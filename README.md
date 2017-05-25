@@ -26,4 +26,10 @@ Para execução da ferramenta faz-se necessário duas listas de informações:
 
 Como resultado poderão ser vistas tuplas relacionando os seguintes dados
 
-**PROJETO, CODIGO DO COMMITE, TIMESTAMP DO COMMIT, DESENVOLVEDOR, ARQUIVO, MÉTODO/ATRIBUTO COMMITADO, QUANTIDADE DE VEZES COMMITADO**
+- PROJETO
+- CODIGO DO COMMITE
+- TIMESTAMP DO COMMIT
+- DESENVOLVEDOR
+- ARQUIVO
+- MÉTODO/ATRIBUTO COMMITADO
+- QUANTIDADE DE VEZES COMMITADO
