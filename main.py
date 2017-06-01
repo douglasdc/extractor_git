@@ -5,6 +5,7 @@ from sh_scripts import *
 from sets import Set
 import re
 import xlwt
+import csv
 
 files_interest = set()
 list_import_regex = []
@@ -13,7 +14,6 @@ id_commit_method = {}
 
 DEV_COMMIT = {}
 DEV_METHOD = {}
-
 
 def new_file_interest(path):
     return files_interest.append(path)
@@ -99,6 +99,8 @@ def new_dev_method(dev, method, qtd_uso):
 
     return DEV_METHOD
 
+
+
 # Extrai as informações do commit, autor, timestamp(UNIX)
 def extract_info_commit(id_commit):
     # for id in id_commit:
@@ -129,14 +131,37 @@ def out_dev_data(list_api_methods):
     # ws2 = wb.add_sheet('DEV_COMMIT')
     wb.save("EXTRACTED_DATA.xls")
 
+def out_cvs_tuple():
+    all_temp = []
+    temp = {}
+    for autor in DEV_COMMIT:
+        # print autor
+        for commit in DEV_COMMIT[autor]:
+            temp['autor'] = autor
+            temp['timestamp'] = commit['timestamp']
+            temp['commit_id'] = commit['id']
+            for metodo in commit['methods']:
+                temp['metodo'] = metodo
+                temp['quantidade'] = DEV_METHOD[autor][metodo]
+                all_temp.append(temp)
+
+    print all_temp
+    keys = all_temp[0].keys()
+    with open('tuplas_extraidas.csv', 'wb') as output_file:
+        dict_writer = csv.DictWriter(output_file, keys)
+        dict_writer.writeheader()
+        dict_writer.writerows(all_temp)
+        
+
 # print run_shell_scripts(all_contribuitors_name, '')
 def main():
-    print 'COMEÇANDO :D'
+    print 'COMEÇANDO...'
 
     file_imports = 'imports.txt' # Arquivo com padrões do import da api desejada
-    file_methods = 'log4j.txt' # Arquivo com os padrões das chamadas de métodos
+    file_methods = 'api_metodos.txt' # Arquivo com os padrões das chamadas de métodos
     list_import_regex = get_list_lines_from_file(file_imports) # Converte o arquivo em lista
     list_api_methods = get_list_lines_from_file(file_methods) # Converte o arquivo em lista
+    
     print len(list_api_methods)
     # Busca os commits que possuiram referencia aos imports
     commits_sh1a = find_commits(list_import_regex, True)
@@ -152,7 +177,8 @@ def main():
     for commit in id_commit_method:
         extract_info_commit(commit)
 
-    out_dev_data(list_api_methods)
+    out_cvs_tuple()
+    # out_dev_data(list_api_methods)
 
 
 if __name__ == "__main__":
