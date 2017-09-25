@@ -147,8 +147,10 @@ def out_dev_data(list_api_methods):
 def out_cvs_tuple():
     all_temp = []
     temp = {}
+    print 'dev commit'
     print DEV_COMMIT
     for autor in DEV_COMMIT:
+        print 'autor'
         print autor
         for commit in DEV_COMMIT[autor]:
             temp['autor'] = autor
@@ -158,6 +160,9 @@ def out_cvs_tuple():
                 temp['metodo'] = metodo
                 temp['quantidade'] = DEV_METHOD[autor][metodo]
                 all_temp.append(temp)
+            
+                print 'temp_commit'
+                print temp
 
     print all_temp
     keys = all_temp[0].keys()
