@@ -4,7 +4,7 @@ from scripts.run_shell import run_shell_scripts
 from scripts.sh_scripts import *
 from sets import Set
 import re
-import xlwt
+# import xlwt
 import csv
 import json
 
@@ -50,18 +50,23 @@ def get_commited_files(file_type, sh1a=None, git_path=''):
 # Busca arquivos que possuiram algum commit contendo refrencias a expressoes regulares presentes em uma lista
 def get_interest_files(commits_sh1a, regex_list, git_path=''):
     print '.........BUSCANDO POR ARQUIVOS DE INTERESSE.........'
-    for sh1a in commits_sh1a:
-        files = get_commited_files('java', sh1a, git_path)
-        files = files.split('\n')
-        # print files
-        for file_path in files:
-            if len(file_path) > 0 and file_path not in files_interest:
-                with open(git_path + '/' + file_path) as f:
-                    for regex in regex_list:
-                        if(re.search(regex, f.read())):
-                            # Insere os arquivos de cada commit na lista de arquivos de interesse
-                            files_interest.add(file_path)
+    try:
+        for sh1a in commits_sh1a:
+            files = get_commited_files('java', sh1a, git_path)
+            files = files.split('\n')
+            # print files
+            for file_path in files:
+                if len(file_path) > 0 and file_path not in files_interest:
+                    print git_path + '/' + file_path
+                    with open(git_path + '/' + file_path) as f:
+                        for regex in regex_list:
+                            if(re.search(regex, f.read())):
+                                # Insere os arquivos de cada commit na lista de arquivos de interesse
+                                files_interest.add(file_path)
 
+    except Exception as e:
+        print 'erro - arquivo não existe'
+    
     print str(len(files_interest)) + ' arquivos de interesse encontrado'
 
 
@@ -201,7 +206,6 @@ def primeiro():
 
         out_cvs_tuple()
         # out_dev_data(list_api_methods)
-
 
 # if __name__ == "__main__":
 #     main()
