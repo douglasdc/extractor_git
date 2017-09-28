@@ -180,9 +180,9 @@ def primeiro():
     projects = parameters['projetos']
     
     for project in projects:
+        print '\n\n===== Buscando no projeto '  + project + '\n\n ====='
         file_imports = 'input/imports.txt' # Arquivo com padrões do import da api desejada
         import os
-        print os.path.abspath('input/metodos.txt')
         # Arquivo com os padrões das chamadas de métodos
         file_methods = 'input/metodos.txt'
         list_import_regex = get_list_lines_from_file(file_imports) # Converte o arquivo em lista
