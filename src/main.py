@@ -34,6 +34,7 @@ def find_commits(list_regex, only_id=False, git_path=''):
     result = []
     for regex in list_regex:
         if only_id:
+            print regex
             ids = run_shell_scripts(commit_sha1_by_regex(regex, git_path), '')
             result = result + ids.split('\n')
 
@@ -188,8 +189,6 @@ def primeiro():
         list_import_regex = get_list_lines_from_file(file_imports) # Converte o arquivo em lista
         list_api_methods = get_list_lines_from_file(file_methods) # Converte o arquivo em lista
         
-        print len(list_api_methods)
-
         # Busca os commits que possuiram referencia aos imports
         commits_sh1a = find_commits(list_import_regex, True, project)
         

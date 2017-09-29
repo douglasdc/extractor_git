@@ -53,7 +53,7 @@ def commit_sha1_by_file(file_path, git_folder):
     return DEFINE_GIT_FOLDER(git_folder) + ' log --format=format:%H ' + file_path
 
 
-def commit_sha1_by_regex(regex, git_folder): 
+def commit_sha1_by_regex(regex, git_folder):
     return DEFINE_GIT_FOLDER(git_folder) + ' log --follow -S' + '"' + regex + '"' + ' --format=format:%H .'
 
 
