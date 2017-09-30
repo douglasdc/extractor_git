@@ -4,7 +4,6 @@ from scripts.run_shell import run_shell_scripts
 from scripts.sh_scripts import *
 from sets import Set
 import re
-# import xlwt
 import csv
 import json
 
@@ -30,13 +29,16 @@ def get_list_lines_from_file(file_imports):
 
 
 def find_commits(list_regex, only_id=False, git_path=''):
+    nl = '|'.join(map(str, list_regex))
+    # print nl
+    # print list_regex
     print '.........BUSCANDO COMMITS.........'
     result = []
-    for regex in list_regex:
-        if only_id:
-            print regex
-            ids = run_shell_scripts(commit_sha1_by_regex(regex, git_path), '')
-            result = result + ids.split('\n')
+    # for regex in list_regex:
+    if only_id:
+        # print regex
+        ids = run_shell_scripts(commit_sha1_by_regex(nl, git_path), '')
+        result = result + ids.split('\n')
 
 
     print str(len(result)) + ' commits encontrados'
@@ -48,6 +50,7 @@ def get_commited_files(file_type, sh1a=None, git_path=''):
     else:
         return run_shell_scripts(see_changed_files(file_type, git_path), '')
 
+
 # Busca arquivos que possuiram algum commit contendo refrencias a expressoes regulares presentes em uma lista
 def get_interest_files(commits_sh1a, regex_list, git_path=''):
     print '.........BUSCANDO POR ARQUIVOS DE INTERESSE.........'
@@ -58,7 +61,7 @@ def get_interest_files(commits_sh1a, regex_list, git_path=''):
             # print files
             for file_path in files:
                 if len(file_path) > 0 and file_path not in files_interest:
-                    print git_path + '/' + file_path
+                    # print git_path + '/' + file_path
                     with open(git_path + '/' + file_path) as f:
                         for regex in regex_list:
                             if(re.search(regex, f.read())):
@@ -77,23 +80,41 @@ def get_commits_regex_by_file(regex_list, files, git_path=''):
     # id_commit_method = {}
     print '.........BUSCANDO COMMITS RELEVANTES NOS ARQUIVOS DE INTERESSE.........'
     for file in files:
-        for regex in regex_list:
-            # id dos commits com uso da expressão para o arquivo
-            sh1a = run_shell_scripts(commit_sha1_by_regex_file(regex, file, git_path), '')
+        lr = '|'.join(map(str, regex_list))
+        # print lr
+        sh1a = run_shell_scripts(commit_sha1_by_regex_file(lr, file, git_path), '')
+        # for regex in regex_list:
+        #     # id dos commits com uso da expressão para o arquivo
+        #     sh1a = run_shell_scripts(commit_sha1_by_regex_file(regex, file, git_path), '')
+        #     # print sh1a
+            # print '----'
+            # sh1al = sh1a.split('\n')
+            # for s in sh1al:
+            #     if len(s) > 0:
+            #         if s not in id_commit_method:
+            #             id_commit_method[s] = []
+                    
+            #         # Insere a expressão na lista das expressoes alteradas por aquele commit
+            #         id_commit_method[s].append(regex)
 
-            if len(sh1a) > 0:
-                if sh1a not in id_commit_method:
-                    id_commit_method[sh1a] = []
+        sh1al = sh1a.split('\n')
+        # print sh1al
+        for s in sh1al:
+            if len(s) > 0:
+                if s not in id_commit_method:
+                    id_commit_method[s] = []
                 
                 # Insere a expressão na lista das expressoes alteradas por aquele commit
-                id_commit_method[sh1a].append(regex)
+                id_commit_method[s].append(lr)
+        
+
     
     print str(len(id_commit_method)) + ' commits encontrados'
 
 # Novo desenvolvedor relacionado com o commit, metodos alterados (inseridos, removidos) no commit 
 # e o momento em que o commit foi feito
 def new_dev_commit(dev, commit, method, timestamp):
-    print '.........CRIANDO RELACAO DE DESENVOLVEDOR COM COMMIT.........'
+    # print '.........CRIANDO RELACAO DE DESENVOLVEDOR COM COMMIT.........'
     if dev not in DEV_COMMIT:
         DEV_COMMIT[dev] = []
     
@@ -130,26 +151,6 @@ def extract_info_commit(id_commit, git_path=''):
     for method in id_commit_method[id_commit]:
         new_dev_method(author, method, 1)
 
-def out_dev_data(list_api_methods):
-    wb= xlwt.Workbook()
-    ws = wb.add_sheet("DEV_METHOD")
-
-    i = 1
-    for regex in list_api_methods:
-        ws.write(0, i, regex) 
-        i = i + 1
-
-    i = 1
-    for dev in DEV_METHOD:
-        ws.write(i, 0, dev)
-        for method in DEV_METHOD[dev]:
-            ws.write(i, list_api_methods.index(method) + 1, DEV_METHOD[dev][method])
-        i = i + 1
-
-
-    # ws2 = wb.add_sheet('DEV_COMMIT')
-    wb.save("EXTRACTED_DATA.xls")
-
 def out_cvs_tuple():
     all_temp = []
     temp = {}
@@ -164,9 +165,9 @@ def out_cvs_tuple():
                 temp['quantidade'] = DEV_METHOD[autor][metodo]
                 all_temp.append(temp)
                 
-    print all_temp
+    # print all_temp
     keys = all_temp[0].keys() #Extrai as chaves para serem usadas como titulo das clunas da tabela
-    with open('tuplas_extraidas.csv', 'wb') as output_file:
+    with open('output/tuplas_extraidas.csv', 'wb') as output_file:
         dict_writer = csv.DictWriter(output_file, keys)
         dict_writer.writeheader()
         dict_writer.writerows(all_temp)
