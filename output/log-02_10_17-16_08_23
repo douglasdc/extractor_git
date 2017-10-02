@@ -1,0 +1,17 @@
+INFO:root:git -C /mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste01  log --follow -G"java.util|java.utils|org.apache.logging.log4j|org.apache.log4j" --format=format:"%H|%an|%at" .
+INFO:root:git -C /mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste01  show --pretty="" --name-only 68314567dc7ac07fa856fe7618d09e9aee54e009 | awk "/^.*\.java/"
+INFO:root:git -C /mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste01  show --pretty="" --name-only b70d5444e66068a2531576cc97f7f7c1a66375a5 | awk "/^.*\.java/"
+INFO:root:git -C /mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste01  log --follow -G"setLayout" --format=format:"%H|%an|%at" main.java
+INFO:root:git -C /mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste01  log --follow -G"setResourceBundle" --format=format:"%H|%an|%at" main.java
+INFO:root:git -C /mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste01  log --follow -G"getContext" --format=format:"%H|%an|%at" main.java
+INFO:root:git -C /mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste01  log --follow -G"getAdditivity" --format=format:"%H|%an|%at" main.java
+INFO:root:git -C /mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste01  log --follow -G"getInstance" --format=format:"%H|%an|%at" main.java
+INFO:root:git -C /mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste01  log --follow -G"getSyslogEquivalent" --format=format:"%H|%an|%at" main.java
+INFO:root:git -C /mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste01  log --follow -G"getResourceBundle" --format=format:"%H|%an|%at" main.java
+INFO:root:git -C /mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste01  log --follow -G"fatal" --format=format:"%H|%an|%at" main.java
+INFO:root:git -C /mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste01  log --follow -G"get" --format=format:"%H|%an|%at" main.java
+INFO:root:git -C /mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste01  log --follow -G"toLevel" --format=format:"%H|%an|%at" main.java
+INFO:root:git -C /mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste01  log --follow -G"getChainedPriority" --format=format:"%H|%an|%at" main.java
+INFO:root:git -C /mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste01  log --follow -G"callAppenders" --format=format:"%H|%an|%at" main.java
+INFO:root:git -C /mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste01  log --follow -G"getCurrentCategories" --format=format:"%H|%an|%at" main.java
+INFO:root:git -C /mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste01  log --follow -G"remove" --format=format:"%H|%an|%at" main.java

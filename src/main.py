@@ -14,6 +14,7 @@ list_api_methods = []
 id_commit_method = {}
 
 COMMIT_USER_METHOD = {}
+AUTHOR_METHOD_USE = {}
 
 DEV_COMMIT = {}
 DEV_METHOD = {}
@@ -144,14 +145,25 @@ def new_dev_method(dev, method, qtd_uso):
     return DEV_METHOD
 
 def relation_dev_commit(commit, metodo):
-
+    from datetime import datetime
     if(commit[0] not in COMMIT_USER_METHOD):
         temp = {}
         temp['autor'] = commit[1]
         temp['timestamp'] = commit[2]
+        temp['momento'] = "{:%d %b %Y %H:%M:%S}".format(datetime.fromtimestamp(float(commit[2])))
         temp['commit'] = commit[0]
         temp['metodo'] = metodo
         COMMIT_USER_METHOD[commit[0]] = temp
+
+    if(commit[1] not in AUTHOR_METHOD_USE):
+        AUTHOR_METHOD_USE[commit[1]] = {}
+        AUTHOR_METHOD_USE[commit[1]][metodo] = 1
+    else:
+        if (metodo not in AUTHOR_METHOD_USE[commit[1]]):
+            AUTHOR_METHOD_USE[commit[1]][metodo] = 1
+        else:
+            AUTHOR_METHOD_USE[commit[1]][metodo] = AUTHOR_METHOD_USE[commit[1]][metodo] + 1
+        
     
     # print COMMIT_USER_METHOD
         # temp['metodo'] = metodo
@@ -192,6 +204,8 @@ def out_cvs_tuple():
             # print data
             dict_writer.writerow(data)
         # dict_writer.writerows(all_temp)
+
+    print AUTHOR_METHOD_USE
         
 
 # print run_shell_scripts(all_contribuitors_name, '')

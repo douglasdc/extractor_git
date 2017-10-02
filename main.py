@@ -1,6 +1,7 @@
 #coding:utf-8
 from src.main import primeiro
 import logging
+from datetime import datetime
 
 def main():
     import sys
@@ -9,5 +10,7 @@ def main():
     primeiro()
 
 if __name__ == "__main__":
-    logging.basicConfig(filename='output/logs.log',level=logging.DEBUG)
+    data = datetime.now()
+    file_name = "output/log-{:%d_%m_%y-%H_%M_%S}.log".format(data)
+    logging.basicConfig(filename=file_name,level=logging.DEBUG)
     main()
