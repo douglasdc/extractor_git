@@ -1,5 +1,6 @@
 #coding:utf-8
 from src.main import primeiro
+import logging
 
 def main():
     import sys
@@ -8,4 +9,5 @@ def main():
     primeiro()
 
 if __name__ == "__main__":
+    logging.basicConfig(filename='output/logs.log',level=logging.DEBUG)
     main()

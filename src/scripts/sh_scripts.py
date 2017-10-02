@@ -1,5 +1,7 @@
 #coding:utf-8
 
+import logging
+
 DEFINE_GIT_FOLDER = lambda git_folder: 'git -C ' + git_folder + ' '
 
 def log(git_folder): 
@@ -7,62 +9,84 @@ def log(git_folder):
 
 
 def log_to_file(file, git_folder): 
-    return DEFINE_GIT_FOLDER(git_folder) + ' log --pretty=fuller --stat ' + file
+    script = DEFINE_GIT_FOLDER(git_folder) + ' log --pretty=fuller --stat ' + file
+    logging.info(script)
+    return script
 
 
 def all_contribuitors_name(git_folder): 
-    return DEFINE_GIT_FOLDER(git_folder) + " log --pretty='%an' | sort | uniq"
+    script = DEFINE_GIT_FOLDER(git_folder) + " log --pretty='%an' | sort | uniq"
+    logging.info(script)
+    return script
 
 
 def author_commit_sha1(sha1, git_folder): 
-    return DEFINE_GIT_FOLDER(git_folder) + ' show -s --format=%an ' + sha1
+    script = DEFINE_GIT_FOLDER(git_folder) + ' show -s --format=%an ' + sha1
+    logging.info(script)
+    return script
 
 
 def timestamp_commit_sha1(sha1, git_folder): 
-    return DEFINE_GIT_FOLDER(git_folder) + ' show -s --format=%at ' + sha1
+    script = DEFINE_GIT_FOLDER(git_folder) + ' show -s --format=%at ' + sha1
+    logging.info(script)
+    return script
 
 
 def count_commits(git_folder): 
-    return DEFINE_GIT_FOLDER(git_folder) + ' rev-list --count master'
+    script = DEFINE_GIT_FOLDER(git_folder) + ' rev-list --count master'
+    logging.info(script)
+    return script
 
 
 def count_contribuitors(git_folder): 
-    return DEFINE_GIT_FOLDER(git_folder) + ' shotlog -s -n --all | wc -l'
+    script = DEFINE_GIT_FOLDER(git_folder) + ' shotlog -s -n --all | wc -l'
+    logging.info(script)
+    return script
 
 
-def count_commit_all_contributors(
-    git_folder): return DEFINE_GIT_FOLDER(git_folder) + ' shortlog -s -n --all master'
+def count_commit_all_contributors(git_folder): 
+    script = DEFINE_GIT_FOLDER(git_folder) + ' shortlog -s -n --all master'
+    logging.info(script)
+    return script
 
 
 def commit_regex(regex, git_folder): 
-    return DEFINE_GIT_FOLDER(git_folder) + ' log --follow -S' + '"' + regex + '"' + ' --pretty=fuller .'
-# commit_regex = lambda regex:'git log --follow -S' + '"' + regex + '"' + '--pretty=fuller .'
-
-# Nome dos autores dos commites de determinado aquivo que casam com o padrão regex
+    script = DEFINE_GIT_FOLDER(git_folder) + ' log --follow -S' + '"' + regex + '"' + ' --pretty=fuller .'
+    logging.info(script)
+    return script
 
 
 def commit_regex_by_author(regex, file, git_folder): 
-    return DEFINE_GIT_FOLDER(git_folder) + ' log --follow -S' + '"' + regex + '"' + ' --pretty=format:%an ' + file
+    script = DEFINE_GIT_FOLDER(git_folder) + ' log --follow -S' + '"' + regex + '"' + ' --pretty=format:%an ' + file
+    logging.info(script)
+    return script
 
 
 def see_changed_files(file_type, git_folder): 
-    return DEFINE_GIT_FOLDER(git_folder) + ' diff-tree --no-commit-id --name-only -r | awk "/^.*\.' + file_type + '/'
+    script = DEFINE_GIT_FOLDER(git_folder) + ' diff-tree --no-commit-id --name-only -r | awk "/^.*\.' + file_type + '/"'
+    logging.info(script)
+    return script
 
 
 def commit_sha1_by_file(file_path, git_folder): 
-    return DEFINE_GIT_FOLDER(git_folder) + ' log --format=format:%H ' + file_path
+    script = DEFINE_GIT_FOLDER(git_folder) + ' log --format=format:%H ' + file_path
+    logging.info(script)
+    return script
 
 
 def commit_sha1_by_regex(regex, git_folder):
-    # print DEFINE_GIT_FOLDER(git_folder) + ' log --follow -S' + '"' + regex + '"' + ' --format=format:%H .'
-    return DEFINE_GIT_FOLDER(git_folder) + ' log --follow -G' + '"' + regex + '"' + ' --format=format:%H .'
+    script = DEFINE_GIT_FOLDER(git_folder) + ' log --follow -G' + '"' + regex + '"' + ' --format=format:"%H|%an|%at" .'
+    logging.info(script)
+    return script
 
 
 def commit_sha1_by_regex_file(regex, file_path, git_folder): 
-    # print DEFINE_GIT_FOLDER(git_folder) + ' log --follow -G' + '"' + regex + '"' + ' --format=format:%H ' + file_path
-    return DEFINE_GIT_FOLDER(git_folder) + ' log --follow -G' + '"' + regex + '"' + ' --format=format:%H ' + file_path
+    script = DEFINE_GIT_FOLDER(git_folder) + ' log --follow -G' + '"' + regex + '"' + ' --format=format:"%H|%an|%at" ' + file_path
+    logging.info(script)
+    return script
 
 
 def commited_files(sh1a, file_type, git_folder): 
-    return DEFINE_GIT_FOLDER(git_folder) + ' diff-tree --no-commit-id --name-only -r ' + sh1a + ' | awk "/^.*\.' + file_type + '/"'
-# commited_files = lambda sh1a, file_type:'git diff-tree --no-commit-id --name-only -r d00ebd640d699b33de06b759b4ee219fa9f3e46a | awk "/^.*\.java/"'
+    script = DEFINE_GIT_FOLDER(git_folder) + ' show --pretty="" --name-only ' + sh1a + ' | awk "/^.*\.' + file_type + '/"'
+    logging.info(script)
+    return script
