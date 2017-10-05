@@ -120,9 +120,7 @@ def commits_regex_by_file(regex_list, files, git_path=''):
             commit_regex_file = []
             commit_hash = run_shell_scripts(commit_sha1_by_regex_file(att, file, git_path), '') #Hashs dos commits que usaram o atributo nesse arquivo
             commits = strip_data_commit(commit_hash)
-            # hash_commits = [y[0] for y in commits]
             for commit in commits:
-                # print commit
                 if len(commit[0]) > 0:
                     if commit[0] not in id_commit_method:
                         id_commit_method[commit[0]] = []
@@ -131,7 +129,7 @@ def commits_regex_by_file(regex_list, files, git_path=''):
                     # count_metodos(commit[0], att, file, git_path)
                     # Insere a expressão na lista das expressoes alteradas por aquele commit
                     id_commit_method[commit[0]].append(att)
-            
+
     info_file('output/commits_atributos.txt', id_commit_method)
     print str(len(id_commit_method)) + ' commits encontrados'
 
@@ -166,24 +164,19 @@ def new_dev_method(dev, method, qtd_uso):
 def relation_dev_commit(commit, metodo, file, git_path):
     from datetime import datetime
     temp = {}
+    temp_metodo = {}
     if(commit[0] not in COMMIT_USER_METHOD):
         temp = {}
+        COMMIT_USER_METHOD[commit[0]] = temp
         temp['autor'] = commit[1]
         temp['timestamp'] = commit[2]
         temp['momento'] = "{:%d %b %Y %H:%M:%S}".format(datetime.fromtimestamp(float(commit[2])))
         temp['commit'] = commit[0]
-        temp['metodo'] = metodo
-        COMMIT_USER_METHOD[commit[0]] = temp
+        temp['metodos'] = {}
+        temp['metodos'][metodo] = {}
+    elif metodo not in COMMIT_USER_METHOD[commit[0]]['metodos']:
+        COMMIT_USER_METHOD[commit[0]]['metodos'][metodo] = {}
 
-    # if(commit[1] not in AUTHOR_METHOD_USE):
-    #     AUTHOR_METHOD_USE[commit[1]] = {}
-    #     AUTHOR_METHOD_USE[commit[1]][metodo] = 1
-    # else:
-    #     if (metodo not in AUTHOR_METHOD_USE[commit[1]]):
-    #         AUTHOR_METHOD_USE[commit[1]][metodo] = 1
-    #     else:
-    #         AUTHOR_METHOD_USE[commit[1]][metodo] = AUTHOR_METHOD_USE[commit[1]][metodo] + 1
-        
     import string
     commit_all = run_shell_scripts(get_all_commit(commit[0], file, git_path), '')
 
@@ -199,9 +192,8 @@ def relation_dev_commit(commit, metodo, file, git_path):
             count_remove = count_insert + len(re.findall('.' + metodo + '\(', line))
             count_commits(len(re.findall('.' + metodo + '\(', line)), commit, metodo, False)
 
-
-    temp['adicionou'] = count_insert
-    temp['removeu'] = count_remove
+    COMMIT_USER_METHOD[commit[0]]['metodos'][metodo]['adicionado'] = count_insert
+    COMMIT_USER_METHOD[commit[0]]['metodos'][metodo]['removido'] = count_remove
 
     # print COMMIT_USER_METHOD
         # temp['metodo'] = metodo
@@ -240,33 +232,43 @@ def extract_info_commit(id_commit, git_path=''):
         new_dev_method(author, method, 1)
 
 def out_cvs_tuple():
-    # print COMMIT_USER_METHOD
-    # all_temp = []
-    # temp = {}
-    # for autor in DEV_COMMIT:
-    #     for commit in DEV_COMMIT[autor]:
-    #         for metodo in commit['methods']:
-    #             temp = {}
-    #             temp['autor'] = autor
-    #             temp['timestamp'] = commit['timestamp']
-    #             temp['commit_id'] = commit['id']
-    #             temp['metodo'] = metodo
-    #             temp['quantidade'] = DEV_METHOD[autor][metodo]
-    #             all_temp.append(temp)
-                
-    # # print all_temp
-    # keys = all_temp[0].keys() #Extrai as chaves para serem usadas como titulo das clunas da tabela
     with open('output/tuplas_extraidas.csv', 'w') as output_file:
-        dict_writer = csv.DictWriter(output_file, fieldnames=COMMIT_USER_METHOD.values()[0].keys())
-        # dict_writer = csv.DictWriter(output_file, fieldnames=keys, quoting=csv.QUOTE_NONE, quotechar='', escapechar='\\')
+        d = {}
+        d['autor'] = ''
+        d['commit_hash'] = ''
+        d['timestamp'] = ''
+        d['momento'] = ''
+        d['metodo'] = ''
+        d['adicionado'] = ''
+        d['removido'] = ''
+        dict_writer = csv.DictWriter(output_file, fieldnames=d.keys(), extrasaction='ignore')
         dict_writer.writeheader()
         for data in COMMIT_USER_METHOD.values():
-            # print data
-            dict_writer.writerow(data)
-        # dict_writer.writerows(all_temp)
+            for d in create_line_to_file(data):
+                # print '\n'
+                # print d
+                dict_writer.writerow(d)
+            # print create_line_to_file(data)
 
-    print AUTHOR_METHOD_USE
+    # print COMMIT_USER_METHOD
         
+def create_line_to_file(commit_data):
+    datas = []
+
+    # print commit_data['metodos']
+    for key, value in commit_data['metodos'].iteritems():
+        data = {}
+        data['autor'] = commit_data['autor']
+        data['commit_hash'] = commit_data['commit']
+        data['timestamp'] = commit_data['timestamp']
+        data['momento'] = commit_data['momento']
+        data['metodo'] = key
+        data['adicionado'] = value['adicionado']
+        data['removido'] = value['removido']
+        # print data
+        datas.append(data)
+
+    return datas
 
 # print run_shell_scripts(all_contribuitors_name, '')
 def primeiro():
