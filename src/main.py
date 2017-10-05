@@ -90,6 +90,24 @@ def get_interest_files(commits_sh1a, regex_list, git_path=''):
     info_file('output/arquivos_interesse.txt', list(set(files_interest)))
     print str(len(files_interest)) + ' arquivos de interesse encontrado'
 
+
+def count_metodos(commit_id, att, file, git_path):
+    import string
+    commit = run_shell_scripts(get_all_commit(commit_id, file, git_path), '')
+
+    count_insert = 0
+    count_remove = 0
+    abs_metodo = 0
+    for line in commit.split('\n'):
+        if string.find(line, '+', 0, 1) != -1:
+            count_insert = count_insert + len(re.findall('.info\(', line))
+        
+        if string.find(line, '-', 0, 1) != -1:
+            count_remove = count_insert + len(re.findall('.info\(', line))
+
+    print count_insert
+    print count_remove
+
 # Busca os commits que possuem referencia às expressões regulares em cada arquivo de uma lista de arquivos
 # PRECISA AINDA VERIFICAR SE REALMENTE FAZ REFERENCIA A API, VERIFICAR SE A CLASSE OU MÉTODO É DA API
 def commits_regex_by_file(regex_list, files, git_path=''):
@@ -109,7 +127,8 @@ def commits_regex_by_file(regex_list, files, git_path=''):
                     if commit[0] not in id_commit_method:
                         id_commit_method[commit[0]] = []
                     
-                    relation_dev_commit(commit, att)
+                    relation_dev_commit(commit, att, file, git_path)
+                    # count_metodos(commit[0], att, file, git_path)
                     # Insere a expressão na lista das expressoes alteradas por aquele commit
                     id_commit_method[commit[0]].append(att)
             
@@ -144,8 +163,9 @@ def new_dev_method(dev, method, qtd_uso):
 
     return DEV_METHOD
 
-def relation_dev_commit(commit, metodo):
+def relation_dev_commit(commit, metodo, file, git_path):
     from datetime import datetime
+    temp = {}
     if(commit[0] not in COMMIT_USER_METHOD):
         temp = {}
         temp['autor'] = commit[1]
@@ -155,19 +175,59 @@ def relation_dev_commit(commit, metodo):
         temp['metodo'] = metodo
         COMMIT_USER_METHOD[commit[0]] = temp
 
-    if(commit[1] not in AUTHOR_METHOD_USE):
-        AUTHOR_METHOD_USE[commit[1]] = {}
-        AUTHOR_METHOD_USE[commit[1]][metodo] = 1
-    else:
-        if (metodo not in AUTHOR_METHOD_USE[commit[1]]):
-            AUTHOR_METHOD_USE[commit[1]][metodo] = 1
-        else:
-            AUTHOR_METHOD_USE[commit[1]][metodo] = AUTHOR_METHOD_USE[commit[1]][metodo] + 1
+    # if(commit[1] not in AUTHOR_METHOD_USE):
+    #     AUTHOR_METHOD_USE[commit[1]] = {}
+    #     AUTHOR_METHOD_USE[commit[1]][metodo] = 1
+    # else:
+    #     if (metodo not in AUTHOR_METHOD_USE[commit[1]]):
+    #         AUTHOR_METHOD_USE[commit[1]][metodo] = 1
+    #     else:
+    #         AUTHOR_METHOD_USE[commit[1]][metodo] = AUTHOR_METHOD_USE[commit[1]][metodo] + 1
         
-    
+    import string
+    commit_all = run_shell_scripts(get_all_commit(commit[0], file, git_path), '')
+
+    count_insert = 0
+    count_remove = 0
+    abs_metodo = 0
+    for line in commit_all.split('\n'):
+        if string.find(line, '+', 0, 1) != -1:
+            count_insert = count_insert + len(re.findall('.' + metodo + '\(', line))
+            count_commits(len(re.findall('.' + metodo + '\(', line)), commit, metodo, True)
+        
+        if string.find(line, '-', 0, 1) != -1:
+            count_remove = count_insert + len(re.findall('.' + metodo + '\(', line))
+            count_commits(len(re.findall('.' + metodo + '\(', line)), commit, metodo, False)
+
+
+    temp['adicionou'] = count_insert
+    temp['removeu'] = count_remove
+
     # print COMMIT_USER_METHOD
         # temp['metodo'] = metodo
         # temp['quantidade'] = DEV_METHOD[autor][metodo]
+
+def count_commits(qtd, commit, metodo, insert=True):
+    if(commit[1] not in AUTHOR_METHOD_USE):
+        AUTHOR_METHOD_USE[commit[1]] = {}
+        AUTHOR_METHOD_USE[commit[1]][metodo] = {'adicionou':0, 'removeu':0}
+        if insert:
+            AUTHOR_METHOD_USE[commit[1]][metodo]['adicionou'] = qtd
+        else:
+            AUTHOR_METHOD_USE[commit[1]][metodo]['removeu'] = qtd
+    else:
+        if (metodo not in AUTHOR_METHOD_USE[commit[1]]):
+            AUTHOR_METHOD_USE[commit[1]][metodo] = {'adicionou':0, 'removeu':0}
+            if insert:
+                AUTHOR_METHOD_USE[commit[1]][metodo]['adicionou'] = qtd
+            else:
+                AUTHOR_METHOD_USE[commit[1]][metodo]['removeu'] = qtd
+        else:
+            # AUTHOR_METHOD_USE[commit[1]][metodo] = AUTHOR_METHOD_USE[commit[1]][metodo] + 1
+            if insert:
+                AUTHOR_METHOD_USE[commit[1]][metodo]['adicionou'] = AUTHOR_METHOD_USE[commit[1]][metodo]['adicionou'] + qtd
+            else:
+                AUTHOR_METHOD_USE[commit[1]][metodo]['removeu'] = AUTHOR_METHOD_USE[commit[1]][metodo]['removeu'] + qtd
 
 # Extrai as informações do commit, autor, timestamp(UNIX)
 def extract_info_commit(id_commit, git_path=''):
