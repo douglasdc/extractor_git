@@ -82,7 +82,7 @@ def commit_sha1_by_regex(regex, git_folder):
 
 
 def commit_sha1_by_regex_file(regex, file_path, git_folder): 
-    script = DEFINE_GIT_FOLDER(git_folder) + ' log --follow -G' + '"' + regex + '"' + ' --format=format:"%H|%an|%at" ' + file_path
+    script = DEFINE_GIT_FOLDER(git_folder) + ' log --follow -G' + '".' + regex + '\("' + ' --format=format:"%H|%an|%at" ' + file_path
     logging.info(script)
     # print script
     return script
