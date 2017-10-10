@@ -1,13 +1,12 @@
 #coding:utf-8
-from src.main import primeiro
+from src.main import start_extraction
 import logging
 from datetime import datetime
 
 def main():
     import sys
     # sys.path.append('/')
-    
-    primeiro()
+    start_extraction()
 
 if __name__ == "__main__":
     data = datetime.now()
