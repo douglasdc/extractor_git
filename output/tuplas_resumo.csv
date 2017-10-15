@@ -1,0 +1,3 @@
+metodos,quantidade,frequencia,desenvolvedor
+info | getLogger | isDebugEnabled | setLevel | getName,5,5,Da Vinci
+debug | info | isDebugEnabled | setLevel | isInfoEnabled,5,10,Mona Lisa

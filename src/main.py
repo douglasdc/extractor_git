@@ -6,13 +6,17 @@ import re, csv, json, logging
 from scripts.run_shell import run_shell_scripts
 from scripts.sh_scripts import *
 from utils import *
+from commit import Commit, Author
 
+commitsObj = {}
+developers = {}
 projects = {}
 list_import_regex = []
 list_api_methods = []
 id_commit_method = {}
 
 COMMIT_USER_METHOD = {}
+AUTHOR_METHOD_RESUMO = {}
 AUTHOR_METHOD_USE = {}
 
 DEV_COMMIT = {}
@@ -76,6 +80,8 @@ def get_interest_files(commits_sh1a, regex_list, git_path=''):
 # Busca os commits que possuem referencia às expressões regulares em cada arquivo de uma lista de arquivos
 # PRECISA AINDA VERIFICAR SE REALMENTE FAZ REFERENCIA A API, VERIFICAR SE A CLASSE OU MÉTODO É DA API
 def commits_regex_by_file(regex_list, files, git_path=''):
+    global commitsObj
+    global developers
     # id_commit_method = {}
     print 'Buscando commits de arquivos pela lista de metodos.....'
     for file in files:
@@ -92,11 +98,24 @@ def commits_regex_by_file(regex_list, files, git_path=''):
                     relation_dev_commit(commit, att, file, git_path)
                     # Insere a expressão na lista das expressoes alteradas por aquele commit
                     id_commit_method[commit[0]].append(att)
+                    if commit[0] not in commitsObj:
+                        c = Commit(commit[0], commit[1], commit[2], att, git_path, 0, 0)
+                        commitsObj[commit[0]] = c
+                    else:
+                        commitsObj[commit[0]].insert_method(att, 0, 0)
+
+                    if commit[1] not in developers:
+                        a = Author(commit[1], att, 0, 0)
+                        developers[commit[1]] = a
+                    else:
+                        developers[commit[1]].insert_method(att, 0, 0)
 
     info_file('output/commits_atributos.txt', id_commit_method)
     # print str(len(id_commit_method)) + ' commits encontrados'
 
 def relation_dev_commit(commit, metodo, file, git_path):
+    projeto = git_path.split('/')
+    projeto = projeto[len(projeto) - 1]
     from datetime import datetime
     temp = {}
     temp_metodo = {}
@@ -107,6 +126,7 @@ def relation_dev_commit(commit, metodo, file, git_path):
         temp['timestamp'] = commit[2]
         temp['momento'] = "{:%d %b %Y %H:%M:%S}".format(datetime.fromtimestamp(float(commit[2])))
         temp['commit'] = commit[0]
+        temp['projeto'] = projeto
         temp['metodos'] = {}
         temp['metodos'][metodo] = {}
     elif metodo not in COMMIT_USER_METHOD[commit[0]]['metodos']:
@@ -130,6 +150,22 @@ def relation_dev_commit(commit, metodo, file, git_path):
     COMMIT_USER_METHOD[commit[0]]['metodos'][metodo]['adicionado'] = count_insert
     COMMIT_USER_METHOD[commit[0]]['metodos'][metodo]['removido'] = count_remove
 
+    if (commit[1] not in AUTHOR_METHOD_RESUMO):
+        temp = {}
+        temp['desenvolvedor'] = commit[1]
+        temp['metodos'] = set()
+        temp['metodos'].add(metodo)
+        temp['quantidade'] = 1
+        temp['frequencia'] = count_insert
+        AUTHOR_METHOD_RESUMO[commit[1]] = temp
+    else:
+        if metodo not in AUTHOR_METHOD_RESUMO[commit[1]]['metodos']:
+            AUTHOR_METHOD_RESUMO[commit[1]]['quantidade'] = AUTHOR_METHOD_RESUMO[commit[1]]['quantidade'] + 1
+
+        AUTHOR_METHOD_RESUMO[commit[1]]['metodos'].add(metodo)
+        AUTHOR_METHOD_RESUMO[commit[1]]['frequencia'] = AUTHOR_METHOD_RESUMO[commit[1]]['frequencia'] + count_insert
+
+
 def count_commits(qtd, commit, metodo, insert=True):
     if(commit[1] not in AUTHOR_METHOD_USE):
         AUTHOR_METHOD_USE[commit[1]] = {}
@@ -152,7 +188,6 @@ def count_commits(qtd, commit, metodo, insert=True):
                 AUTHOR_METHOD_USE[commit[1]][metodo]['removeu'] = AUTHOR_METHOD_USE[commit[1]][metodo]['removeu'] + qtd
 
 
-
 def out_cvs_tuple():
     with open('output/tuplas_extraidas.csv', 'w') as output_file:
         d = {}
@@ -163,11 +198,28 @@ def out_cvs_tuple():
         d['metodo'] = ''
         d['adicionado'] = ''
         d['removido'] = ''
+        d['projeto'] = ''
         dict_writer = csv.DictWriter(output_file, fieldnames=d.keys(), extrasaction='ignore')
         dict_writer.writeheader()
         for data in COMMIT_USER_METHOD.values():
             for d in create_line_to_file(data):
                 dict_writer.writerow(d)
+
+    with open('output/tuplas_resumo.csv', 'w') as output_file:
+        d = {}
+        d['desenvolvedor'] = ''
+        d['metodos'] = ''
+        d['frequencia'] = ''
+        d['quantidade'] = ''
+        dict_writer = csv.DictWriter(output_file, fieldnames=d.keys(), extrasaction='ignore')
+        dict_writer.writeheader()
+        for data in AUTHOR_METHOD_RESUMO.values():
+            d = {}
+            d['desenvolvedor'] = data['desenvolvedor']
+            d['metodos'] = ' | '.join(map(str, data['metodos']))
+            d['frequencia'] = data['frequencia']
+            d['quantidade'] = data['quantidade']
+            dict_writer.writerow(d)
 
         
 def create_line_to_file(commit_data):
@@ -182,6 +234,7 @@ def create_line_to_file(commit_data):
         data['metodo'] = key
         data['adicionado'] = value['adicionado']
         data['removido'] = value['removido']
+        data['projeto'] = commit_data['projeto']
         datas.append(data)
 
     return datas
@@ -214,7 +267,6 @@ def load_methods():
     file_methods = 'input/metodos.txt'
     list_api_methods = get_list_lines_from_file(file_methods)
 
-
 def start_extraction():
     print 'Iniciando.....'
 
@@ -235,5 +287,7 @@ def start_extraction():
         # buscando os commits que possuem uso dos metodos presentes na lista
         commits_regex_by_file(list_api_methods, files_interest, project)
 
-
         out_cvs_tuple()
+
+        print AUTHOR_METHOD_RESUMO
+        # teste_create_out()
