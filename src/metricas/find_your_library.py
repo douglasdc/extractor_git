@@ -1,9 +1,12 @@
-
+#coding:utf-8
 # Implementation of metrics from "Find Your Library Experts"
 
 import numpy
 
 # Relação entre o uso de um método pelo desenvolvedor e todo o uso dentro do projeto
+# A entrada são duas listas, uma contendo todos os métodos fornecidos pela biblioteca, e outra com os métodos usados por cada desenvolvedor
+# provided_symbol = {metodo: quantidade_uso}
+# usage_symbol = {dev:{metodo:quantidade_usada}}
 def library_expertise(provided_symbol, usage_symbol):
     developers = {}
     for dev, value in usage_symbol.iteritems():

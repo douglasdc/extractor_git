@@ -1,16 +1,37 @@
 metodo,adicionado,timestamp,projeto,autor,momento,commit_hash,removido
-info,0,1506952269,Teste01,Da Vinci,02 Oct 2017 13:51:09,1de6f77,1
-setLevel,1,1506952269,Teste01,Da Vinci,02 Oct 2017 13:51:09,1de6f77,1
-isDebugEnabled,1,1507502721,Teste01,Da Vinci,08 Oct 2017 22:45:21,b91e16b,0
-setLevel,1,1507502721,Teste01,Da Vinci,08 Oct 2017 22:45:21,b91e16b,0
-info,2,1506964918,Teste01,Mona Lisa,02 Oct 2017 17:21:58,48f315e,0
-debug,1,1506953211,Teste01,Mona Lisa,02 Oct 2017 14:06:51,913c79a,1
-info,1,1506953211,Teste01,Mona Lisa,02 Oct 2017 14:06:51,913c79a,0
-setLevel,1,1506953211,Teste01,Mona Lisa,02 Oct 2017 14:06:51,913c79a,1
-isInfoEnabled,1,1506953211,Teste01,Mona Lisa,02 Oct 2017 14:06:51,913c79a,0
-debug,1,1506952029,Teste01,Mona Lisa,02 Oct 2017 13:47:09,26614ae,0
-info,1,1506952029,Teste01,Mona Lisa,02 Oct 2017 13:47:09,26614ae,0
-getLogger,1,1506951774,Teste01,Da Vinci,02 Oct 2017 13:42:54,b70d544,0
-getName,1,1506951774,Teste01,Da Vinci,02 Oct 2017 13:42:54,b70d544,0
-debug,1,1506952805,Teste01,Mona Lisa,02 Oct 2017 14:00:05,1fe0d86,0
-isDebugEnabled,1,1506952805,Teste01,Mona Lisa,02 Oct 2017 14:00:05,1fe0d86,0
+info,0,1506952269,Teste01,Da Vinci,02 Oct 2017 10:51:09,1de6f77,1
+setLevel,1,1506952269,Teste01,Da Vinci,02 Oct 2017 10:51:09,1de6f77,1
+info,3,1508200790,Teste02,Da Vinci,16 Oct 2017 21:39:50,e481aa1,0
+get,1,1508200790,Teste02,Da Vinci,16 Oct 2017 21:39:50,e481aa1,0
+equals,13,1508204695,Teste02,Da Vinci,16 Oct 2017 22:44:55,ccbee02,0
+get,1,1508204695,Teste02,Da Vinci,16 Oct 2017 22:44:55,ccbee02,0
+info,1,1508200640,Teste02,Mona Lisa,16 Oct 2017 21:37:20,7bb2c56,0
+getLogger,1,1508200640,Teste02,Mona Lisa,16 Oct 2017 21:37:20,7bb2c56,0
+getName,1,1508200640,Teste02,Mona Lisa,16 Oct 2017 21:37:20,7bb2c56,0
+setLevel,1,1508200640,Teste02,Mona Lisa,16 Oct 2017 21:37:20,7bb2c56,0
+getInstance,2,1508200640,Teste02,Mona Lisa,16 Oct 2017 21:37:20,7bb2c56,0
+isDebugEnabled,1,1507502721,Teste01,Da Vinci,08 Oct 2017 19:45:21,b91e16b,0
+setLevel,1,1507502721,Teste01,Da Vinci,08 Oct 2017 19:45:21,b91e16b,0
+info,2,1506964918,Teste01,Mona Lisa,02 Oct 2017 14:21:58,48f315e,0
+info,3,1508244398,Teste02,Dante,17 Oct 2017 09:46:38,6111b0f,0
+remove,2,1508244398,Teste02,Dante,17 Oct 2017 09:46:38,6111b0f,0
+get,2,1508244398,Teste02,Dante,17 Oct 2017 09:46:38,6111b0f,0
+getLogger,1,1508199999,Teste02,Mona Lisa,16 Oct 2017 21:26:39,dc9c838,0
+getName,1,1508199999,Teste02,Mona Lisa,16 Oct 2017 21:26:39,dc9c838,0
+warn,1,1508241281,Teste02,Da Vinci,17 Oct 2017 08:54:41,9a6b2e8,0
+info,1,1508241281,Teste02,Da Vinci,17 Oct 2017 08:54:41,9a6b2e8,0
+debug,1,1506953211,Teste01,Mona Lisa,02 Oct 2017 11:06:51,913c79a,1
+info,1,1506953211,Teste01,Mona Lisa,02 Oct 2017 11:06:51,913c79a,0
+setLevel,1,1506953211,Teste01,Mona Lisa,02 Oct 2017 11:06:51,913c79a,1
+isInfoEnabled,1,1506953211,Teste01,Mona Lisa,02 Oct 2017 11:06:51,913c79a,0
+debug,1,1506952029,Teste01,Mona Lisa,02 Oct 2017 10:47:09,26614ae,0
+info,1,1506952029,Teste01,Mona Lisa,02 Oct 2017 10:47:09,26614ae,0
+getLogger,1,1506951774,Teste01,Da Vinci,02 Oct 2017 10:42:54,b70d544,0
+getName,1,1506951774,Teste01,Da Vinci,02 Oct 2017 10:42:54,b70d544,0
+getInstance,1,1508241503,Teste02,Mona Lisa,17 Oct 2017 08:58:23,ea47712,0
+debug,1,1506952805,Teste01,Mona Lisa,02 Oct 2017 11:00:05,1fe0d86,0
+isDebugEnabled,1,1506952805,Teste01,Mona Lisa,02 Oct 2017 11:00:05,1fe0d86,0
+info,11,1508242849,Teste02,Dante,17 Oct 2017 09:20:49,ddfd028,11
+info,1,1508241647,Teste02,Mona Lisa,17 Oct 2017 09:00:47,f2045c5,0
+getLogger,1,1508241647,Teste02,Mona Lisa,17 Oct 2017 09:00:47,f2045c5,0
+getName,1,1508241647,Teste02,Mona Lisa,17 Oct 2017 09:00:47,f2045c5,0

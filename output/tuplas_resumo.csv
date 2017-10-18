@@ -1,3 +1,4 @@
 metodos,quantidade,frequencia,desenvolvedor
-info | getLogger | isDebugEnabled | setLevel | getName,5,5,Da Vinci
-debug | info | isDebugEnabled | setLevel | isInfoEnabled,5,10,Mona Lisa
+info | get | setLevel | equals | warn | getLogger | isDebugEnabled | getName,8,25,Da Vinci
+info | getInstance | setLevel | getLogger | isDebugEnabled | getName | debug | isInfoEnabled,8,22,Mona Lisa
+info | remove | get,3,18,Dante

@@ -1,1 +1,3 @@
-main.java
+src/controller/DialogoManager.java
+src/controller/Mapeamento.java
+src/fachada/Fachada.java

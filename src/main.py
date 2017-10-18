@@ -7,6 +7,7 @@ from scripts.run_shell import run_shell_scripts
 from scripts.sh_scripts import *
 from utils import *
 from commit import Commit, Author
+from metricas.find_your_library import library_expertise
 
 commitsObj = {}
 developers = {}
@@ -267,6 +268,12 @@ def load_methods():
     file_methods = 'input/metodos.txt'
     list_api_methods = get_list_lines_from_file(file_methods)
 
+def find_your_library():
+    for key, value in AUTHOR_METHOD_USE.iteritems():
+        print value
+    library_expertise(AUTHOR_METHOD_USE)
+    return None
+
 def start_extraction():
     print 'Iniciando.....'
 
@@ -289,5 +296,6 @@ def start_extraction():
 
         out_cvs_tuple()
 
-        print AUTHOR_METHOD_RESUMO
+        print AUTHOR_METHOD_USE
+        find_your_library()
         # teste_create_out()
