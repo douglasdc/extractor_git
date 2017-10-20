@@ -10,7 +10,8 @@ import numpy
 def library_expertise(provided_symbol, usage_symbol):
     developers = {}
     for dev, value in usage_symbol.iteritems():
-        expertise = {key: value[key] / provided_symbol.get(key, 0) for key in value.keys()}
+        expertise = {key: 0.0 if float(provided_symbol.get(key, 0)) == 0 else round(float(
+            value.get(key, 0)) / float(provided_symbol.get(key, 0)), 4) for key in provided_symbol.keys()}
         developers[dev] = expertise
     
     return developers

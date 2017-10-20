@@ -7,7 +7,7 @@ from scripts.run_shell import run_shell_scripts
 from scripts.sh_scripts import *
 from utils import *
 from commit import Commit, Author
-from metricas.find_your_library import library_expertise
+from metricas.find_your_library import library_expertise, expertise_distance
 
 commitsObj = {}
 developers = {}
@@ -269,9 +269,27 @@ def load_methods():
     list_api_methods = get_list_lines_from_file(file_methods)
 
 def find_your_library():
-    for key, value in AUTHOR_METHOD_USE.iteritems():
-        print value
-    library_expertise(AUTHOR_METHOD_USE)
+    print 'Calculando metricas do Find Your Library Experts.....'
+    total = {}
+    autor = {}
+    for k, value in AUTHOR_METHOD_USE.iteritems():
+        autor[k] = {key: value[key]['adicionou'] for key in value.keys()}
+        for k2 in value.keys():
+            total[k2] = max(total.get(k2, 0) + value[k2]['adicionou'], value[k2]['adicionou'])
+            
+    le = library_expertise(total, autor)
+    ed = expertise_distance(le)
+
+    for dev, value in le.iteritems():
+        value['desenvolvedor'] = dev
+        value['exp_dist'] = ed[dev]
+
+    with open('output/expertise_distance.csv', 'w') as output_file:
+        dict_writer = csv.DictWriter(output_file, fieldnames=le.values()[0].keys(), extrasaction='ignore')
+        dict_writer.writeheader()
+        for value in le.values():
+            dict_writer.writerow(value)
+
     return None
 
 def start_extraction():
@@ -296,6 +314,5 @@ def start_extraction():
 
         out_cvs_tuple()
 
-        print AUTHOR_METHOD_USE
         find_your_library()
         # teste_create_out()
