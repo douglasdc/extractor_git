@@ -20,7 +20,7 @@ def library_expertise(provided_symbol, usage_symbol):
 
 def expertise_distance(library_expertise):
     developers = {}
-    print library_expertise
+    # print library_expertise
     for dev, value in library_expertise.iteritems():
         uns = numpy.ones(1)
         exp = numpy.array(value)

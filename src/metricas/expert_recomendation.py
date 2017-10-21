@@ -30,5 +30,14 @@ def relative_depth(total_usage, usage_symbol):
 # Caculo da largura relativa em relacao ao uso de todos os desenvolvedores
 # Consiste na soma da frequencia relativa para cada metodo da API
 def relative_breadth(usage_symbol):
-    
-    return None
+    total_usage = {}
+    # for key, value in usage_symbol.iteritems():
+    for value in usage_symbol.values():
+        for key in value.keys():
+            total_usage[key] = total_usage.get(key, 0) + 1
+
+    developers = {}
+    for dev, values in usage_symbol.iteritems():
+        developers[dev] = sum(1/float(total_usage[key]) for key in values.keys())
+
+    return developers

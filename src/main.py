@@ -280,7 +280,7 @@ def find_your_library():
     
     le = library_expertise(list_api_methods, autor)
     ed = expertise_distance(le)
-    print ed
+    # print ed
     
     developers = []
     for dev, value in le.iteritems():
@@ -297,9 +297,37 @@ def find_your_library():
         for value in developers:
             dict_writer.writerow(value)
 
-    print relative_depth(total, autor)
 
-    return None
+def expert_recomendation():
+    print 'Calculand metricas do Expert Recommendation.....'
+    total = {}
+    autor = {}
+    for k, value in AUTHOR_METHOD_USE.iteritems():
+        autor[k] = {key: value[key]['adicionou'] for key in value.keys()}
+        for k2 in value.keys():
+            total[k2] = max(total.get(k2, 0) + value[k2]['adicionou'], value[k2]['adicionou'])
+
+    dm = depth_method(autor)
+    bm = breadth_method(autor)
+    rd = relative_depth(total, autor)
+    rb = relative_breadth(autor)
+
+    developers = []
+    for dev in dm.keys():
+        temp = {}
+        temp['depth'] = dm[dev]
+        temp['breadth'] = bm[dev]
+        temp['rel_depth'] = rd[dev]
+        temp['rel_breadth'] = rb[dev]
+
+        developers.append(temp)
+    
+    with open('output/expert_recommendation.csv', 'w') as output_file:
+        dict_writer = csv.DictWriter(
+            output_file, fieldnames=developers[0].keys(), extrasaction='ignore')
+        dict_writer.writeheader()
+        for value in developers:
+            dict_writer.writerow(value)
 
 def start_extraction():
     print 'Iniciando.....'
@@ -324,4 +352,6 @@ def start_extraction():
         out_cvs_tuple()
 
         find_your_library()
+
+        expert_recomendation()
         # teste_create_out()
