@@ -8,6 +8,7 @@ from scripts.sh_scripts import *
 from utils import *
 from commit import Commit, Author
 from metricas.find_your_library import library_expertise, expertise_distance
+from metricas.expert_recomendation import depth_method, breadth_method, relative_breadth, relative_depth
 
 commitsObj = {}
 developers = {}
@@ -276,19 +277,27 @@ def find_your_library():
         autor[k] = {key: value[key]['adicionou'] for key in value.keys()}
         for k2 in value.keys():
             total[k2] = max(total.get(k2, 0) + value[k2]['adicionou'], value[k2]['adicionou'])
-            
-    le = library_expertise(total, autor)
+    
+    le = library_expertise(list_api_methods, autor)
     ed = expertise_distance(le)
-
+    print ed
+    
+    developers = []
     for dev, value in le.iteritems():
-        value['desenvolvedor'] = dev
-        value['exp_dist'] = ed[dev]
-
-    with open('output/expertise_distance.csv', 'w') as output_file:
-        dict_writer = csv.DictWriter(output_file, fieldnames=le.values()[0].keys(), extrasaction='ignore')
+        temp = {}
+        temp['exp_dist'] = ed[dev]
+        temp['desenvolvedor'] = dev
+        temp['lib_exp'] = value
+        developers.append(temp)
+        
+    with open('output/find_your_library.csv', 'w') as output_file:
+        dict_writer = csv.DictWriter(
+            output_file, fieldnames=developers[0].keys(), extrasaction='ignore')
         dict_writer.writeheader()
-        for value in le.values():
+        for value in developers:
             dict_writer.writerow(value)
+
+    print relative_depth(total, autor)
 
     return None
 

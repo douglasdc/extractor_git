@@ -10,18 +10,20 @@ import numpy
 def library_expertise(provided_symbol, usage_symbol):
     developers = {}
     for dev, value in usage_symbol.iteritems():
-        expertise = {key: 0.0 if float(provided_symbol.get(key, 0)) == 0 else round(float(
-            value.get(key, 0)) / float(provided_symbol.get(key, 0)), 4) for key in provided_symbol.keys()}
-        developers[dev] = expertise
+        developers[dev] = sum(1 for v in value.values() if v > 0) /float(len(provided_symbol))
+        # expertise = {key: 0.0 if float(provided_symbol.get(key, 0)) == 0 else round(float(
+        #     value.get(key, 0)) / float(provided_symbol.get(key, 0)), 4) for key in provided_symbol.keys()}
+        # developers[dev] = expertise
     
     return developers
 
 
 def expertise_distance(library_expertise):
     developers = {}
+    print library_expertise
     for dev, value in library_expertise.iteritems():
-        uns = numpy.ones(len(value.values()))
-        exp = numpy.array(value.values())
+        uns = numpy.ones(1)
+        exp = numpy.array(value)
         expertise = numpy.linalg.norm(uns - exp)
         developers[dev] = expertise
 
