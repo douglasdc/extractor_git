@@ -1,5 +1,9 @@
 {
     "projetos":[
         "/mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste02"
-    ]    
+    ],
+    "code_java":true,
+    "code_php":true,
+    "code_javascript":true,
+    "code_python":true
 }

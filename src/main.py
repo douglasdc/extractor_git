@@ -2,6 +2,7 @@
 from subprocess import PIPE, Popen
 from sets import Set
 import re, csv, json, logging
+import timeit
 
 from scripts.run_shell import run_shell_scripts
 from scripts.sh_scripts import *
@@ -9,6 +10,8 @@ from utils import *
 from commit import Commit, Author
 from metricas.find_your_library import library_expertise, expertise_distance
 from metricas.expert_recomendation import depth_method, breadth_method, relative_breadth, relative_depth
+from parser import *
+from data import *
 
 commitsObj = {}
 developers = {}
@@ -36,15 +39,14 @@ def find_commits(list_regex, only_id=False, git_path=''):
     result = []
     if only_id:
         ids = run_shell_scripts(commit_sha1_by_regex(list_regex, git_path), '')
-        # print ids
         commits = strip_data_commit(ids)
         hash_commits = [y[0] for y in commits if len(y[0]) > 0]
 
         result = result + list(set(hash_commits))
 
-    # print str(len(result)) + ' commits encontrados'
     info_file('output/commits_import.txt', result)
     return result
+
 
 def get_commited_files(file_type, sh1a=None, git_path=''):
     if sh1a:
@@ -55,51 +57,66 @@ def get_commited_files(file_type, sh1a=None, git_path=''):
 
 # Busca arquivos que possuiram algum commit contendo refrencias a expressoes regulares presentes em uma lista
 def get_interest_files(commits_sh1a, regex_list, git_path=''):
-    files_interest = set()
+    files_interest = []
     file = ''
     print 'Buscando arquivos de interesse dos commits.....'
     try:
         for sh1a in commits_sh1a:
             if(len(sh1a) > 0):
                 files = get_commited_files('java', sh1a, git_path)
-                files = files.split('\n')
-                for file_path in files:
-                    if len(file_path) > 0 and file_path not in files_interest:
-                        file = git_path + '/' + file_path
-                        with open(git_path + '/' + file_path) as f:
-                            for regex in regex_list:
-                                if(re.search(regex, f.read())):
-                                    # Insere os arquivos de cada commit na lista de arquivos de interesse
-                                    files_interest.add(file_path)
+                files_interest = files_interest + [git_path + '/' + file for file in files.split('\n') if len(file) > 0]
 
     except Exception as e:
         logging.warning('Arquivo nao encontrato - ' + file)
     
     info_file('output/arquivos_interesse.txt', list(set(files_interest)))
-    # print str(len(files_interest)) + ' arquivos de interesse encontrado'
-    return files_interest
+    return list(set(files_interest))
 
 # Busca os commits que possuem referencia às expressões regulares em cada arquivo de uma lista de arquivos
 # PRECISA AINDA VERIFICAR SE REALMENTE FAZ REFERENCIA A API, VERIFICAR SE A CLASSE OU MÉTODO É DA API
 def commits_regex_by_file(regex_list, files, git_path=''):
     global commitsObj
     global developers
+    commits2 = {}
     # id_commit_method = {}
     print 'Buscando commits de arquivos pela lista de metodos.....'
+    tat = '\(|.'.join(map(str, regex_list))
     for file in files:
+        # commit_hash = run_shell_scripts(commit_sha1_by_regex_file(tat, file, git_path), '') #Hashs dos commits que usaram o atributo nesse arquivo
+        # print commit_hash
         for att in regex_list:
-            
             commit_regex_file = []
+            import time
             commit_hash = run_shell_scripts(commit_sha1_by_regex_file(att, file, git_path), '') #Hashs dos commits que usaram o atributo nesse arquivo
-            commits = strip_data_commit(commit_hash)
-            for commit in commits:
-                if len(commit[0]) > 0:
+            if len(commit_hash) > 0:
+                commits = strip_data_commit(commit_hash)
+                for commit in commits:
+
                     if commit[0] not in id_commit_method:
                         id_commit_method[commit[0]] = []
                     
+                    id_commit_method[commit[0]].append(att)
+
+                    if commit[0] not in commits:
+                        temp = {}
+                        temp['commit'] = commit[0]
+                        temp['autor'] = commit[1]
+                        temp['timestamp'] = commit[2]
+                        temp['metodos'] = []
+                        temp['metodos'].append(att)
+                        temp['arquivos'] = []
+                        temp['arquivos'].append(file)
+
+                        # teste[commit[0]] = {}
+                        commits2[commit[0]] = temp
+                    else:
+                        commits2[commit[0]]['metodos'].append(att)
+                        commits2[commit[0]]['arquivos'].append(file)
+
+                # #         # print teste
+
                     relation_dev_commit(commit, att, file, git_path)
                     # Insere a expressão na lista das expressoes alteradas por aquele commit
-                    id_commit_method[commit[0]].append(att)
                     if commit[0] not in commitsObj:
                         c = Commit(commit[0], commit[1], commit[2], att, git_path, 0, 0)
                         commitsObj[commit[0]] = c
@@ -113,6 +130,7 @@ def commits_regex_by_file(regex_list, files, git_path=''):
                         developers[commit[1]].insert_method(att, 0, 0)
 
     info_file('output/commits_atributos.txt', id_commit_method)
+    return commits2
     # print str(len(id_commit_method)) + ' commits encontrados'
 
 def relation_dev_commit(commit, metodo, file, git_path):
@@ -280,7 +298,6 @@ def find_your_library():
     
     le = library_expertise(list_api_methods, autor)
     ed = expertise_distance(le)
-    # print ed
     
     developers = []
     for dev, value in le.iteritems():
@@ -314,7 +331,8 @@ def expert_recomendation():
 
     developers = []
     for dev in dm.keys():
-        temp = {}
+        temp = {} 
+        temp['dev'] = dev  
         temp['depth'] = dm[dev]
         temp['breadth'] = bm[dev]
         temp['rel_depth'] = rd[dev]
@@ -343,11 +361,28 @@ def start_extraction():
         commits_sh1a = find_commits(list_import_regex, True, project)
         
         # Busca os arquivos de interesse presentes no commits que possuiam referencia aos import dos 
-        files_interest = get_interest_files(commits_sh1a,list_import_regex, project)
+        files_interest = get_interest_files(commits_sh1a, list_import_regex, project)
 
+        import time
+        start = time.time()
         # Extrai todos os commits que os arquivos de interesse tiveram, 
         # buscando os commits que possuem uso dos metodos presentes na lista
-        commits_regex_by_file(list_api_methods, files_interest, project)
+        commits = commits_regex_by_file(list_api_methods, files_interest, project)
+
+        # for key, value in commits.iteritems():
+        #     commit_all = ''
+        #     for file in value['arquivos']:
+        #         commit_all = run_shell_scripts(get_all_commit(key, file, project), '')
+        #         # print commit_all
+        #     contagem = find_patters_commit(commit_all, list_api_methods, True)
+        #     value['metodos'] = contagem
+
+        # print '-----'
+        # summary(commits)
+
+        # print '-----'
+        # print summary_author(commits)
+        
 
         out_cvs_tuple()
 
