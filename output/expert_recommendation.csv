@@ -1,4 +1,4 @@
-breadth,depth,rel_depth,dev,rel_breadth
-4,20,2.7,Da Vinci,2.833333333333333
-5,12,4.1,Mona Lisa,4.333333333333333
-3,18,2.2,Dante,1.8333333333333333
+relative_depth,breadth,depth,relative_breadth,dev
+2.582783882783883,5,25,3.0,Da Vinci
+4.926007326007326,7,24,5.0,Mona Lisa
+2.4912087912087912,4,34,1.9999999999999998,Dante

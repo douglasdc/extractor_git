@@ -1,5 +1,10 @@
 #coding:utf-8
+# *****************************************************************************
 # Implementation of metrics from "Expert Recommendation with Usage Expertise"
+# *****************************************************************************
+
+from src.data import methods_total_frequency
+
 
 # Calcula a profundiade do conhecimento do desenvolvedor
 # Consiste na soma da frequencia de uso de todos os métodos da API
@@ -20,7 +25,8 @@ def breadth_method(usage_symbol):
     return developers
 
 # Calculo da profundidade em relação ao uso de todos os desenvolvedores
-def relative_depth(total_usage, usage_symbol):
+def relative_depth(usage_symbol):
+    total_usage = methods_total_frequency(usage_symbol)
     developers = {}
     for k2, value in usage_symbol.iteritems():
         developers[k2] = sum(float(value[key])/float(total_usage[key]) for key in value.keys())

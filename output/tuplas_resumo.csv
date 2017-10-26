@@ -1,4 +1,4 @@
-metodos,quantidade,frequencia,desenvolvedor
-warn | info | equals | get,4,20,Da Vinci
-info | getLogger | getName | setLevel | getInstance,5,12,Mona Lisa
-info | remove | get,3,18,Dante
+frequencia_removidos,quantidade_removidos,frequencia_total,quantidade_inseridos,quantidade_total,metodos,frequencia_inseridos,desenvolvedor
+0,0,25,5,5,info | warn | equals | log | get,25,Da Vinci
+0,0,24,7,7,info | log | getInstance | get | getName | getLogger | setLevel,24,Mona Lisa
+2,2,34,4,4,info | log | remove | get,32,Dante

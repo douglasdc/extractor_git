@@ -1,0 +1,4 @@
+metodos,quantidade,frequencia,desenvolvedor
+warn | info | equals | get,4,20,Da Vinci
+info | getLogger | getName | setLevel | getInstance,5,12,Mona Lisa
+info | remove | get,3,18,Dante

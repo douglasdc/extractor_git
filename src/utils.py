@@ -26,7 +26,7 @@ def info_file(file_path, data):
 def write_csv(out_path, file_name, out_dict):
     with open(out_path + '/' + file_name + '.csv', 'w') as output_file:
         dict_writer = csv.DictWriter(
-            output_file, fieldnames=out_dict.keys(), extrasaction='ignore')
+            output_file, fieldnames=out_dict[0].keys(), extrasaction='ignore')
         dict_writer.writeheader()
         for value in out_dict:
             dict_writer.writerow(value)
