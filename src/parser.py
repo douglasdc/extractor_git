@@ -16,7 +16,7 @@ def find_patters_commit(commit, metodos, remove_lines_iquals):
     contagem = {}
     for metodo in metodos:
         contagem[metodo] = {}
-        contagem[metodo]['adicionou'] = sum(1 for value in inseridos if re.search(metodo, value))
-        contagem[metodo]['removeu'] = sum(1 for value in removidos if re.search(metodo, value))
+        contagem[metodo]['adicionou'] = sum(1 for value in inseridos if re.search('.' + metodo + '\(', value))
+        contagem[metodo]['removeu'] = sum(1 for value in removidos if re.search('.' + metodo + '\(', value))
     
     return contagem
