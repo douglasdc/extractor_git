@@ -64,7 +64,7 @@ def autor_methods_frequency(commits, removidos=True):
     return autor
 
 
-def methods_total_frequency(autor_methods_frequency, removidos=True):
+def methods_total_frequency(autor_methods_frequency):
     metodos = {}
     for dev, value in autor_methods_frequency.iteritems():
         for key, uso in value.iteritems():

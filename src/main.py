@@ -13,6 +13,7 @@ from metricas.expert_recomendation import depth_method, breadth_method, relative
 from parser import *
 from data import *
 from data_export import *
+from parametros import *
 
 commitsObj = {}
 developers = {}
@@ -64,7 +65,7 @@ def get_interest_files(commits_sh1a, regex_list, git_path=''):
     try:
         for sh1a in commits_sh1a:
             if(len(sh1a) > 0):
-                files = get_commited_files('java', sh1a, git_path)
+                files = get_commited_files(LINGUAGENS, sh1a, git_path)
                 files_interest = files_interest + [git_path + '/' + file for file in files.split('\n') if len(file) > 0]
 
     except Exception as e:
@@ -112,12 +113,23 @@ def commits_regex_by_file(regex_list, files, git_path=''):
 
 def load_files():
     global projects
+    global PROJETOS
+    global CONSIDERAR_REMOCAO
+    global LINGUAGENS
 
     print 'Carregando parametros.....'
     try:
         parametros = open('parametros.json')
         parameters = json.load(parametros)
         projects = parameters['projetos']
+        PROJETOS = projects
+        CONSIDERAR_REMOCAO = parameters['considerar_removidos']
+
+        if parameters['code_java']: LINGUAGENS.append('java')
+        if parameters['code_python']: LINGUAGENS.append('py')
+        if parameters['code_javascript']: LINGUAGENS.append('js')
+        if parameters['code_php']: LINGUAGENS.append('php')
+
     except Exception as ex:
         logging.critical('FALHA NO ARQUIVO DE PARAMETROS')
         print 'Verifique seu arquivo de parametros, algo de errado não está certo'
@@ -139,7 +151,7 @@ def load_methods():
 
 def find_your_library(commits):
     
-    autor = autor_methods_frequency(commits)
+    autor = autor_methods_frequency(commits, CONSIDERAR_REMOCAO)
     # total = methods_total_frequency(commits)
     le = library_expertise(list_api_methods, autor)
     ed = expertise_distance(le)
@@ -148,7 +160,7 @@ def find_your_library(commits):
 
 def expert_recomendation(commits):
     print 'Calculando metricas do Expert Recommendation.....'
-    autor = autor_methods_frequency(commits)
+    autor = autor_methods_frequency(commits, CONSIDERAR_REMOCAO)
 
     dm = depth_method(autor)
     bm = breadth_method(autor)
@@ -160,11 +172,14 @@ def expert_recomendation(commits):
 def start_extraction():
     print 'Iniciando.....'
 
+    global PROJETO_ATUAL
+
     load_files()
     load_imports()
     load_methods()
     for project in projects:
         p = project.split('/')
+        PROJETO_ATUAL = p
         print 'Inicando extracao no projeto - '  + p[len(p) - 1]
         
         # Busca os commits que possuiram referencia aos imports
@@ -183,7 +198,7 @@ def start_extraction():
             for file in value['arquivos']:
                 commit_all = run_shell_scripts(get_all_commit(key, file, project), '')
                 # print commit_all
-            contagem = find_patters_commit(commit_all, list_api_methods, True)
+            contagem = find_patters_commit(commit_all, list_api_methods, CONSIDERAR_REMOCAO)
             value['metodos'] = contagem
 
         general = summary(commits)

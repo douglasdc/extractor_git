@@ -63,7 +63,8 @@ def commit_regex_by_author(regex, file, git_folder):
 
 
 def see_changed_files(file_type, git_folder): 
-    script = DEFINE_GIT_FOLDER(git_folder) + ' diff-tree --no-commit-id --name-only -r | awk "/^.*\.' + file_type + '/"'
+    languages = '|'.join(map(str, file_type))
+    script = DEFINE_GIT_FOLDER(git_folder) + ' diff-tree --no-commit-id --name-only -r | awk "/^.*\.(' + languages + ')/"'
     logging.info(script)
     return script
 
@@ -89,7 +90,9 @@ def commit_sha1_by_regex_file(regex, file_path, git_folder):
 
 
 def commited_files(sh1a, file_type, git_folder): 
-    script = DEFINE_GIT_FOLDER(git_folder) + ' show --pretty="" --name-only ' + sh1a + ' | awk "/^.*\.' + file_type + '/"'
+    languages = '|'.join(map(str, file_type))
+    script = DEFINE_GIT_FOLDER(git_folder) + ' show --pretty="" --name-only ' + sh1a + ' | awk "/^.*\.(' + languages + ')/"'
+    # print script
     logging.info(script)
     return script
 
