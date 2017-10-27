@@ -1,4 +1,32 @@
 frequencia_removidos,quantidade_removidos,frequencia_total,quantidade_inseridos,quantidade_total,metodos,frequencia_inseridos,desenvolvedor
-0,0,20,4,4,info | warn | equals | get,20,Da Vinci
-0,0,12,5,5,info | getLogger | getName | setLevel | getInstance,12,Mona Lisa
-1,1,19,3,3,info | remove | get,18,Dante
+1,0,2,1,1,warn,1,Daniel Martin
+0,0,3,1,1,equals,3,Marty Schoch
+0,0,9,7,7,configure | clear | remove | warn | error | debug | close,9,Alexander Sokolovsky
+0,0,6,4,4,debug | toString | equals | get,6,Raghavan Srinivas
+98,12,339,20,21,info | peek | clear | log | getInstance | get | getName | equals | remove | warn | debug | isDebugEnabled | toString | push | shutdown | error | put | close | fatal | isInfoEnabled | getLogger,241,Dustin Sallings
+1,0,2,1,1,get,1,Valeri Felberg
+2,2,9,2,2,put | get,7,Kristian Eide
+0,0,4,1,1,get,4,Aaron Miller
+4,1,6,1,2,getName | equals,2,Greg Kim
+4,0,13,3,3,put | getInstance | get,9,Joseph Hart
+0,0,1,1,1,equals,1,Kevin Lafferty
+1,1,3,1,1,get,2,Ahn Seong Hwa
+1,0,2,1,1,debug,1,amcreynolds
+2,0,8,3,3,debug | put | get,6,Philipp Fehre
+55,10,161,12,14,info | peek | configure | get | getName | equals | remove | warn | debug | toString | shutdown | error | put | close,106,Mike Wiederhold
+0,0,15,5,5,get | toString | equals | shutdown | hashCode,15,Nelz
+42,12,156,16,18,info | isTraceEnabled | log | setName | get | clear | format | equals | remove | hashCode | warn | debug | toString | shutdown | error | put | close | getLogger,114,Michael Nitschinger
+0,0,5,1,1,get,5,Matt Weiden
+1,0,2,1,1,put,1,Fabien Renaud
+28,9,88,11,13,info | format | setLevel | get | put | equals | remove | hashCode | warn | getLogger | toString | shutdown | debug,60,Matt Ingenthron
+2,1,2,0,1,remove,0,Paul Burnstein
+7,1,14,1,1,get,7,Ray Krueger
+0,0,37,2,2,put | hashCode,37,Paul Marynchev
+0,0,1,1,1,warn,1,vgnanasekaran
+1,1,20,8,8,info | get | getName | warn | getLogger | toString | error | close,19,Boris Partensky
+1,1,2,1,2,info | get,1,Andrey Kartashov
+1,0,2,1,1,put,1,ciaranj
+1,0,2,1,1,get,1,Ted Crossman
+0,0,4,1,1,get,4,Nick Brachet
+0,0,2,1,1,shutdown,2,mattbertolini
+9,3,39,4,4,put | remove | getInstance | get,30,Blair Zajac

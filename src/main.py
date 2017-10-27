@@ -116,6 +116,7 @@ def load_files():
     global PROJETOS
     global CONSIDERAR_REMOCAO
     global LINGUAGENS
+    global REMOVER_LINHAS_IDENTICAS
 
     print 'Carregando parametros.....'
     try:
@@ -124,6 +125,7 @@ def load_files():
         projects = parameters['projetos']
         PROJETOS = projects
         CONSIDERAR_REMOCAO = parameters['considerar_removidos']
+        REMOVER_LINHAS_IDENTICAS = parameters['linhas_identicas']
 
         if parameters['code_java']: LINGUAGENS.append('java')
         if parameters['code_python']: LINGUAGENS.append('py')
@@ -142,6 +144,7 @@ def load_imports():
     file_imports = 'input/imports.txt'
     list_import_regex = get_list_lines_from_file(file_imports)
 
+
 def load_methods():
     global list_api_methods
 
@@ -149,7 +152,9 @@ def load_methods():
     file_methods = 'input/metodos.txt'
     list_api_methods = get_list_lines_from_file(file_methods)
 
+
 def find_your_library(commits):
+    print 'Calculando metricas do Find Your Library.....'
     
     autor = autor_methods_frequency(commits, CONSIDERAR_REMOCAO)
     # total = methods_total_frequency(commits)
@@ -169,6 +174,21 @@ def expert_recomendation(commits):
 
     expertise__csv(dm, bm, rd, rb)
 
+
+def count_commits(commits, project):
+    commits = commits.copy()
+    for key, value in commits.iteritems():
+        commit_all = ''
+        for file in value['arquivos']:
+            commit_all = run_shell_scripts(get_all_commit(key, file, project), '')
+
+        contagem = find_patters_commit(commit_all, list_api_methods, CONSIDERAR_REMOCAO)
+        commits[key]['metodos'] = contagem
+
+    # print commits
+    return commits
+
+
 def start_extraction():
     print 'Iniciando.....'
 
@@ -179,7 +199,7 @@ def start_extraction():
     load_methods()
     for project in projects:
         p = project.split('/')
-        PROJETO_ATUAL = p
+        PROJETO_ATUAL = p[len(p) - 1]
         print 'Inicando extracao no projeto - '  + p[len(p) - 1]
         
         # Busca os commits que possuiram referencia aos imports
@@ -193,13 +213,7 @@ def start_extraction():
         # commits = commits_regex_by_file(list_api_methods, files_interest, project)
         commits = commits_regex_by_file(list_api_methods, files_interest, project)
 
-        for key, value in commits.iteritems():
-            commit_all = ''
-            for file in value['arquivos']:
-                commit_all = run_shell_scripts(get_all_commit(key, file, project), '')
-                # print commit_all
-            contagem = find_patters_commit(commit_all, list_api_methods, CONSIDERAR_REMOCAO)
-            value['metodos'] = contagem
+        commits = count_commits(commits, project)
 
         general = summary(commits)
         s_author = summary_author(commits)

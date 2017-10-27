@@ -99,5 +99,5 @@ def commited_files(sh1a, file_type, git_folder):
 
 def get_all_commit(sh1a, file_path, git_folder):
     script = DEFINE_GIT_FOLDER(git_folder) + ' show ' + sh1a + ' ' + file_path
-    # print script
+    logging.info(script)
     return script

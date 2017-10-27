@@ -1,10 +1,13 @@
 {
     "projetos":[
-        "/mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste02"
+        "/mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste02",
+        "/mnt/c/Users/Douglas/Documents/java-memcached-client"
     ],
     "code_java":true,
     "code_php":true,
     "code_javascript":true,
     "code_python":true,
-    "considerar_removidos":true
+    "considerar_removidos":true,
+    "por_projeto":true,
+    "linhas_identicas": true
 }

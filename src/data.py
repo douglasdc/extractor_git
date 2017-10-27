@@ -7,7 +7,7 @@ from scripts.sh_scripts import *
 
 def summary(commits):
     for key, value in commits.iteritems():
-        value['metodos'] = {key: value for key, value in value['metodos'].iteritems() if (value['adicionou'] + value['removeu']) > 0}
+        value['metodos'] = {keys: values for keys, values in value['metodos'].iteritems() if (values['adicionou'] + values['removeu']) > 0}
         value['momento'] = "{:%d %b %Y %H:%M:%S}".format(datetime.fromtimestamp(float(value['timestamp'])))
 
     return commits
