@@ -47,6 +47,7 @@ def find_commits(list_regex, only_id=False, git_path=''):
         result = result + list(set(hash_commits))
 
     info_file('output/commits_import.txt', result)
+    print 'Encontrado ' + str(len(result)) + ' commits'
     return result
 
 
@@ -74,7 +75,7 @@ def get_interest_files(commits_sh1a, regex_list, git_path=''):
         logging.warning('Arquivo nao encontrato - ' + file)
     
     info_file('output/arquivos_interesse.txt', list(set(files_interest)))
-    # print len(files_interest)
+    print 'Encontrato ' + str(len(files_interest)) + ' arquivos'
     return list(set(files_interest))
 
 # Busca os commits que possuem referencia às expressões regulares em cada arquivo de uma lista de arquivos
@@ -111,6 +112,7 @@ def commits_regex_by_file(regex_list, files, git_path=''):
                     commits2[commit[0]]['arquivos'].append(file)
 
     info_file('output/commits_atributos.txt', id_commit_method)
+    print 'Encontrato ' + str(len(commits2)) + ' commits'
     return commits2
 
 
@@ -146,6 +148,7 @@ def load_imports():
     print 'Carregando imports da API.....'
     file_imports = 'input/imports.txt'
     list_import_regex = get_list_lines_from_file(file_imports)
+    print 'Imports no arquivo: ' + str(len(list_import_regex))
 
 
 def load_methods():
@@ -154,6 +157,7 @@ def load_methods():
     print 'Carregando metodos da API.....'
     file_methods = 'input/metodos.txt'
     list_api_methods = get_list_lines_from_file(file_methods)
+    print 'Metodos no arquivo: ' + str(len(list_api_methods))
 
 
 def find_your_library(commits):
