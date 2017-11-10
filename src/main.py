@@ -148,6 +148,7 @@ def load_imports():
     print 'Carregando imports da API.....'
     file_imports = 'input/imports.txt'
     list_import_regex = get_list_lines_from_file(file_imports)
+    print list_import_regex
     print 'Imports no arquivo: ' + str(len(list_import_regex))
 
 
@@ -157,6 +158,7 @@ def load_methods():
     print 'Carregando metodos da API.....'
     file_methods = 'input/metodos.txt'
     list_api_methods = get_list_lines_from_file(file_methods)
+    print list_api_methods
     print 'Metodos no arquivo: ' + str(len(list_api_methods))
 
 
