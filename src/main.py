@@ -65,13 +65,16 @@ def get_interest_files(commits_sh1a, regex_list, git_path=''):
     try:
         for sh1a in commits_sh1a:
             if(len(sh1a) > 0):
+                full_path = git_path + '/' + file
                 files = get_commited_files(LINGUAGENS, sh1a, git_path)
-                files_interest = files_interest + [git_path + '/' + file for file in files.split('\n') if len(file) > 0]
+                files_interest = files_interest + [git_path + '/' + file for file in files.split('\n') if git_path + '/' + file not in files_interest and len(file) > 0 and
+                len(run_shell_scripts('[ -f "' + git_path + '/' + file + '" ] && echo "Arquivo existe"', '')) > 0]
 
     except Exception as e:
         logging.warning('Arquivo nao encontrato - ' + file)
     
     info_file('output/arquivos_interesse.txt', list(set(files_interest)))
+    # print len(files_interest)
     return list(set(files_interest))
 
 # Busca os commits que possuem referencia às expressões regulares em cada arquivo de uma lista de arquivos

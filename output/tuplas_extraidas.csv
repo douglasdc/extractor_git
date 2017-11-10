@@ -1,483 +1,109 @@
 autor,momento,commit,timestamp,metodo,removeu,adicionou
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,info,7,12
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,peek,1,1
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,clear,0,2
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,log,0,5
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,getInstance,2,0
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,get,43,100
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,getName,0,8
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,equals,7,8
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,remove,1,5
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,warn,2,11
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,debug,11,12
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,isDebugEnabled,0,2
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,toString,5,18
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,push,0,3
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,shutdown,2,13
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,error,0,4
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,put,14,18
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,close,3,9
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,fatal,0,6
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,isInfoEnabled,0,3
-Dustin Sallings,10 Aug 2006 04:55:56,363a95a,1155196556,getLogger,0,1
-Michael Nitschinger,02 Jun 2014 07:43:47,a982d0a,1401705827,info,4,4
-Michael Nitschinger,02 Jun 2014 07:43:47,a982d0a,1401705827,isTraceEnabled,0,1
-Michael Nitschinger,02 Jun 2014 07:43:47,a982d0a,1401705827,log,0,3
-Michael Nitschinger,02 Jun 2014 07:43:47,a982d0a,1401705827,setName,1,0
-Michael Nitschinger,02 Jun 2014 07:43:47,a982d0a,1401705827,get,5,39
-Michael Nitschinger,02 Jun 2014 07:43:47,a982d0a,1401705827,clear,1,0
-Michael Nitschinger,02 Jun 2014 07:43:47,a982d0a,1401705827,format,0,3
-Michael Nitschinger,02 Jun 2014 07:43:47,a982d0a,1401705827,equals,4,7
-Michael Nitschinger,02 Jun 2014 07:43:47,a982d0a,1401705827,remove,0,4
-Michael Nitschinger,02 Jun 2014 07:43:47,a982d0a,1401705827,hashCode,0,1
-Michael Nitschinger,02 Jun 2014 07:43:47,a982d0a,1401705827,warn,8,13
-Michael Nitschinger,02 Jun 2014 07:43:47,a982d0a,1401705827,debug,5,10
-Michael Nitschinger,02 Jun 2014 07:43:47,a982d0a,1401705827,toString,0,6
-Michael Nitschinger,02 Jun 2014 07:43:47,a982d0a,1401705827,shutdown,1,1
-Michael Nitschinger,02 Jun 2014 07:43:47,a982d0a,1401705827,error,3,3
-Michael Nitschinger,02 Jun 2014 07:43:47,a982d0a,1401705827,put,4,14
-Michael Nitschinger,02 Jun 2014 07:43:47,a982d0a,1401705827,close,3,3
-Michael Nitschinger,02 Jun 2014 07:43:47,a982d0a,1401705827,getLogger,3,2
-Daniel Martin,19 Aug 2011 15:57:23,a9035c9,1313780243,warn,1,1
-Dustin Sallings,06 Sep 2009 03:28:26,c4fd35d,1252218506,put,14,18
-Dustin Sallings,06 Sep 2009 03:28:26,c4fd35d,1252218506,shutdown,2,13
-Dustin Sallings,06 Sep 2009 03:28:26,c4fd35d,1252218506,getInstance,2,0
-Michael Nitschinger,26 Aug 2013 04:07:20,d3a6d57,1377500840,put,4,14
-Michael Nitschinger,26 Aug 2013 04:07:20,d3a6d57,1377500840,remove,0,4
-Michael Nitschinger,26 Aug 2013 04:07:20,d3a6d57,1377500840,get,5,39
-Dustin Sallings,22 Feb 2008 04:00:10,6461165,1203663610,debug,11,12
-Dustin Sallings,22 Feb 2008 04:00:10,6461165,1203663610,put,4,0
-Dustin Sallings,22 Feb 2008 04:00:10,6461165,1203663610,equals,7,8
-Dustin Sallings,22 Feb 2008 04:00:10,6461165,1203663610,get,43,100
-Matt Ingenthron,31 Mar 2010 16:44:59,8afa770,1270064699,info,5,3
-Matt Ingenthron,31 Mar 2010 16:44:59,8afa770,1270064699,format,0,2
-Matt Ingenthron,31 Mar 2010 16:44:59,8afa770,1270064699,setLevel,0,2
-Matt Ingenthron,31 Mar 2010 16:44:59,8afa770,1270064699,get,9,15
-Matt Ingenthron,31 Mar 2010 16:44:59,8afa770,1270064699,put,2,10
-Matt Ingenthron,31 Mar 2010 16:44:59,8afa770,1270064699,equals,2,2
-Matt Ingenthron,31 Mar 2010 16:44:59,8afa770,1270064699,remove,1,0
-Matt Ingenthron,31 Mar 2010 16:44:59,8afa770,1270064699,hashCode,2,0
-Matt Ingenthron,31 Mar 2010 16:44:59,8afa770,1270064699,warn,1,5
-Matt Ingenthron,31 Mar 2010 16:44:59,8afa770,1270064699,getLogger,0,3
-Matt Ingenthron,31 Mar 2010 16:44:59,8afa770,1270064699,toString,3,6
-Matt Ingenthron,31 Mar 2010 16:44:59,8afa770,1270064699,shutdown,0,3
-Matt Ingenthron,31 Mar 2010 16:44:59,8afa770,1270064699,debug,3,9
-Raghavan Srinivas,13 Aug 2012 02:48:20,9455c1a,1344836900,debug,0,2
-Raghavan Srinivas,13 Aug 2012 02:48:20,9455c1a,1344836900,toString,0,1
-Raghavan Srinivas,13 Aug 2012 02:48:20,9455c1a,1344836900,equals,0,1
-Raghavan Srinivas,13 Aug 2012 02:48:20,9455c1a,1344836900,get,0,2
-Mike Wiederhold,18 Oct 2011 23:49:50,05a12e0,1318988990,info,0,1
-Mike Wiederhold,18 Oct 2011 23:49:50,05a12e0,1318988990,peek,1,1
-Mike Wiederhold,18 Oct 2011 23:49:50,05a12e0,1318988990,configure,3,0
-Mike Wiederhold,18 Oct 2011 23:49:50,05a12e0,1318988990,get,17,22
-Mike Wiederhold,18 Oct 2011 23:49:50,05a12e0,1318988990,getName,0,2
-Mike Wiederhold,18 Oct 2011 23:49:50,05a12e0,1318988990,equals,17,30
-Mike Wiederhold,18 Oct 2011 23:49:50,05a12e0,1318988990,remove,1,2
-Mike Wiederhold,18 Oct 2011 23:49:50,05a12e0,1318988990,warn,4,2
-Mike Wiederhold,18 Oct 2011 23:49:50,05a12e0,1318988990,debug,2,5
-Mike Wiederhold,18 Oct 2011 23:49:50,05a12e0,1318988990,toString,0,4
-Mike Wiederhold,18 Oct 2011 23:49:50,05a12e0,1318988990,shutdown,3,5
-Mike Wiederhold,18 Oct 2011 23:49:50,05a12e0,1318988990,error,1,0
-Mike Wiederhold,18 Oct 2011 23:49:50,05a12e0,1318988990,put,6,25
-Mike Wiederhold,18 Oct 2011 23:49:50,05a12e0,1318988990,close,0,7
-Michael Nitschinger,28 Jan 2013 12:57:44,6e8c47d,1359388664,debug,5,10
-Dustin Sallings,14 Oct 2009 15:38:00,88aad1b,1255545480,get,1,1
-Dustin Sallings,04 Nov 2009 04:05:25,4549dce,1257318325,debug,0,1
-Michael Nitschinger,16 Nov 2016 05:11:36,e1979df,1479283896,info,4,4
-Michael Nitschinger,16 Nov 2016 05:11:36,e1979df,1479283896,toString,0,1
-Dustin Sallings,06 Sep 2009 03:52:34,f850e9d,1252219954,shutdown,0,1
-Dustin Sallings,06 Sep 2009 03:52:34,f850e9d,1252219954,get,0,2
-Dustin Sallings,22 Feb 2008 04:00:16,988bbb9,1203663616,get,0,3
-Michael Nitschinger,09 Jan 2015 07:55:34,f896fd5,1420800934,warn,8,13
-Matt Ingenthron,19 Feb 2012 04:57:37,abcb8b3,1329634657,toString,0,1
-Matt Ingenthron,19 Feb 2012 04:57:37,abcb8b3,1329634657,format,0,2
-Dustin Sallings,20 Jun 2009 22:41:54,b634d0a,1245548514,get,0,2
-Blair Zajac,06 Nov 2009 13:55:41,7831c78,1257526541,put,1,3
-Blair Zajac,06 Nov 2009 13:55:41,7831c78,1257526541,remove,0,1
-Blair Zajac,06 Nov 2009 13:55:41,7831c78,1257526541,getInstance,1,1
-Blair Zajac,06 Nov 2009 13:55:41,7831c78,1257526541,get,7,25
-Matt Ingenthron,28 Jul 2012 15:59:20,807e2ea,1343501960,debug,3,9
-Matt Ingenthron,28 Jul 2012 15:59:20,807e2ea,1343501960,info,5,3
-Dustin Sallings,02 May 2008 23:54:20,4bcd22c,1209783260,get,2,2
-Matt Ingenthron,10 Jan 2013 05:22:39,39d1a8d,1357806159,info,2,2
-Ray Krueger,01 May 2008 12:41:54,ec93207,1209656514,get,7,7
-Mike Wiederhold,16 Aug 2011 18:09:31,7d40455,1313528971,put,0,1
-Mike Wiederhold,16 Aug 2011 18:09:31,7d40455,1313528971,equals,17,30
-Mike Wiederhold,16 Aug 2011 18:09:31,7d40455,1313528971,get,0,1
-Dustin Sallings,08 Oct 2009 02:42:57,23152a2,1254980577,toString,5,18
-Michael Nitschinger,08 Jan 2014 07:57:11,7c5b87d,1389178631,setName,1,0
-Boris Partensky,18 Oct 2008 18:03:09,c7918a1,1224363789,info,1,2
-Boris Partensky,18 Oct 2008 18:03:09,c7918a1,1224363789,get,0,2
-Boris Partensky,18 Oct 2008 18:03:09,c7918a1,1224363789,getName,0,2
-Boris Partensky,18 Oct 2008 18:03:09,c7918a1,1224363789,warn,0,4
-Boris Partensky,18 Oct 2008 18:03:09,c7918a1,1224363789,getLogger,0,3
-Boris Partensky,18 Oct 2008 18:03:09,c7918a1,1224363789,toString,0,2
-Boris Partensky,18 Oct 2008 18:03:09,c7918a1,1224363789,error,0,3
-Boris Partensky,18 Oct 2008 18:03:09,c7918a1,1224363789,close,0,1
-Dustin Sallings,24 Sep 2009 15:17:23,0cc7605,1253816243,get,1,1
-Paul Burnstein,28 Jul 2011 02:36:00,ff1df81,1311831360,remove,2,0
-Michael Nitschinger,08 Aug 2013 08:17:38,5d4daec,1375960658,get,0,2
-Mike Wiederhold,06 Jun 2011 16:11:46,94515db,1307387506,equals,0,1
-Mike Wiederhold,06 Jun 2011 16:11:46,94515db,1307387506,get,0,1
-ciaranj,25 Sep 2009 07:48:31,547cdc5,1253875711,put,1,1
-Matt Ingenthron,15 Mar 2010 06:56:35,4ac7a1e,1268646995,debug,0,1
-Matt Ingenthron,15 Mar 2010 06:56:35,4ac7a1e,1268646995,warn,1,5
-Matt Ingenthron,15 Mar 2010 06:56:35,4ac7a1e,1268646995,toString,0,1
-Michael Nitschinger,14 Apr 2014 03:35:47,38954c1,1397457347,warn,1,4
-Matt Ingenthron,21 May 2012 15:24:52,ac6ccd8,1337624692,debug,0,1
-Matt Ingenthron,21 May 2012 15:24:52,ac6ccd8,1337624692,warn,1,0
-Mike Wiederhold,14 Jul 2011 21:27:22,dd7aa77,1310689642,debug,2,5
-Mike Wiederhold,14 Jul 2011 21:27:22,dd7aa77,1310689642,warn,4,2
-Mike Wiederhold,14 Jul 2011 21:27:22,dd7aa77,1310689642,info,0,1
-Dustin Sallings,26 Feb 2008 03:57:52,98c0e69,1204009072,get,0,2
-Matt Ingenthron,25 Feb 2011 04:03:51,dfd1bd2,1298617431,get,0,1
-Dustin Sallings,29 Feb 2008 22:50:39,1ee97bc,1204336239,debug,0,1
-Dustin Sallings,19 Sep 2009 19:14:52,4888bb9,1253398492,push,0,3
-Dustin Sallings,19 Sep 2009 19:14:52,4888bb9,1253398492,shutdown,0,3
-Dustin Sallings,19 Sep 2009 19:14:52,4888bb9,1253398492,get,0,1
-Ahn Seong Hwa,06 Feb 2010 07:28:10,64d2d91,1265452090,get,1,2
-Blair Zajac,03 Jun 2010 20:56:44,d82f698,1275609404,getInstance,1,1
-Mike Wiederhold,06 Oct 2011 15:53:49,0186c40,1317927229,equals,0,2
-Michael Nitschinger,23 Apr 2014 12:54:18,fde7a94,1398268458,clear,1,0
-Michael Nitschinger,23 Apr 2014 12:54:18,fde7a94,1398268458,remove,0,1
-Blair Zajac,12 Jun 2010 15:59:26,ce3bba1,1276369166,remove,0,1
-Mike Wiederhold,14 Jul 2011 21:16:33,828307b,1310688993,equals,1,3
-Michael Nitschinger,25 Mar 2014 06:14:55,0e8c594,1395738895,warn,0,1
-Dustin Sallings,14 May 2008 02:19:42,f1969bf,1210742382,get,1,1
-Mike Wiederhold,11 Sep 2011 23:50:29,37f14f5,1315795829,warn,1,0
-Boris Partensky,15 Jun 2010 15:18:10,03bd66b,1276625890,warn,0,1
-Boris Partensky,15 Jun 2010 15:18:10,03bd66b,1276625890,getLogger,0,3
-Boris Partensky,15 Jun 2010 15:18:10,03bd66b,1276625890,get,0,2
-Mike Wiederhold,15 Sep 2011 17:32:09,1a0a992,1316118729,equals,1,0
-Mike Wiederhold,15 Sep 2011 17:32:09,1a0a992,1316118729,get,1,1
-Dustin Sallings,10 Dec 2007 20:05:07,881969c,1197327907,debug,1,1
-Dustin Sallings,25 Mar 2008 13:29:27,c0b909b,1206462567,get,0,2
-Matt Ingenthron,14 Aug 2011 15:05:27,8fa4dbe,1313345127,debug,1,0
-Matt Ingenthron,14 Aug 2011 15:05:27,8fa4dbe,1313345127,warn,0,1
-Dustin Sallings,22 Feb 2008 16:40:09,a52d77d,1203709209,put,1,1
-Mike Wiederhold,15 Jun 2011 19:44:02,6ce52d2,1308177842,warn,1,0
-Mike Wiederhold,15 Jun 2011 19:44:02,6ce52d2,1308177842,equals,1,1
-Mike Wiederhold,26 Jul 2011 21:34:00,fee988c,1311726840,equals,0,1
-Dustin Sallings,02 May 2008 23:11:25,80c91c3,1209780685,get,5,5
-Kevin Lafferty,23 Oct 2009 04:00:27,0888741,1256281227,equals,0,1
-Nick Brachet,18 Oct 2008 20:50:21,bd17fe6,1224373821,get,0,4
-Alexander Sokolovsky,24 Sep 2010 18:07:44,ea8a0da,1285362464,configure,0,1
-Alexander Sokolovsky,24 Sep 2010 18:07:44,ea8a0da,1285362464,clear,0,1
-Alexander Sokolovsky,24 Sep 2010 18:07:44,ea8a0da,1285362464,remove,0,1
-Alexander Sokolovsky,24 Sep 2010 18:07:44,ea8a0da,1285362464,warn,0,2
-Alexander Sokolovsky,24 Sep 2010 18:07:44,ea8a0da,1285362464,error,0,1
-Alexander Sokolovsky,24 Sep 2010 18:07:44,ea8a0da,1285362464,debug,0,2
-Alexander Sokolovsky,24 Sep 2010 18:07:44,ea8a0da,1285362464,close,0,1
-Dustin Sallings,13 Feb 2009 15:05:26,c13f26f,1234548326,get,2,2
-Dustin Sallings,13 Feb 2009 15:20:44,d432609,1234549244,get,0,1
-Dustin Sallings,27 Oct 2009 13:46:05,32762f8,1256661965,debug,1,1
-Dustin Sallings,27 Oct 2009 13:46:05,32762f8,1256661965,info,7,12
-Michael Nitschinger,07 Mar 2014 06:34:13,6ada2e6,1394184853,get,0,4
-Dustin Sallings,03 May 2008 20:38:07,7c7be67,1209857887,get,0,4
-Andrey Kartashov,06 May 2010 12:14:15,fb8b07a,1273158855,info,0,1
-Andrey Kartashov,06 May 2010 12:14:15,fb8b07a,1273158855,get,1,0
-Mike Wiederhold,09 Jun 2011 17:03:19,f552ef9,1307649799,equals,0,2
-Mike Wiederhold,09 Jun 2011 17:03:19,f552ef9,1307649799,get,0,3
-Michael Nitschinger,25 Jun 2013 08:00:25,98ca257,1372158025,get,0,4
-Paul Marynchev,05 Aug 2011 23:46:44,6aa2332,1312598804,put,0,36
-Paul Marynchev,05 Aug 2011 23:46:44,6aa2332,1312598804,hashCode,0,1
-Mike Wiederhold,12 May 2012 17:17:33,2ee17b2,1336853853,put,1,1
-Dustin Sallings,19 Sep 2009 18:45:58,a849a3f,1253396758,push,0,2
-Dustin Sallings,19 Sep 2009 18:45:58,a849a3f,1253396758,get,1,1
-Michael Nitschinger,27 May 2014 05:59:49,de62e2b,1401181189,equals,4,7
-Dustin Sallings,01 Apr 2009 21:18:23,c6f8a97,1238631503,put,1,1
-Dustin Sallings,18 Oct 2009 05:24:10,9c409fc,1255854250,toString,2,2
-Michael Nitschinger,10 Feb 2014 12:19:55,0be3261,1392045595,get,0,3
-Matt Ingenthron,21 Mar 2011 19:44:04,53d6138,1300747444,debug,1,1
-Dustin Sallings,27 Jan 2009 03:58:06,262d326,1233039486,info,0,3
-Dustin Sallings,27 Jan 2009 03:58:06,262d326,1233039486,log,0,5
-Dustin Sallings,27 Jan 2009 03:58:06,262d326,1233039486,getName,0,8
-Dustin Sallings,27 Jan 2009 03:58:06,262d326,1233039486,warn,2,11
-Dustin Sallings,27 Jan 2009 03:58:06,262d326,1233039486,getLogger,0,1
-Dustin Sallings,27 Jan 2009 03:58:06,262d326,1233039486,isDebugEnabled,0,2
-Dustin Sallings,27 Jan 2009 03:58:06,262d326,1233039486,error,0,4
-Dustin Sallings,27 Jan 2009 03:58:06,262d326,1233039486,debug,0,3
-Dustin Sallings,27 Jan 2009 03:58:06,262d326,1233039486,fatal,0,6
-Dustin Sallings,27 Jan 2009 03:58:06,262d326,1233039486,isInfoEnabled,0,3
-Boris Partensky,17 Jun 2010 15:05:26,f811114,1276797926,close,0,1
-Boris Partensky,17 Jun 2010 15:05:26,f811114,1276797926,error,0,3
-Dustin Sallings,19 Dec 2007 04:20:06,cdc536e,1198048806,put,4,4
-Dustin Sallings,14 Apr 2009 17:55:25,0cd55a3,1239742525,put,1,1
-Matt Ingenthron,17 Feb 2011 00:05:04,b8ae76d,1297911904,debug,0,1
-Matt Ingenthron,17 Feb 2011 00:05:04,b8ae76d,1297911904,info,1,0
-Matt Ingenthron,15 Mar 2012 21:48:12,c544245,1331858892,put,2,10
-Mike Wiederhold,13 Sep 2011 20:28:31,353a356,1315956511,debug,0,1
-Dustin Sallings,23 Sep 2009 02:51:38,03d5980,1253685098,close,3,9
-Raghavan Srinivas,31 Jan 2012 22:19:26,c3f32fb,1328055566,debug,0,1
-Raghavan Srinivas,31 Jan 2012 22:19:26,c3f32fb,1328055566,toString,0,1
-Mike Wiederhold,05 Jan 2012 23:03:25,406f5d9,1325811805,equals,3,0
-Dustin Sallings,18 Oct 2008 18:41:47,d4f8243,1224366107,equals,2,0
-Dustin Sallings,12 Feb 2009 13:36:56,ffb991d,1234456616,get,0,2
-Michael Nitschinger,08 Jan 2014 07:37:30,588043c,1389177450,get,1,2
-Mike Wiederhold,08 Sep 2011 19:14:26,1445b53,1315520066,put,1,1
-Michael Nitschinger,07 Oct 2013 10:58:09,f6f76ef,1381154289,warn,0,1
-Michael Nitschinger,07 Oct 2013 10:58:09,f6f76ef,1381154289,shutdown,1,1
-Matt Ingenthron,17 May 2012 14:23:51,3c03623,1337275431,get,0,2
-Mike Wiederhold,02 Aug 2011 18:54:49,b406daa,1312322089,peek,1,1
-Matt Ingenthron,11 Jan 2011 19:11:55,c7bc636,1294783915,get,2,0
-Philipp Fehre,03 Mar 2015 11:29:41,ce08f50,1425392981,debug,1,2
-Philipp Fehre,03 Mar 2015 11:29:41,ce08f50,1425392981,put,1,2
-Philipp Fehre,03 Mar 2015 11:29:41,ce08f50,1425392981,get,0,2
-Dustin Sallings,12 Feb 2008 02:45:39,55f6911,1202795139,get,0,1
-Mike Wiederhold,13 Sep 2012 21:50:10,50d1b36,1347583810,get,1,1
-Mike Wiederhold,20 Oct 2011 22:49:36,4f2880a,1319158176,equals,0,1
-Matt Ingenthron,21 Feb 2011 04:39:05,a764cf9,1298273945,warn,0,1
-Matt Ingenthron,21 Feb 2011 04:39:05,a764cf9,1298273945,getLogger,0,1
-Dustin Sallings,18 Mar 2009 17:46:37,c7d6455,1237409197,get,0,1
-Mike Wiederhold,26 Sep 2012 20:23:58,4f8f0df,1348701838,get,0,2
-Mike Wiederhold,10 Jul 2011 19:55:56,e720c5d,1310338556,warn,2,1
-Mike Wiederhold,10 Jul 2011 19:55:56,e720c5d,1310338556,get,1,0
-Mike Wiederhold,10 Jul 2011 19:55:56,e720c5d,1310338556,equals,2,0
-Mike Wiederhold,10 Jul 2011 19:55:56,e720c5d,1310338556,shutdown,3,5
-Mike Wiederhold,10 Jul 2011 19:55:56,e720c5d,1310338556,configure,3,0
-Matt Ingenthron,23 Mar 2011 18:59:06,00daa10,1300917546,toString,2,2
-Dustin Sallings,03 May 2008 20:17:09,955dea2,1209856629,toString,0,2
-Mike Wiederhold,15 Jun 2011 21:20:53,e93aef2,1308183653,equals,0,1
-Mike Wiederhold,15 Jun 2011 21:20:53,e93aef2,1308183653,get,0,5
-Dustin Sallings,05 Mar 2008 02:33:08,4e36dce,1204695188,toString,0,1
-Dustin Sallings,03 May 2008 20:01:53,175759e,1209855713,close,1,1
-Raghavan Srinivas,30 Aug 2012 01:19:52,c1acdae,1346300392,get,0,2
-Dustin Sallings,07 Nov 2008 01:30:52,84b422f,1226032252,get,2,2
-Mike Wiederhold,07 Sep 2011 17:47:36,5ca2ed1,1315428456,close,0,7
-Michael Nitschinger,20 Nov 2013 10:53:43,7d45580,1384955623,debug,2,2
-Matt Ingenthron,06 Apr 2010 20:19:16,764b5b5,1270595956,info,0,1
-Mike Wiederhold,24 Aug 2011 18:47:03,e69df0c,1314222423,debug,1,1
-Dustin Sallings,04 Oct 2008 04:24:04,8262a2a,1223105044,info,0,1
-Dustin Sallings,23 Dec 2007 19:53:51,25af7fb,1198450431,put,1,1
-Dustin Sallings,11 Dec 2007 01:01:53,835526a,1197345713,put,0,1
-Dustin Sallings,11 Dec 2007 01:01:53,835526a,1197345713,get,1,1
-Mike Wiederhold,08 Jun 2011 05:31:32,ab10e07,1307521892,debug,0,1
-Mike Wiederhold,08 Feb 2012 00:42:25,680f227,1328668945,put,2,2
-Mike Wiederhold,08 Feb 2012 00:42:25,680f227,1328668945,shutdown,1,1
-Mike Wiederhold,08 Feb 2012 00:42:25,680f227,1328668945,equals,1,0
-Mike Wiederhold,08 Feb 2012 00:42:25,680f227,1328668945,remove,1,2
-Mike Wiederhold,08 Feb 2012 00:42:25,680f227,1328668945,get,1,1
-Michael Nitschinger,24 Mar 2016 07:51:32,fd7e071,1458816692,get,0,2
-Dustin Sallings,03 Feb 2009 13:46:36,e6a8bda,1233679596,get,1,1
-Michael Nitschinger,21 Nov 2013 11:56:13,850fddb,1385045773,debug,0,1
-Dustin Sallings,10 Oct 2009 15:48:16,8423612,1255200496,debug,1,0
-Dustin Sallings,22 Jun 2010 01:42:36,4efb06f,1277181756,get,1,1
-Matt Ingenthron,07 Jun 2011 20:55:51,50383b6,1307490951,equals,2,2
-Matt Ingenthron,15 Dec 2010 18:56:11,b26b600,1292450171,get,1,1
-Dustin Sallings,10 Feb 2009 23:26:30,2620f44,1234319190,debug,1,0
-Blair Zajac,02 Jun 2010 15:55:50,76f00f6,1275504950,put,1,3
-Dustin Sallings,04 Mar 2008 00:41:43,66eef22,1204602103,shutdown,0,2
-Dustin Sallings,10 Oct 2009 15:39:17,0384e37,1255199957,clear,0,2
-Dustin Sallings,10 Oct 2009 15:39:17,0384e37,1255199957,toString,1,2
-Dustin Sallings,10 Oct 2009 15:39:17,0384e37,1255199957,remove,1,5
-Dustin Sallings,25 Mar 2008 13:15:55,6ad3794,1206461755,toString,0,1
-Dustin Sallings,25 Mar 2008 13:15:55,6ad3794,1206461755,shutdown,0,1
-Matt Ingenthron,30 Dec 2010 21:27:31,7416862,1293755251,equals,1,1
-Matt Ingenthron,30 Dec 2010 21:27:31,7416862,1293755251,get,1,4
-Michael Nitschinger,07 May 2013 04:26:02,730fe4f,1367911562,isTraceEnabled,0,1
-Michael Nitschinger,16 Aug 2013 05:44:11,e6af57e,1376642651,debug,0,1
-Dustin Sallings,03 May 2008 20:48:44,2603ac2,1209858524,get,0,3
-Dustin Sallings,05 Mar 2008 04:28:04,d9c628a,1204702084,get,0,9
-Mike Wiederhold,22 Sep 2011 15:13:41,591a840,1316715221,put,0,12
-Mike Wiederhold,22 Sep 2011 15:13:41,591a840,1316715221,equals,0,8
-Mike Wiederhold,22 Sep 2011 15:13:41,591a840,1316715221,get,0,1
-Dustin Sallings,02 Feb 2009 17:04:46,4f6817a,1233605086,shutdown,0,1
-Mike Wiederhold,15 Jun 2011 20:46:02,bc892d2,1308181562,equals,1,1
-Mike Wiederhold,15 Jun 2011 20:46:02,bc892d2,1308181562,get,1,1
-Blair Zajac,06 Nov 2009 13:33:18,7201892,1257525198,get,0,4
-Mike Wiederhold,07 Jul 2011 21:21:33,4f53400,1310084493,equals,0,2
-Dustin Sallings,03 Oct 2008 00:17:26,f6d3214,1223003846,get,0,2
-Dustin Sallings,10 Oct 2009 15:23:50,0ff519f,1255199030,put,0,1
-Dustin Sallings,10 Oct 2009 15:23:50,0ff519f,1255199030,toString,1,1
-Boris Partensky,01 Jul 2010 15:02:11,3b3b3c8,1278007331,warn,0,2
-Boris Partensky,01 Jul 2010 15:02:11,3b3b3c8,1278007331,getLogger,0,2
-Boris Partensky,01 Jul 2010 15:02:11,3b3b3c8,1278007331,info,1,0
-Boris Partensky,01 Jul 2010 15:02:11,3b3b3c8,1278007331,error,0,1
-Paul Burnstein,05 Aug 2011 19:09:26,31511c8,1312582166,remove,1,0
-Dustin Sallings,10 Feb 2009 23:40:34,6ced6e5,1234320034,debug,0,1
-Dustin Sallings,13 Dec 2007 03:10:59,7975a6a,1197526259,warn,1,0
-Dustin Sallings,13 Dec 2007 03:10:59,7975a6a,1197526259,info,3,3
-Dustin Sallings,03 May 2008 04:40:32,8497839,1209800432,get,5,0
-Dustin Sallings,12 Feb 2009 15:18:51,b149016,1234462731,get,0,1
-Matt Ingenthron,07 Dec 2010 23:20:04,e17758f,1291774804,shutdown,0,1
-Matt Ingenthron,07 Dec 2010 23:20:04,e17758f,1291774804,get,0,1
-Dustin Sallings,29 Jun 2011 17:20:31,d36f6df,1309378831,warn,0,1
-Fabien Renaud,20 Dec 2014 23:14:17,7918946,1419128057,put,1,1
-Matt Ingenthron,25 Feb 2011 05:34:21,019932f,1298622861,equals,0,1
-Matt Ingenthron,16 Nov 2010 02:26:54,4cf9d05,1289885214,debug,0,2
-Blair Zajac,04 Mar 2008 19:07:28,e2f04ba,1204668448,get,6,8
-Dustin Sallings,23 Sep 2009 13:34:38,3def22f,1253723678,peek,1,1
-Dustin Sallings,18 Sep 2009 03:43:25,0894556,1253256205,toString,0,1
-Matt Ingenthron,27 Oct 2009 14:39:51,e2286e7,1256665191,get,1,1
-Alexander Sokolovsky,15 Nov 2010 12:13:20,e6698d7,1289834000,warn,0,2
-Dustin Sallings,11 Nov 2009 03:44:50,b306283,1257921890,warn,0,1
-Mike Wiederhold,12 Sep 2011 00:19:04,48e7e62,1315797544,get,0,1
-Matt Ingenthron,20 Jan 2011 17:52:01,33709a7,1295556721,get,0,1
-Dustin Sallings,03 Oct 2008 01:39:57,255d13b,1223008797,debug,1,1
-Dustin Sallings,03 Oct 2008 01:39:57,255d13b,1223008797,warn,0,1
-Dustin Sallings,03 Oct 2008 01:39:57,255d13b,1223008797,info,1,1
-Dustin Sallings,23 Jan 2008 01:32:26,26fa76e,1201062746,put,1,1
-Michael Nitschinger,20 Feb 2013 12:54:30,00f2e78,1361375670,get,1,2
-Dustin Sallings,23 Jan 2008 00:17:22,3f3bae5,1201058242,get,0,4
-Dustin Sallings,02 Feb 2009 16:12:30,9870d6e,1233601950,remove,0,1
-Dustin Sallings,15 Oct 2008 01:50:24,d0259d9,1224046224,put,0,1
-Mike Wiederhold,24 Aug 2011 19:11:51,60a1e05,1314223911,debug,1,1
-Matt Ingenthron,15 Mar 2012 21:44:24,5018474,1331858664,get,1,1
-Michael Nitschinger,10 Nov 2014 04:57:45,be9e2ad,1415606265,put,0,1
-Mike Wiederhold,11 Jan 2012 22:33:40,8df59cf,1326328420,equals,3,3
-Matt Ingenthron,31 Mar 2011 21:50:59,c157be5,1301619059,get,1,1
-Matt Ingenthron,31 Mar 2011 21:50:59,c157be5,1301619059,remove,1,0
-Matt Ingenthron,31 Mar 2011 21:50:59,c157be5,1301619059,hashCode,2,0
-Matt Ingenthron,31 Mar 2011 21:50:59,c157be5,1301619059,put,2,2
-Matt Ingenthron,31 Mar 2011 21:50:59,c157be5,1301619059,toString,1,0
-Matt Ingenthron,31 Mar 2011 21:50:59,c157be5,1301619059,debug,0,1
-Mike Wiederhold,30 Jun 2011 18:41:41,e50ec2d,1309470101,get,1,0
-Dustin Sallings,28 Mar 2009 21:37:19,c2d1b84,1238287039,get,0,2
-Dustin Sallings,10 Oct 2009 15:56:18,34933a2,1255200978,put,0,1
-Mike Wiederhold,20 Sep 2011 18:45:40,ffe0eed,1316555140,equals,0,1
-Dustin Sallings,17 Oct 2008 13:33:35,df6cd92,1224261215,equals,2,0
-Dustin Sallings,18 Sep 2009 04:43:53,c065aa5,1253259833,getName,0,2
-Dustin Sallings,18 Sep 2009 04:43:53,c065aa5,1253259833,toString,0,2
-Matt Ingenthron,11 Oct 2011 01:04:04,2393d4f,1318305844,get,1,0
-Matt Ingenthron,12 Apr 2010 13:04:33,3483b2a,1271088273,shutdown,0,1
-Dustin Sallings,27 May 2008 03:57:28,03f8b43,1211871448,debug,0,1
-Raghavan Srinivas,05 Jan 2012 21:56:34,ab2395c,1325807794,equals,0,1
-Mike Wiederhold,04 Jun 2011 23:49:43,b858386,1307242183,put,0,2
-Dustin Sallings,14 May 2008 00:52:11,6a38bf7,1210737131,equals,0,1
-Dustin Sallings,14 May 2008 00:52:11,6a38bf7,1210737131,get,0,4
-Dustin Sallings,30 Oct 2008 22:30:44,60ceb53,1225416644,shutdown,1,1
-Dustin Sallings,30 Oct 2008 22:30:44,60ceb53,1225416644,get,1,1
-mattbertolini,09 Dec 2014 11:04:03,95833c9,1418133843,shutdown,0,2
-Dustin Sallings,01 Nov 2008 03:20:01,e5afba2,1225520401,getName,0,3
-Dustin Sallings,01 Nov 2008 03:20:01,e5afba2,1225520401,toString,0,1
-Dustin Sallings,01 Nov 2008 03:20:01,e5afba2,1225520401,equals,0,2
-Mike Wiederhold,08 Sep 2011 15:30:01,6d9c441,1315506601,getName,0,2
-Mike Wiederhold,08 Sep 2011 15:30:01,6d9c441,1315506601,toString,0,4
-Aaron Miller,03 Oct 2012 20:12:28,4072cf4,1349305948,get,0,4
-Mike Wiederhold,04 Aug 2011 15:19:05,fd7ce14,1312481945,equals,1,1
-Mike Wiederhold,04 Aug 2011 15:19:05,fd7ce14,1312481945,get,1,1
-Michael Nitschinger,20 Nov 2013 06:29:59,394bd0b,1384939799,get,0,2
-Nelz,06 Jun 2008 01:45:26,919b732,1212727526,get,0,5
-Nelz,06 Jun 2008 01:45:26,919b732,1212727526,toString,0,2
-Nelz,06 Jun 2008 01:45:26,919b732,1212727526,equals,0,4
-Nelz,06 Jun 2008 01:45:26,919b732,1212727526,shutdown,0,2
-Nelz,06 Jun 2008 01:45:26,919b732,1212727526,hashCode,0,2
-Dustin Sallings,26 Jan 2009 04:37:33,54f5826,1232955453,equals,0,1
-Dustin Sallings,26 Jan 2009 04:37:33,54f5826,1232955453,shutdown,0,1
-Dustin Sallings,26 Jan 2009 04:37:33,54f5826,1232955453,get,0,1
-Dustin Sallings,19 Dec 2008 01:40:40,8c489ff,1229661640,equals,0,1
-Dustin Sallings,19 Dec 2008 01:40:40,8c489ff,1229661640,shutdown,0,1
-Dustin Sallings,19 Dec 2008 01:40:40,8c489ff,1229661640,get,0,2
-Dustin Sallings,16 Feb 2009 15:02:01,c9df12f,1234807321,put,0,1
-Dustin Sallings,16 Feb 2009 15:02:01,c9df12f,1234807321,clear,0,1
-Dustin Sallings,16 Feb 2009 15:02:01,c9df12f,1234807321,remove,0,1
-Dustin Sallings,16 Feb 2009 15:02:01,c9df12f,1234807321,get,0,5
-Michael Nitschinger,28 Jan 2013 11:28:02,65cf4b0,1359383282,equals,0,1
-Dustin Sallings,01 Nov 2008 02:57:48,c92caa7,1225519068,toString,0,2
-Mike Wiederhold,17 Nov 2011 21:18:42,8e6018d,1321571922,equals,3,0
-Mike Wiederhold,17 Nov 2011 21:18:42,8e6018d,1321571922,get,8,0
-Dustin Sallings,29 Jun 2011 17:07:23,5ef4754,1309378043,equals,1,1
-Ted Crossman,11 Jan 2012 15:46:56,01fe32e,1326304016,get,1,1
-Greg Kim,07 Apr 2010 15:04:21,da151b8,1270663461,getName,2,2
-Greg Kim,07 Apr 2010 15:04:21,da151b8,1270663461,equals,2,0
-Mike Wiederhold,08 Sep 2011 15:40:18,33f2f3e,1315507218,toString,0,2
-Dustin Sallings,22 Feb 2008 04:00:12,464750e,1203663612,equals,0,1
-Dustin Sallings,22 Feb 2008 04:00:12,464750e,1203663612,get,0,1
-Dustin Sallings,03 May 2008 19:00:37,ee45606,1209852037,debug,0,1
-Dustin Sallings,03 May 2008 19:00:37,ee45606,1209852037,close,0,6
-Dustin Sallings,03 May 2008 19:00:37,ee45606,1209852037,warn,0,3
-Dustin Sallings,22 Feb 2008 23:17:47,0fdddae,1203733067,get,0,1
-Michael Nitschinger,03 Oct 2013 01:08:13,bc74069,1380773293,get,0,3
-Dustin Sallings,13 Dec 2007 03:06:40,1d8449e,1197526000,debug,0,1
-Dustin Sallings,13 Dec 2007 03:06:40,1d8449e,1197526000,put,0,1
-Dustin Sallings,13 Dec 2007 03:06:40,1d8449e,1197526000,info,1,1
-Dustin Sallings,13 Dec 2007 03:06:40,1d8449e,1197526000,warn,1,1
-Michael Nitschinger,24 Mar 2014 06:11:40,f82790d,1395652300,toString,0,3
-Michael Nitschinger,24 Mar 2014 06:11:40,f82790d,1395652300,log,0,3
-Michael Nitschinger,24 Mar 2014 06:11:40,f82790d,1395652300,format,0,3
-Blair Zajac,28 Jun 2010 16:49:37,f0311f7,1277754577,put,0,2
-Blair Zajac,28 Jun 2010 16:49:37,f0311f7,1277754577,get,0,12
-Dustin Sallings,23 Jan 2008 01:36:35,8fc6b1e,1201062995,put,0,1
-Kristian Eide,09 Jan 2010 17:36:56,229605f,1263069416,put,1,2
-Kristian Eide,09 Jan 2010 17:36:56,229605f,1263069416,get,1,5
-Mike Wiederhold,26 Jun 2012 18:37:13,5d84027,1340746633,put,0,1
-Matt Weiden,17 May 2013 06:13:08,af62d13,1368781988,get,0,5
-Dustin Sallings,25 Sep 2009 22:55:28,d0210bd,1253930128,get,1,1
-Michael Nitschinger,28 May 2014 06:00:39,4aae4c5,1401267639,debug,0,1
-Michael Nitschinger,28 May 2014 06:00:39,4aae4c5,1401267639,info,1,0
-vgnanasekaran,15 Jan 2014 16:21:31,169ddea,1389813691,warn,0,1
-Alexander Sokolovsky,24 Sep 2010 18:18:57,3157250,1285363137,configure,0,1
-Alexander Sokolovsky,24 Sep 2010 18:18:57,3157250,1285363137,remove,0,1
-Alexander Sokolovsky,24 Sep 2010 18:18:57,3157250,1285363137,warn,0,1
-Alexander Sokolovsky,24 Sep 2010 18:18:57,3157250,1285363137,error,0,1
-Alexander Sokolovsky,24 Sep 2010 18:18:57,3157250,1285363137,debug,0,1
-Alexander Sokolovsky,24 Sep 2010 18:18:57,3157250,1285363137,close,0,1
-Michael Nitschinger,05 Mar 2014 10:15:55,d8cd4e6,1394025355,equals,2,2
-Michael Nitschinger,18 Feb 2014 06:47:44,6c6588b,1392716864,toString,0,1
-Michael Nitschinger,18 Feb 2014 06:47:44,6c6588b,1392716864,get,0,1
-Kristian Eide,02 Oct 2008 15:02:54,6e2dbb3,1222970574,get,0,4
-Michael Nitschinger,23 Apr 2014 12:20:44,68daf93,1398266444,get,1,0
-Dustin Sallings,13 Aug 2009 04:21:54,5ca0489,1250148114,info,1,1
-Michael Nitschinger,20 Nov 2013 11:45:47,dcd848d,1384958747,put,2,2
-Michael Nitschinger,20 Nov 2013 11:45:47,dcd848d,1384958747,get,2,2
-Marty Schoch,23 Feb 2012 23:43:06,8fa2060,1330047786,equals,0,3
-Dustin Sallings,02 May 2008 23:41:08,33bcb1c,1209782468,shutdown,1,1
-Dustin Sallings,20 Sep 2009 03:53:59,7596f40,1253429639,remove,1,1
-Michael Nitschinger,07 Jan 2014 11:50:29,50c338d,1389106229,shutdown,1,0
-Michael Nitschinger,21 Dec 2012 05:27:24,6e2416b,1356078444,get,0,6
-Kristian Eide,29 Aug 2008 15:46:25,02c1f2e,1220035585,put,1,2
-Dustin Sallings,12 Feb 2009 15:39:26,e3a676c,1234463966,info,1,0
-Dustin Sallings,12 Feb 2009 15:39:26,e3a676c,1234463966,close,2,0
-Dustin Sallings,25 Apr 2008 15:42:54,5acd91c,1209148974,get,4,4
-Michael Nitschinger,07 May 2013 05:42:27,b90bc11,1367916147,equals,0,1
-Michael Nitschinger,22 May 2013 07:38:00,87c002a,1369219080,warn,0,1
-Ray Krueger,02 May 2008 09:03:08,d506ffb,1209729788,get,1,1
-Mike Wiederhold,30 Jun 2011 19:00:36,d03a74e,1309471236,get,1,1
-Mike Wiederhold,17 Nov 2011 16:12:17,5e83890,1321553537,configure,1,0
-Mike Wiederhold,17 Nov 2011 16:12:17,5e83890,1321553537,error,1,0
-Michael Nitschinger,07 Oct 2013 12:23:49,38f7a6c,1381159429,hashCode,0,1
-Dustin Sallings,12 Mar 2008 13:00:23,66404fe,1205337623,get,1,1
-Mike Wiederhold,09 Jan 2012 01:05:20,1cfc1c2,1326078320,put,0,2
-Mike Wiederhold,09 Jan 2012 01:05:20,1cfc1c2,1326078320,shutdown,0,3
-Mike Wiederhold,09 Jan 2012 01:05:20,1cfc1c2,1326078320,equals,0,1
-Mike Wiederhold,09 Jan 2012 01:05:20,1cfc1c2,1326078320,remove,0,1
-Mike Wiederhold,09 Jan 2012 01:05:20,1cfc1c2,1326078320,get,0,1
-Matt Ingenthron,16 Aug 2011 14:00:26,65ebc2c,1313514026,debug,1,0
-Matt Ingenthron,16 Aug 2011 14:00:26,65ebc2c,1313514026,warn,0,1
-Dustin Sallings,02 Mar 2010 06:37:49,90fdba5,1267522669,toString,0,1
-amcreynolds,25 Feb 2017 19:50:00,8fe2e33,1488063000,debug,1,1
-Mike Wiederhold,26 Sep 2012 20:37:56,388fd0e,1348702676,toString,0,1
-Raghavan Srinivas,12 Aug 2012 18:45:51,43f3ad8,1344807951,get,0,1
-Dustin Sallings,30 Oct 2008 22:29:47,9d4585a,1225416587,get,0,1
-Valeri Felberg,17 Dec 2008 15:58:13,fba04e9,1229540293,get,1,1
-Dustin Sallings,03 May 2008 03:03:19,50c5d44,1209794599,get,0,12
-Dustin Sallings,05 Mar 2008 04:39:50,56f1d99,1204702790,toString,0,1
-Dustin Sallings,15 Oct 2008 05:40:52,b609da4,1224060052,get,11,0
-Mike Wiederhold,11 Jul 2011 22:03:08,eae60d3,1310432588,put,0,1
-Mike Wiederhold,14 Jul 2011 18:20:50,a9da817,1310678450,shutdown,1,1
-Dustin Sallings,21 Mar 2009 05:48:35,f6ea239,1237625315,info,0,1
-Michael Nitschinger,24 Mar 2014 09:25:00,e6892a0,1395663900,warn,1,1
-Joseph Hart,06 Sep 2009 02:27:18,baf3a9f,1252214838,put,2,2
-Joseph Hart,06 Sep 2009 02:27:18,baf3a9f,1252214838,getInstance,0,2
-Joseph Hart,06 Sep 2009 02:27:18,baf3a9f,1252214838,get,2,5
-Michael Nitschinger,02 Jun 2014 06:47:20,1a92696,1401702440,debug,0,1
-Michael Nitschinger,02 Jun 2014 06:47:20,1a92696,1401702440,close,3,3
-Michael Nitschinger,02 Jun 2014 06:47:20,1a92696,1401702440,warn,1,1
-Michael Nitschinger,20 Nov 2013 08:36:33,e94fbf5,1384947393,info,3,3
-Michael Nitschinger,20 Nov 2013 08:36:33,e94fbf5,1384947393,put,2,2
-Michael Nitschinger,20 Nov 2013 08:36:33,e94fbf5,1384947393,equals,1,2
-Michael Nitschinger,20 Nov 2013 08:36:33,e94fbf5,1384947393,warn,4,4
-Michael Nitschinger,20 Nov 2013 08:36:33,e94fbf5,1384947393,getLogger,3,2
-Michael Nitschinger,20 Nov 2013 08:36:33,e94fbf5,1384947393,error,3,3
-Michael Nitschinger,20 Nov 2013 08:36:33,e94fbf5,1384947393,debug,3,3
-Michael Nitschinger,20 Nov 2013 08:36:33,e94fbf5,1384947393,close,2,2
-Matt Ingenthron,04 May 2013 15:24:40,d07bbbd,1367691880,toString,0,1
-Matt Ingenthron,04 May 2013 15:24:40,d07bbbd,1367691880,format,0,1
-Ahn Seong Hwa,05 Feb 2010 11:59:46,c750296,1265381986,get,0,2
-Dustin Sallings,19 Sep 2009 05:43:32,641678f,1253349812,get,0,2
-Dustin Sallings,12 Feb 2009 00:09:47,91aa81a,1234408187,equals,0,1
-Dustin Sallings,18 Sep 2009 02:39:10,6edff67,1253252350,put,0,1
-Dustin Sallings,18 Sep 2009 02:39:10,6edff67,1253252350,get,0,4
-Nelz,11 Sep 2008 19:34:05,27ad2c3,1221172445,shutdown,0,2
-Nelz,11 Sep 2008 19:34:05,27ad2c3,1221172445,get,0,2
-Matt Ingenthron,21 Mar 2012 02:48:22,b93ff8f,1332308902,get,1,0
+Vinícius Assis,13 Dec 2016 08:24:37,e286d3b,1481628277,get,0,1
+Diego Leite,23 Mar 2016 15:15:16,db0fb08,1458756916,get,2,6
+Diego Leite,23 Mar 2016 15:15:16,db0fb08,1458756916,format,1,1
+luanecomp,17 Apr 2017 08:53:01,148641a,1492429981,log,28,9
+luanecomp,17 Apr 2017 08:53:01,148641a,1492429981,format,1,1
+luanecomp,17 Apr 2017 08:53:01,148641a,1492429981,clear,0,1
+luanecomp,17 Apr 2017 08:53:01,148641a,1492429981,remove,5,28
+luanecomp,17 Apr 2017 08:53:01,148641a,1492429981,toString,4,7
+luanecomp,17 Apr 2017 08:53:01,148641a,1492429981,push,2,39
+Carla,12 Sep 2016 09:21:14,50fabbe,1473682874,log,2,3
+Carla,12 Sep 2016 09:21:14,50fabbe,1473682874,remove,3,3
+Carla,12 Sep 2016 09:21:14,50fabbe,1473682874,format,0,4
+luanecomp,01 Jun 2017 09:27:14,99a4fe8,1496320034,push,2,39
+Carla,10 Aug 2016 14:16:09,134059b,1470849369,format,0,4
+yuri,07 Apr 2017 08:55:49,2e7f1ac,1491566149,remove,0,1
+yuri,07 Apr 2017 08:55:49,2e7f1ac,1491566149,get,0,1
+Calebe Oliveira,23 Mar 2016 12:57:09,12b3643,1458748629,info,1,1
+Calebe Oliveira,23 Mar 2016 12:57:09,12b3643,1458748629,format,0,3
+Calebe Oliveira,23 Mar 2016 12:57:09,12b3643,1458748629,get,15,13
+Diego Leite,16 Dec 2015 17:38:26,c100e46,1450298306,get,2,6
+Jeyel Ferreira,26 May 2017 09:50:40,2dd171e,1495803040,log,3,3
+Jeyel Ferreira,26 May 2017 09:50:40,2dd171e,1495803040,get,4,4
+Jeyel Ferreira,26 May 2017 09:50:40,2dd171e,1495803040,remove,2,7
+Jeyel Ferreira,26 May 2017 09:50:40,2dd171e,1495803040,getContext,0,1
+Jeyel Ferreira,26 May 2017 09:50:40,2dd171e,1495803040,toString,9,9
+Jeyel Ferreira,26 May 2017 09:50:40,2dd171e,1495803040,push,0,10
+luanecomp,07 Apr 2017 08:34:34,b74ba63,1491564874,toString,4,7
+luanecomp,06 Apr 2017 15:55:52,bc37073,1491504952,remove,5,28
+luanecomp,06 Apr 2017 15:55:52,bc37073,1491504952,format,1,1
+luanecomp,22 May 2017 12:00:12,fc5dd56,1495465212,push,0,16
+luanecomp,22 May 2017 12:00:12,fc5dd56,1495465212,clear,0,1
+luanecomp,22 May 2017 12:00:12,fc5dd56,1495465212,remove,1,6
+luanecomp,02 May 2017 09:10:17,86d0332,1493727017,log,28,9
+luanecomp,02 May 2017 09:10:17,86d0332,1493727017,remove,0,1
+luanecomp,29 Mar 2017 17:46:12,6336c73,1490820372,remove,0,2
+MariliaSuzart,04 Aug 2016 11:47:51,ae95216,1470322071,format,0,1
+luanecomp,10 Apr 2017 11:59:01,0e13871,1491836341,format,1,0
+MariliaSuzart,22 Jul 2016 11:40:02,425594b,1469198402,format,0,1
+Jeyel Ferreira,08 Jun 2017 12:09:15,69140f7,1496934555,toString,9,9
+luanecomp,07 Apr 2017 14:58:32,66bad21,1491587912,log,0,1
+luanecomp,07 Apr 2017 14:58:32,66bad21,1491587912,remove,0,1
+Carla,16 Aug 2016 12:12:35,c78b832,1471360355,format,0,2
+Jeyel Ferreira,22 May 2017 14:10:22,9bcc972,1495473022,toString,0,5
+Jeyel Ferreira,22 May 2017 14:10:22,9bcc972,1495473022,remove,0,1
+Dilan Nery,15 Jan 2016 12:47:29,b817ac0,1452872849,get,0,1
+luanecomp,24 May 2017 13:25:50,6bada66,1495643150,log,27,0
+Jeyel Ferreira,07 Nov 2017 13:38:59,c83ddea,1510072739,log,3,3
+luanecomp,12 May 2017 17:47:15,7a48c75,1494622035,push,0,4
+luanecomp,12 May 2017 17:47:15,7a48c75,1494622035,remove,0,2
+Dilan Nery,10 Mar 2016 12:04:18,77fb848,1457622258,get,0,1
+Jeyel Ferreira,24 May 2017 15:38:30,3cdcbd9,1495651110,toString,3,0
+Vinícius Assis,19 Sep 2016 18:01:11,cd25afe,1474318871,get,0,1
+Calebe Oliveira,10 Dec 2015 16:20:27,fa24506,1449775227,info,1,1
+Calebe Oliveira,08 Jan 2016 15:16:58,6fe17c0,1452277018,get,15,13
+Calebe Oliveira,15 Dec 2015 17:19:28,61a0c88,1450210768,get,1,1
+Jeyel Ferreira,06 Oct 2017 11:50:26,5592c1a,1507301426,push,0,10
+Jeyel Ferreira,06 Oct 2017 11:50:26,5592c1a,1507301426,remove,0,3
+Jeyel Ferreira,05 Apr 2017 10:52:59,768d784,1491400379,get,4,4
+Diego Leite,16 Dec 2015 14:02:55,a4d74df,1450285375,get,1,1
+Calebe Oliveira,15 Dec 2015 14:41:36,9cff8cf,1450201296,get,0,2
+Calebe Oliveira,15 Dec 2015 15:22:15,0a0186c,1450203735,get,1,1
+luanecomp,12 May 2017 15:22:23,838d8b8,1494613343,push,0,8
+luanecomp,12 May 2017 15:22:23,838d8b8,1494613343,log,0,2
+luanecomp,12 May 2017 15:22:23,838d8b8,1494613343,remove,0,2
+yuri,31 Mar 2017 15:14:02,90a08ed,1490984042,get,0,1
+Calebe Oliveira,17 Dec 2015 14:40:31,23f9b8e,1450374031,get,0,3
+Diego Leite,04 Dec 2015 16:50:16,273a83a,1449258616,get,0,1
+luanecomp,01 Jun 2017 17:02:26,3ec7e9f,1496347346,toString,0,1
+luanecomp,11 May 2017 08:19:04,b747bc2,1494501544,push,0,3
+luanecomp,11 May 2017 08:19:04,b747bc2,1494501544,remove,0,4
+Diego Leite,16 Dec 2015 11:59:44,7a57ee7,1450277984,get,0,1
+Diego Leite,30 Mar 2016 15:55:55,1c86a8b,1459364155,get,0,1
+luanecomp,13 Apr 2017 14:17:59,1969e31,1492103879,log,0,2
+luanecomp,13 Apr 2017 14:17:59,1969e31,1492103879,remove,0,1
+Diego Leite,21 Jan 2016 14:20:39,c214ffe,1453396839,get,1,0
+Jeyel Ferreira,02 Oct 2017 11:03:00,2ffeba8,1506952980,push,0,4
+Jeyel Ferreira,02 Oct 2017 11:03:00,2ffeba8,1506952980,remove,0,1
+luanecomp,16 May 2017 11:31:45,40db99b,1494945105,push,0,5
+luanecomp,16 May 2017 11:31:45,40db99b,1494945105,remove,0,1
+luanecomp,16 May 2017 17:27:02,5d35607,1494966422,log,0,3
+Jeyel Ferreira,01 Nov 2017 09:25:04,4976aca,1509539104,toString,1,1
+Jeyel Ferreira,01 Nov 2017 09:25:04,4976aca,1509539104,log,2,2
+Jeyel Ferreira,01 Nov 2017 09:25:04,4976aca,1509539104,remove,1,1
+Jeyel Ferreira,01 Nov 2017 09:25:04,4976aca,1509539104,get,1,1
+yuri,03 May 2017 09:39:47,d4451a8,1493815187,remove,0,1
+Carla,25 Jul 2016 13:15:08,7a55c21,1469463308,format,0,1
+Jeyel Ferreira,02 Jun 2017 09:37:10,0fb4978,1496407030,toString,1,1
+Carla,20 May 2016 14:27:44,6ae8b3b,1463765264,log,2,3
+Carla,20 May 2016 14:27:44,6ae8b3b,1463765264,remove,3,3
+luanecomp,20 Apr 2017 18:00:18,a3d006a,1492722018,push,0,1
+luanecomp,20 Apr 2017 18:00:18,a3d006a,1492722018,remove,0,1
+Jeyel Ferreira,15 May 2017 11:38:45,b8ef291,1494859125,getContext,0,1
+luanecomp,20 Apr 2017 10:55:29,6b0899d,1492696529,remove,0,1
+luanecomp,07 Apr 2017 17:57:38,6c5bc43,1491598658,remove,2,2
+Carla,20 May 2016 14:32:33,2016aba,1463765553,log,2,0
+Carla,20 May 2016 14:32:33,2016aba,1463765553,remove,3,0
+luanecomp,13 Mar 2017 15:48:44,57524e8,1489430924,toString,0,3
+luanecomp,02 Jun 2017 15:38:32,1e02874,1496428712,toString,1,0
+Jeyel Ferreira,10 Apr 2017 14:12:41,fabedce,1491844361,get,3,0
+Calebe Oliveira,10 Dec 2015 15:57:14,6ba5e97,1449773834,info,0,1
+Calebe Oliveira,08 Jan 2016 16:57:22,21443d1,1452283042,get,13,0
+Jeyel Ferreira,02 Jun 2017 09:26:19,80681b0,1496406379,toString,1,1
+luanecomp,18 May 2017 15:34:02,d3477db,1495132442,remove,0,1
+Calebe Oliveira,17 Dec 2015 15:25:31,31c2c28,1450376731,get,0,1
+Diego Leite,16 Dec 2015 18:01:55,adda814,1450299715,get,0,1
+Calebe Oliveira,06 Jan 2016 11:54:30,4b66342,1452092070,get,0,4
+luanecomp,17 Apr 2017 08:53:57,6e9a398,1492430037,remove,0,1
+Calebe Oliveira,11 Mar 2016 11:49:48,0da105d,1457707788,format,0,3
