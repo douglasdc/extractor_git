@@ -8,19 +8,22 @@ import numpy
 # provided_symbol = {metodo: quantidade_uso}
 # usage_symbol = {dev:{metodo:quantidade_usada}}
 def library_expertise(provided_symbol, usage_symbol):
+    print 'Calculando library expertise.....'
+    print 'A API forneceu ' + str(len(provided_symbol)) + ' simbolos'   
     developers = {}
     for dev, value in usage_symbol.iteritems():
-        developers[dev] = sum(1 for v in value.values() if v > 0) /float(len(provided_symbol))
+        usage = sum(1 for v in value.values() if v > 0)
+        developers[dev] = usage /float(len(provided_symbol))
         # expertise = {key: 0.0 if float(provided_symbol.get(key, 0)) == 0 else round(float(
         #     value.get(key, 0)) / float(provided_symbol.get(key, 0)), 4) for key in provided_symbol.keys()}
         # developers[dev] = expertise
-    
+
     return developers
 
 
 def expertise_distance(library_expertise):
+    print 'Calculando expertise distance.....'
     developers = {}
-    # print library_expertise
     for dev, value in library_expertise.iteritems():
         uns = numpy.ones(1)
         exp = numpy.array(value)

@@ -8,5 +8,7 @@
     "code_python":true,
     "considerar_removidos":true,
     "por_projeto":true,
-    "linhas_identicas": true
+    "linhas_identicas": true,
+    "data_inicio":"1990-01-01",
+    "data_fim":"2020-01-01"
 }

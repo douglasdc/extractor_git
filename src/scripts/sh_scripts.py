@@ -1,8 +1,9 @@
 #coding:utf-8
 
-import logging
+import logging, datetime
 
 DEFINE_GIT_FOLDER = lambda git_folder: 'git -C ' + git_folder + ' '
+DEFINE_PERIOD = lambda since, until: '--since "' + since.strftime('%b %d %Y') + '" --until "' + until.strftime('%b %d %Y') + '"'
 
 def log(git_folder): 
     return DEFINE_GIT_FOLDER(git_folder)(git_folder) + ' log'
@@ -69,21 +70,23 @@ def see_changed_files(file_type, git_folder):
     return script
 
 
-def commit_sha1_by_file(file_path, git_folder): 
-    script = DEFINE_GIT_FOLDER(git_folder) + ' log --format=format:%H ' + file_path
+def commit_sha1_by_file(file_path, git_folder, since=datetime.date(1990, 1, 1), until=datetime.date(2030, 1, 1)):
+    script = DEFINE_GIT_FOLDER(
+        git_folder) + ' log ' + DEFINE_PERIOD(since, until) + ' --format=format:%H ' + file_path
     logging.info(script)
     return script
 
 
-def commit_sha1_by_regex(regex, git_folder):
-    script = DEFINE_GIT_FOLDER(git_folder) + ' log --follow -G' + '"' + regex + '"' + ' --format=format:"%H|%an|%at" .'
+def commit_sha1_by_regex(regex, git_folder, since=datetime.date(1990, 1, 1), until=datetime.date(2030, 1, 1)):
+    script = DEFINE_GIT_FOLDER(git_folder) + ' log ' + DEFINE_PERIOD(since, until) + ' --follow -G' + '"' + regex + '"' + ' --format=format:"%H|%an|%at" .'
     logging.info(script)
     # print script
     return script
 
 
-def commit_sha1_by_regex_file(regex, file_path, git_folder): 
-    script = DEFINE_GIT_FOLDER(git_folder) + ' log --follow -G' + '".' + regex + '\("' + ' --format=format:"%h|%an|%at" ' + file_path
+def commit_sha1_by_regex_file(regex, file_path, git_folder, since=datetime.date(1990,1,1), until=datetime.date(2030,1,1)):
+    print DEFINE_PERIOD(since, until)
+    script = DEFINE_GIT_FOLDER(git_folder) + ' log ' + DEFINE_PERIOD(since, until) + ' --follow -G' + '".' + regex + '\("' + ' --format=format:"%h|%an|%at" ' + file_path
     logging.info(script)
     # print script
     return script

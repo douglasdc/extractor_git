@@ -6,6 +6,7 @@ from scripts.run_shell import run_shell_scripts
 from scripts.sh_scripts import *
 
 def summary(commits):
+    from datetime import datetime
     for key, value in commits.iteritems():
         value['metodos'] = {keys: values for keys, values in value['metodos'].iteritems() if (values['adicionou'] + values['removeu']) > 0}
         value['momento'] = "{:%d %b %Y %H:%M:%S}".format(datetime.fromtimestamp(float(value['timestamp'])))

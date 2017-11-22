@@ -1,10 +1,10 @@
 frequencia_removidos,quantidade_removidos,frequencia_total,quantidade_inseridos,quantidade_total,metodos,frequencia_inseridos,desenvolvedor
-3,2,10,2,2,get | format,7,Diego Leite
-18,4,52,6,6,log | get | remove | getContext | toString | push,34,Jeyel Ferreira
-16,2,33,3,3,info | format | get,17,Calebe Oliveira
-5,2,15,3,3,log | remove | format,10,Carla
-0,0,2,2,2,remove | get,2,yuri
+5,2,15,3,3,post | delete | get,10,Diego Leite
+4,1,8,1,1,get,4,Jeyel Ferreira
+25,3,45,3,3,post | get | delete,20,Calebe Oliveira
+0,0,0,0,0,,0,Carla
+0,0,1,1,1,get,1,yuri
 0,0,1,1,1,get,1,Vinícius Assis
-0,0,1,1,1,get,1,Dilan Nery
-0,0,1,1,1,format,1,MariliaSuzart
-40,5,125,6,6,log | format | clear | remove | toString | push,85,luanecomp
+2,1,7,2,2,get | delete,5,Dilan Nery
+0,0,0,0,0,,0,MariliaSuzart
+0,0,0,0,0,,0,luanecomp

@@ -1,109 +1,49 @@
 autor,momento,commit,timestamp,metodo,removeu,adicionou
 Vinícius Assis,13 Dec 2016 08:24:37,e286d3b,1481628277,get,0,1
-Diego Leite,23 Mar 2016 15:15:16,db0fb08,1458756916,get,2,6
-Diego Leite,23 Mar 2016 15:15:16,db0fb08,1458756916,format,1,1
-luanecomp,17 Apr 2017 08:53:01,148641a,1492429981,log,28,9
-luanecomp,17 Apr 2017 08:53:01,148641a,1492429981,format,1,1
-luanecomp,17 Apr 2017 08:53:01,148641a,1492429981,clear,0,1
-luanecomp,17 Apr 2017 08:53:01,148641a,1492429981,remove,5,28
-luanecomp,17 Apr 2017 08:53:01,148641a,1492429981,toString,4,7
-luanecomp,17 Apr 2017 08:53:01,148641a,1492429981,push,2,39
-Carla,12 Sep 2016 09:21:14,50fabbe,1473682874,log,2,3
-Carla,12 Sep 2016 09:21:14,50fabbe,1473682874,remove,3,3
-Carla,12 Sep 2016 09:21:14,50fabbe,1473682874,format,0,4
-luanecomp,01 Jun 2017 09:27:14,99a4fe8,1496320034,push,2,39
-Carla,10 Aug 2016 14:16:09,134059b,1470849369,format,0,4
-yuri,07 Apr 2017 08:55:49,2e7f1ac,1491566149,remove,0,1
+Jeyel Ferreira,01 Nov 2017 10:04:36,b3232da,1509541476,get,4,4
+Diego Leite,15 Jan 2016 14:29:23,482d15b,1452878963,post,2,3
+Diego Leite,15 Jan 2016 14:29:23,482d15b,1452878963,delete,0,1
+Diego Leite,15 Jan 2016 14:29:23,482d15b,1452878963,get,3,6
 yuri,07 Apr 2017 08:55:49,2e7f1ac,1491566149,get,0,1
-Calebe Oliveira,23 Mar 2016 12:57:09,12b3643,1458748629,info,1,1
-Calebe Oliveira,23 Mar 2016 12:57:09,12b3643,1458748629,format,0,3
+Calebe Oliveira,23 Mar 2016 12:57:09,12b3643,1458748629,post,4,3
 Calebe Oliveira,23 Mar 2016 12:57:09,12b3643,1458748629,get,15,13
-Diego Leite,16 Dec 2015 17:38:26,c100e46,1450298306,get,2,6
-Jeyel Ferreira,26 May 2017 09:50:40,2dd171e,1495803040,log,3,3
-Jeyel Ferreira,26 May 2017 09:50:40,2dd171e,1495803040,get,4,4
-Jeyel Ferreira,26 May 2017 09:50:40,2dd171e,1495803040,remove,2,7
-Jeyel Ferreira,26 May 2017 09:50:40,2dd171e,1495803040,getContext,0,1
-Jeyel Ferreira,26 May 2017 09:50:40,2dd171e,1495803040,toString,9,9
-Jeyel Ferreira,26 May 2017 09:50:40,2dd171e,1495803040,push,0,10
-luanecomp,07 Apr 2017 08:34:34,b74ba63,1491564874,toString,4,7
-luanecomp,06 Apr 2017 15:55:52,bc37073,1491504952,remove,5,28
-luanecomp,06 Apr 2017 15:55:52,bc37073,1491504952,format,1,1
-luanecomp,22 May 2017 12:00:12,fc5dd56,1495465212,push,0,16
-luanecomp,22 May 2017 12:00:12,fc5dd56,1495465212,clear,0,1
-luanecomp,22 May 2017 12:00:12,fc5dd56,1495465212,remove,1,6
-luanecomp,02 May 2017 09:10:17,86d0332,1493727017,log,28,9
-luanecomp,02 May 2017 09:10:17,86d0332,1493727017,remove,0,1
-luanecomp,29 Mar 2017 17:46:12,6336c73,1490820372,remove,0,2
-MariliaSuzart,04 Aug 2016 11:47:51,ae95216,1470322071,format,0,1
-luanecomp,10 Apr 2017 11:59:01,0e13871,1491836341,format,1,0
-MariliaSuzart,22 Jul 2016 11:40:02,425594b,1469198402,format,0,1
-Jeyel Ferreira,08 Jun 2017 12:09:15,69140f7,1496934555,toString,9,9
-luanecomp,07 Apr 2017 14:58:32,66bad21,1491587912,log,0,1
-luanecomp,07 Apr 2017 14:58:32,66bad21,1491587912,remove,0,1
-Carla,16 Aug 2016 12:12:35,c78b832,1471360355,format,0,2
-Jeyel Ferreira,22 May 2017 14:10:22,9bcc972,1495473022,toString,0,5
-Jeyel Ferreira,22 May 2017 14:10:22,9bcc972,1495473022,remove,0,1
-Dilan Nery,15 Jan 2016 12:47:29,b817ac0,1452872849,get,0,1
-luanecomp,24 May 2017 13:25:50,6bada66,1495643150,log,27,0
-Jeyel Ferreira,07 Nov 2017 13:38:59,c83ddea,1510072739,log,3,3
-luanecomp,12 May 2017 17:47:15,7a48c75,1494622035,push,0,4
-luanecomp,12 May 2017 17:47:15,7a48c75,1494622035,remove,0,2
+Calebe Oliveira,23 Mar 2016 12:57:09,12b3643,1458748629,delete,6,4
+Diego Leite,16 Dec 2015 17:38:26,c100e46,1450298306,post,2,3
+Diego Leite,16 Dec 2015 17:38:26,c100e46,1450298306,get,3,6
+Calebe Oliveira,14 Dec 2015 12:39:34,0ec4ae5,1450107574,delete,6,4
+Dilan Nery,18 Mar 2016 23:44:32,2acb1e2,1458355472,get,0,1
+Dilan Nery,18 Mar 2016 23:44:32,2acb1e2,1458355472,delete,2,4
+Diego Leite,16 Dec 2015 18:01:55,adda814,1450299715,get,0,1
+Calebe Oliveira,14 Dec 2015 12:51:19,5f34239,1450108279,delete,0,1
+Diego Leite,16 Dec 2015 13:37:12,a850ad6,1450283832,post,0,1
+Dilan Nery,15 Jan 2016 12:47:29,b817ac0,1452872849,delete,2,4
 Dilan Nery,10 Mar 2016 12:04:18,77fb848,1457622258,get,0,1
-Jeyel Ferreira,24 May 2017 15:38:30,3cdcbd9,1495651110,toString,3,0
+Jeyel Ferreira,01 Nov 2017 09:25:04,4976aca,1509539104,get,4,4
 Vinícius Assis,19 Sep 2016 18:01:11,cd25afe,1474318871,get,0,1
-Calebe Oliveira,10 Dec 2015 16:20:27,fa24506,1449775227,info,1,1
-Calebe Oliveira,08 Jan 2016 15:16:58,6fe17c0,1452277018,get,15,13
-Calebe Oliveira,15 Dec 2015 17:19:28,61a0c88,1450210768,get,1,1
-Jeyel Ferreira,06 Oct 2017 11:50:26,5592c1a,1507301426,push,0,10
-Jeyel Ferreira,06 Oct 2017 11:50:26,5592c1a,1507301426,remove,0,3
-Jeyel Ferreira,05 Apr 2017 10:52:59,768d784,1491400379,get,4,4
+Calebe Oliveira,15 Dec 2015 17:19:28,61a0c88,1450210768,get,15,13
+Jeyel Ferreira,05 Apr 2017 10:52:59,768d784,1491400379,get,0,3
+Diego Leite,16 Dec 2015 14:02:55,a4d74df,1450285375,post,1,1
 Diego Leite,16 Dec 2015 14:02:55,a4d74df,1450285375,get,1,1
+Calebe Oliveira,15 Dec 2015 14:41:36,9cff8cf,1450201296,post,4,3
 Calebe Oliveira,15 Dec 2015 14:41:36,9cff8cf,1450201296,get,0,2
+Calebe Oliveira,15 Dec 2015 15:22:15,0a0186c,1450203735,post,1,1
 Calebe Oliveira,15 Dec 2015 15:22:15,0a0186c,1450203735,get,1,1
-luanecomp,12 May 2017 15:22:23,838d8b8,1494613343,push,0,8
-luanecomp,12 May 2017 15:22:23,838d8b8,1494613343,log,0,2
-luanecomp,12 May 2017 15:22:23,838d8b8,1494613343,remove,0,2
 yuri,31 Mar 2017 15:14:02,90a08ed,1490984042,get,0,1
+Calebe Oliveira,14 Dec 2015 13:47:15,3389ae1,1450111635,delete,0,2
 Calebe Oliveira,17 Dec 2015 14:40:31,23f9b8e,1450374031,get,0,3
 Diego Leite,04 Dec 2015 16:50:16,273a83a,1449258616,get,0,1
-luanecomp,01 Jun 2017 17:02:26,3ec7e9f,1496347346,toString,0,1
-luanecomp,11 May 2017 08:19:04,b747bc2,1494501544,push,0,3
-luanecomp,11 May 2017 08:19:04,b747bc2,1494501544,remove,0,4
 Diego Leite,16 Dec 2015 11:59:44,7a57ee7,1450277984,get,0,1
-Diego Leite,30 Mar 2016 15:55:55,1c86a8b,1459364155,get,0,1
-luanecomp,13 Apr 2017 14:17:59,1969e31,1492103879,log,0,2
-luanecomp,13 Apr 2017 14:17:59,1969e31,1492103879,remove,0,1
 Diego Leite,21 Jan 2016 14:20:39,c214ffe,1453396839,get,1,0
-Jeyel Ferreira,02 Oct 2017 11:03:00,2ffeba8,1506952980,push,0,4
-Jeyel Ferreira,02 Oct 2017 11:03:00,2ffeba8,1506952980,remove,0,1
-luanecomp,16 May 2017 11:31:45,40db99b,1494945105,push,0,5
-luanecomp,16 May 2017 11:31:45,40db99b,1494945105,remove,0,1
-luanecomp,16 May 2017 17:27:02,5d35607,1494966422,log,0,3
-Jeyel Ferreira,01 Nov 2017 09:25:04,4976aca,1509539104,toString,1,1
-Jeyel Ferreira,01 Nov 2017 09:25:04,4976aca,1509539104,log,2,2
-Jeyel Ferreira,01 Nov 2017 09:25:04,4976aca,1509539104,remove,1,1
-Jeyel Ferreira,01 Nov 2017 09:25:04,4976aca,1509539104,get,1,1
-yuri,03 May 2017 09:39:47,d4451a8,1493815187,remove,0,1
-Carla,25 Jul 2016 13:15:08,7a55c21,1469463308,format,0,1
-Jeyel Ferreira,02 Jun 2017 09:37:10,0fb4978,1496407030,toString,1,1
-Carla,20 May 2016 14:27:44,6ae8b3b,1463765264,log,2,3
-Carla,20 May 2016 14:27:44,6ae8b3b,1463765264,remove,3,3
-luanecomp,20 Apr 2017 18:00:18,a3d006a,1492722018,push,0,1
-luanecomp,20 Apr 2017 18:00:18,a3d006a,1492722018,remove,0,1
-Jeyel Ferreira,15 May 2017 11:38:45,b8ef291,1494859125,getContext,0,1
-luanecomp,20 Apr 2017 10:55:29,6b0899d,1492696529,remove,0,1
-luanecomp,07 Apr 2017 17:57:38,6c5bc43,1491598658,remove,2,2
-Carla,20 May 2016 14:32:33,2016aba,1463765553,log,2,0
-Carla,20 May 2016 14:32:33,2016aba,1463765553,remove,3,0
-luanecomp,13 Mar 2017 15:48:44,57524e8,1489430924,toString,0,3
-luanecomp,02 Jun 2017 15:38:32,1e02874,1496428712,toString,1,0
-Jeyel Ferreira,10 Apr 2017 14:12:41,fabedce,1491844361,get,3,0
-Calebe Oliveira,10 Dec 2015 15:57:14,6ba5e97,1449773834,info,0,1
-Calebe Oliveira,08 Jan 2016 16:57:22,21443d1,1452283042,get,13,0
-Jeyel Ferreira,02 Jun 2017 09:26:19,80681b0,1496406379,toString,1,1
-luanecomp,18 May 2017 15:34:02,d3477db,1495132442,remove,0,1
+Calebe Oliveira,17 Dec 2015 15:25:31,31c2c28,1450376731,post,0,1
 Calebe Oliveira,17 Dec 2015 15:25:31,31c2c28,1450376731,get,0,1
-Diego Leite,16 Dec 2015 18:01:55,adda814,1450299715,get,0,1
+Diego Leite,30 Mar 2016 15:55:55,1c86a8b,1459364155,get,0,1
+Diego Leite,30 Mar 2016 15:52:07,ba92b57,1459363927,delete,0,1
+Diego Leite,10 Dec 2015 14:26:39,cc89c34,1449768399,get,1,0
+Calebe Oliveira,08 Jan 2016 16:57:22,21443d1,1452283042,post,3,0
+Calebe Oliveira,08 Jan 2016 16:57:22,21443d1,1452283042,get,13,0
+Dilan Nery,15 Jan 2016 12:14:26,ec4b246,1452870866,delete,2,0
+Calebe Oliveira,08 Jan 2016 15:16:58,6fe17c0,1452277018,get,0,1
+Jeyel Ferreira,10 Apr 2017 14:12:41,fabedce,1491844361,get,3,0
+Dilan Nery,14 Dec 2015 11:06:29,74ea1c5,1450101989,delete,0,3
 Calebe Oliveira,06 Jan 2016 11:54:30,4b66342,1452092070,get,0,4
-luanecomp,17 Apr 2017 08:53:57,6e9a398,1492430037,remove,0,1
-Calebe Oliveira,11 Mar 2016 11:49:48,0da105d,1457707788,format,0,3
+Calebe Oliveira,01 Feb 2016 12:06:33,e3df155,1454339193,delete,5,0

@@ -28,7 +28,8 @@ AUTHOR_METHOD_USE = {}
 
 DEV_COMMIT = {}
 DEV_METHOD = {}
-
+SINCE = ''
+UNTIL = ''
 
 def new_file_interest(path):
     return files_interest.append(path, git_path)
@@ -40,7 +41,7 @@ def find_commits(list_regex, only_id=False, git_path=''):
     list_regex = '|'.join(map(str, list_regex))
     result = []
     if only_id:
-        ids = run_shell_scripts(commit_sha1_by_regex(list_regex, git_path), '')
+        ids = run_shell_scripts(commit_sha1_by_regex(list_regex, git_path, SINCE, UNTIL), '')
         commits = strip_data_commit(ids)
         hash_commits = [y[0] for y in commits if len(y[0]) > 0]
 
@@ -89,8 +90,7 @@ def commits_regex_by_file(regex_list, files, git_path=''):
     tat = '\(|.'.join(map(str, regex_list))
     for file in files:
         #Hashs dos commits que usaram o atributo nesse arquivo
-        commit_hash = run_shell_scripts(commit_sha1_by_regex_file(tat, file, git_path), '') 
-
+        commit_hash = run_shell_scripts(commit_sha1_by_regex_file(tat, file, git_path, SINCE, UNTIL), '')
         if len(commit_hash) > 0:
             commits = strip_data_commit(commit_hash)
             for commit in commits:
@@ -117,11 +117,14 @@ def commits_regex_by_file(regex_list, files, git_path=''):
 
 
 def load_files():
+    from datetime import datetime
     global projects
     global PROJETOS
     global CONSIDERAR_REMOCAO
     global LINGUAGENS
     global REMOVER_LINHAS_IDENTICAS
+    global SINCE
+    global UNTIL
 
     print 'Carregando parametros.....'
     try:
@@ -137,6 +140,9 @@ def load_files():
         if parameters['code_javascript']: LINGUAGENS.append('js')
         if parameters['code_php']: LINGUAGENS.append('php')
 
+        SINCE = datetime.strptime(parameters['data_inicio'], "%Y-%m-%d").date()
+        UNTIL = datetime.strptime(parameters['data_fim'], "%Y-%m-%d").date()
+
     except Exception as ex:
         logging.critical('FALHA NO ARQUIVO DE PARAMETROS')
         print 'Verifique seu arquivo de parametros, algo de errado não está certo'
@@ -148,7 +154,7 @@ def load_imports():
     print 'Carregando imports da API.....'
     file_imports = 'input/imports.txt'
     list_import_regex = get_list_lines_from_file(file_imports)
-    print list_import_regex
+    # print list_import_regex
     print 'Imports no arquivo: ' + str(len(list_import_regex))
 
 
@@ -158,7 +164,7 @@ def load_methods():
     print 'Carregando metodos da API.....'
     file_methods = 'input/metodos.txt'
     list_api_methods = get_list_lines_from_file(file_methods)
-    print list_api_methods
+    # print list_api_methods
     print 'Metodos no arquivo: ' + str(len(list_api_methods))
 
 
