@@ -1,10 +1,5 @@
 frequencia_removidos,quantidade_removidos,frequencia_total,quantidade_inseridos,quantidade_total,metodos,frequencia_inseridos,desenvolvedor
-5,2,15,3,3,post | delete | get,10,Diego Leite
-4,1,8,1,1,get,4,Jeyel Ferreira
-25,3,45,3,3,post | get | delete,20,Calebe Oliveira
-0,0,0,0,0,,0,Carla
-0,0,1,1,1,get,1,yuri
-0,0,1,1,1,get,1,Vinícius Assis
-2,1,7,2,2,get | delete,5,Dilan Nery
-0,0,0,0,0,,0,MariliaSuzart
-0,0,0,0,0,,0,luanecomp
+7578,64,16020,65,65, | load | contains | prepend | mouseout | show | text | is | serialize | focus | height | toggle | ready | nextAll | eq | click | append | size | index | bind | end | val | trigger | keyup | add | submit | find | width | live | html | resize | blur | css | addClass | map | removeAttr | closest | get | clone | each | change | next | removeClass | slice | offset | not | hide | one | data | after | on | unbind | attr | die | children | appendTo | remove | queue | toggleClass | empty | error | hasClass | position | mouseover | first,8442,Leandro Pereira
+786,22,2579,28,29, | text | is | nth-child | die | click | append | size | filter | slice | end | val | prepend | add | html | parents | empty | addClass | map | get | removeClass | on | attr | bind | remove | queue | css | each | first,1793,Mauricio
+2068,32,3945,32,34, | show | text | is | serialize | find | focus | height | ready | click | append | slice | end | val | contains | submit | next | live | trigger | empty | addClass | insertBefore | get | fadeOut | each | hide | one | change | on | attr | die | html | error | hasClass,1877,Mark Railton
+154,14,382,21,25, | load | show | text | is | focus | height | toggle | eq | append | index | hide | val | live | trigger | mouseout | empty | closest | get | end | on | attr | css | each | mouseover,228,bcron10

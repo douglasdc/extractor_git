@@ -1,6 +1,6 @@
 {
     "projetos":[
-        "/mnt/c/Users/Douglas/Documents/dinamico-cloud"
+        "/mnt/c/Users/Douglas/Documents/transpoco_tracking"
     ],
     "code_java":true,
     "code_php":true,
@@ -9,6 +9,6 @@
     "considerar_removidos":true,
     "por_projeto":true,
     "linhas_identicas": true,
-    "data_inicio":"1990-01-01",
-    "data_fim":"2020-01-01"
+    "data_inicio":"2017-2-1",
+    "data_fim":"2017-11-27"
 }

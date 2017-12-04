@@ -101,7 +101,10 @@ def commits_regex_by_file(regex_list, files, git_path=''):
                 if commit[0] not in commits:
                     temp = {}
                     temp['commit'] = commit[0]
-                    temp['autor'] = commit[1]
+                    if 'Maurício' in commit[1] or 'Mauricio' in commit[1]:
+                        temp['autor'] = 'Mauricio'
+                    else:
+                        temp['autor'] = commit[1]
                     temp['timestamp'] = commit[2]
                     temp['metodos'] = []
                     temp['arquivos'] = []
@@ -162,7 +165,7 @@ def load_methods():
     global list_api_methods
 
     print 'Carregando metodos da API.....'
-    file_methods = 'input/metodos.txt'
+    file_methods = 'input/metodos2.txt'
     list_api_methods = get_list_lines_from_file(file_methods)
     # print list_api_methods
     print 'Metodos no arquivo: ' + str(len(list_api_methods))
@@ -227,6 +230,7 @@ def start_extraction():
         # buscando os commits que possuem uso dos metodos presentes na lista
         # commits = commits_regex_by_file(list_api_methods, files_interest, project)
         commits = commits_regex_by_file(list_api_methods, files_interest, project)
+        # print [key for key in commits.keys()]
 
         commits = count_commits(commits, project)
 
