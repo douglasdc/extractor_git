@@ -72,7 +72,9 @@ def get_interest_files(commits_sh1a, regex_list, git_path=''):
         for sh1a in commits_sh1a:
             if(len(sh1a) > 0):
                 full_path = git_path + '/' + file
-                files = run_shell_scripts('git -C' + git_path + 'diff-tree -G' + '"' + regex + '"' + ' --no-commit-id --name-only -r ' + sh1a, '')
+                # print git_path
+                # print 'git -C' + git_path + 'diff-tree -G' + '"' + regex + '"' + ' --no-commit-id --name-only -r ' + sh1a
+                files = run_shell_scripts('git -C ' + git_path + ' diff-tree -G' + '"' + regex + '"' + ' --no-commit-id --name-only -r ' + sh1a, '')
                 # files = get_commited_files(LINGUAGENS, sh1a, git_path)
                 files_interest = files_interest + [git_path + '/' + file for file in files.split('\n') if git_path + '/' + file not in files_interest and len(file) > 0 and
                     len(run_shell_scripts('[ -f "' + git_path + '/' + file + '" ] && echo "Arquivo existe"', '')) > 0]
