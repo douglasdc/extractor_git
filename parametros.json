@@ -1,6 +1,6 @@
 {
     "projetos":[
-        "/mnt/c/Users/Douglas/Documents/transpoco_tracking"
+        "/mnt/c/Users/Douglas/Documents/Camile_projects/geotool-sos"
     ],
     "code_java":true,
     "code_php":true,
@@ -9,6 +9,6 @@
     "considerar_removidos":true,
     "por_projeto":true,
     "linhas_identicas": true,
-    "data_inicio":"2017-2-1",
+    "data_inicio":"2011-2-1",
     "data_fim":"2017-11-27"
 }

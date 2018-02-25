@@ -70,5 +70,5 @@ def methods_total_frequency(autor_methods_frequency):
     for dev, value in autor_methods_frequency.iteritems():
         for key, uso in value.iteritems():
             metodos[key] = metodos.get(key, 0) + uso
-        
+    
     return metodos

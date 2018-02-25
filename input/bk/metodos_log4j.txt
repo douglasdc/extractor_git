@@ -6,12 +6,10 @@ getInstance
 getSyslogEquivalent
 getResourceBundle
 fatal
-get
 toLevel
 getChainedPriority
 callAppenders
 getCurrentCategories
-remove
 getLogger
 debug
 getLayout
@@ -30,14 +28,11 @@ toString
 isWarnEnabled
 peek
 getErrorHandler
-equals
-put
 toPriority
 addFilter
 getAllPossiblePriorities
 isGreaterOrEqual
 cloneStack
-pop
 setPriority
 shutdown
 isFatalEnabled
@@ -45,7 +40,6 @@ log
 isTraceEnabled
 getFilter
 configure
-setName
 getAllAppenders
 warn
 l7dlog
@@ -64,7 +58,6 @@ setRepositorySelector
 getCurrentLoggers
 doConfigure
 doAppend
-format
 getLevel
 isAttached
 configureAndWatch
@@ -83,6 +76,5 @@ toInt
 inherit
 readResolve
 getLoggerRepository
-push
 addAppender
 isInfoEnabled

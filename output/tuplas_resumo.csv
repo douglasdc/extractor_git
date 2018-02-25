@@ -1,5 +1,17 @@
 frequencia_removidos,quantidade_removidos,frequencia_total,quantidade_inseridos,quantidade_total,metodos,frequencia_inseridos,desenvolvedor
-7578,64,16020,65,65, | load | contains | prepend | mouseout | show | text | is | serialize | focus | height | toggle | ready | nextAll | eq | click | append | size | index | bind | end | val | trigger | keyup | add | submit | find | width | live | html | resize | blur | css | addClass | map | removeAttr | closest | get | clone | each | change | next | removeClass | slice | offset | not | hide | one | data | after | on | unbind | attr | die | children | appendTo | remove | queue | toggleClass | empty | error | hasClass | position | mouseover | first,8442,Leandro Pereira
-786,22,2579,28,29, | text | is | nth-child | die | click | append | size | filter | slice | end | val | prepend | add | html | parents | empty | addClass | map | get | removeClass | on | attr | bind | remove | queue | css | each | first,1793,Mauricio
-2068,32,3945,32,34, | show | text | is | serialize | find | focus | height | ready | click | append | slice | end | val | contains | submit | next | live | trigger | empty | addClass | insertBefore | get | fadeOut | each | hide | one | change | on | attr | die | html | error | hasClass,1877,Mark Railton
-154,14,382,21,25, | load | show | text | is | focus | height | toggle | eq | append | index | hide | val | live | trigger | mouseout | empty | closest | get | end | on | attr | css | each | mouseover,228,bcron10
+33,10,74,15,16,or | hasNext | getInstance | get | create | valueOf | equals | next | write | add | toByteArray | toString | getName | values | getBytes | size,41,aaime
+1,1,7,5,5,close | forName | copy | flush | delete,6,groldan
+0,0,2,2,2,write | copyFile,2,LeeBreisacher
+48,16,142,20,21,reset | separatorsToUnix | normalizeNoEndSeparator | getBaseName | getFullPath | isDirectory | get | read | create | valueOf | equals | getPath | next | length | add | toString | getFullPathNoEndSeparator | getName | close | or | append,94,danieleromagnoli
+1,1,2,1,1,or,1,ang05a
+2,2,87,16,16,size | toList | hasNext | getInstance | deleteDirectory | getName | get | equals | getPath | next | add | toString | close | copy | or | delete,85,mleslie
+1,0,2,1,1,or,1,riniangreani
+47,17,80,13,21,and | deleteDirectory | suffixFileFilter | run | copyFile | read | getName | orFileFilter | equals | append | next | write | init | add | listFiles | andFileFilter | getExtension | close | toString | or | makeFileOnly,33,Simone Giannecchini
+42,14,84,14,14,size | copyFile | suffixFileFilter | run | getParent | notFileFilter | orFileFilter | add | deleteQuietly | listFiles | toString | nameFileFilter | or | delete,42,mbedward
+0,0,11,2,2,read | add,11,mpazos
+1,0,3,2,2,read | readFileToString,2,bencaradocdavies
+0,0,0,0,0,,0,Daniele Romagnoli
+148,28,346,33,35,and | notFileFilter | valueOf | getBaseName | accept | isDirectory | flush | close | create | append | size | handleStart | getName | getPath | write | add | toString | listFiles | sort | deleteQuietly | run | get | read | equals | handleIsCancelled | handleEnd | getParent | reset | copyFile | suffixFileFilter | getFullPath | remove | closeQuietly | directoryFileFilter | or,198,simonegiannecchini
+13,6,16,3,9,doDelete | hasNext | get | equals | next | close | copy | or | size,3,Gabriel Roldan
+0,0,83,10,10,copyFile | hasNext | buffer | next | read | add | getCount | close | delete | size,83,Andrea Aime
+4,0,8,2,2,read | add,4,jive

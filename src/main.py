@@ -3,6 +3,7 @@ from subprocess import PIPE, Popen
 from sets import Set
 import re, csv, json, logging
 import timeit
+import time
 
 from scripts.run_shell import run_shell_scripts
 from scripts.sh_scripts import *
@@ -64,17 +65,21 @@ def get_interest_files(commits_sh1a, regex_list, git_path=''):
     files_interest = []
     file = ''
     print 'Buscando arquivos de interesse dos commits.....'
+    startTime = int(round(time.time() * 1000))
+    regex = '|'.join(map(str, list_import_regex))
     try:
+        print len(commits_sh1a)
         for sh1a in commits_sh1a:
             if(len(sh1a) > 0):
                 full_path = git_path + '/' + file
-                files = get_commited_files(LINGUAGENS, sh1a, git_path)
+                files = run_shell_scripts('git -C' + git_path + 'diff-tree -G' + '"' + regex + '"' + ' --no-commit-id --name-only -r ' + sh1a, '')
+                # files = get_commited_files(LINGUAGENS, sh1a, git_path)
                 files_interest = files_interest + [git_path + '/' + file for file in files.split('\n') if git_path + '/' + file not in files_interest and len(file) > 0 and
-                len(run_shell_scripts('[ -f "' + git_path + '/' + file + '" ] && echo "Arquivo existe"', '')) > 0]
+                    len(run_shell_scripts('[ -f "' + git_path + '/' + file + '" ] && echo "Arquivo existe"', '')) > 0]
 
     except Exception as e:
         logging.warning('Arquivo nao encontrato - ' + file)
-    
+    endTime = int(round(time.time() * 1000))
     info_file('output/arquivos_interesse.txt', list(set(files_interest)))
     print 'Encontrato ' + str(len(files_interest)) + ' arquivos'
     return list(set(files_interest))
@@ -167,7 +172,7 @@ def load_methods():
     global list_api_methods
 
     print 'Carregando metodos da API.....'
-    file_methods = 'input/metodos2.txt'
+    file_methods = 'input/metodos.txt'
     list_api_methods = get_list_lines_from_file(file_methods)
     # print list_api_methods
     print 'Metodos no arquivo: ' + str(len(list_api_methods))
@@ -204,8 +209,6 @@ def count_commits(commits, project):
 
         contagem = find_patters_commit(commit_all, list_api_methods, CONSIDERAR_REMOCAO)
         commits[key]['metodos'] = contagem
-
-    # print commits
     return commits
 
 
@@ -239,8 +242,11 @@ def start_extraction():
         general = summary(commits)
         s_author = summary_author(commits)
 
-        tuplas_geral(general)
-        tuplas_resumo(s_author)
-
-        find_your_library(s_author)
-        expert_recomendation(s_author)
+        try:
+            tuplas_geral(general)
+            tuplas_resumo(s_author)
+            find_your_library(s_author)
+            expert_recomendation(s_author)
+        except Exception as e:
+            logging.warning('0 Commits encontrados no projeto, verifique os parâmetros e api que desejam buscar')
+            print '0 Commits encontratos no projeto, verifique os parâmetros e api que desejam buscar'

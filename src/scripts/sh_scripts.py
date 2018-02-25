@@ -80,7 +80,7 @@ def commit_sha1_by_file(file_path, git_folder, since=datetime.date(1990, 1, 1), 
 def commit_sha1_by_regex(regex, git_folder, since=datetime.date(1990, 1, 1), until=datetime.date(2030, 1, 1)):
     script = DEFINE_GIT_FOLDER(git_folder) + ' log ' + DEFINE_PERIOD(since, until) + ' --follow -G' + '"' + regex + '"' + ' --format=format:"%H|%an|%at" .'
     logging.info(script)
-    # print script
+
     return script
 
 
@@ -88,14 +88,14 @@ def commit_sha1_by_regex_file(regex, file_path, git_folder, since=datetime.date(
     # print DEFINE_PERIOD(since, until)
     script = DEFINE_GIT_FOLDER(git_folder) + ' log ' + DEFINE_PERIOD(since, until) + ' --follow -G' + '".' + regex + '\("' + ' --format=format:"%h|%an|%at" ' + file_path
     logging.info(script)
-    # print script
+
     return script
 
 
 def commited_files(sh1a, file_type, git_folder): 
     languages = '|'.join(map(str, file_type))
     script = DEFINE_GIT_FOLDER(git_folder) + ' show --pretty="" --name-only ' + sh1a + ' | awk "/^.*\.(' + languages + ')/"'
-    # print script
+
     logging.info(script)
     return script
 
@@ -104,3 +104,6 @@ def get_all_commit(sh1a, file_path, git_folder):
     script = DEFINE_GIT_FOLDER(git_folder) + ' show ' + sh1a + ' ' + file_path
     logging.info(script)
     return script
+
+
+# git -C <caminho_projeto>  log --since "<data_inicio>" --until "<data_fim>" --follow -G"<simbolos>" --format=format:"%h|%an|%at" <caminho_arquivo>
