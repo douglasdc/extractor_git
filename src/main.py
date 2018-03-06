@@ -115,6 +115,7 @@ def commits_regex_by_file(regex_list, files, git_path=''):
                     else:
                         temp['autor'] = commit[1]
                     temp['timestamp'] = commit[2]
+                    temp['email'] = commit[3]
                     temp['metodos'] = []
                     temp['arquivos'] = []
                     temp['arquivos'].append(file)
