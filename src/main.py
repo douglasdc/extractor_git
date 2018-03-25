@@ -94,7 +94,7 @@ def commits_regex_by_file(regex_list, files, git_path=''):
     commits2 = {}
 
     print 'Buscando commits de arquivos pela lista de metodos.....'
-    tat = '\(|.'.join(map(str, regex_list))
+    tat = '\(|.'.join(map(str, regex_list[0:1001]))
     for file in files:
         #Hashs dos commits que usaram o atributo nesse arquivo
         commit_hash = run_shell_scripts(commit_sha1_by_regex_file(tat, file, git_path, SINCE, UNTIL), '')
@@ -175,7 +175,7 @@ def load_methods():
     global list_api_methods
 
     print 'Carregando metodos da API.....'
-    file_methods = 'input/metodos.txt'
+    file_methods = 'input/metodos_commons.txt'
     list_api_methods = get_list_lines_from_file(file_methods)
     # print list_api_methods
     print 'Metodos no arquivo: ' + str(len(list_api_methods))

@@ -88,6 +88,7 @@ def commit_sha1_by_regex_file(regex, file_path, git_folder, since=datetime.date(
     # print DEFINE_PERIOD(since, until)
     script = DEFINE_GIT_FOLDER(git_folder) + ' log ' + DEFINE_PERIOD(since, until) + ' --follow -G' + '".' + regex + '\("' + ' --format=format:"%h|%an|%at|%ae" ' + file_path
     logging.info(script)
+    # print script
 
     return script
 
