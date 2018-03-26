@@ -68,21 +68,18 @@ def get_interest_files(commits_sh1a, regex_list, git_path=''):
     startTime = int(round(time.time() * 1000))
     regex = '|'.join(map(str, list_import_regex))
     try:
-        print len(commits_sh1a)
         for sh1a in commits_sh1a:
             if(len(sh1a) > 0):
                 full_path = git_path + '/' + file
-                # print git_path
-                # print 'git -C' + git_path + 'diff-tree -G' + '"' + regex + '"' + ' --no-commit-id --name-only -r ' + sh1a
+
                 files = run_shell_scripts('git -C ' + git_path + ' diff-tree -G' + '"' + regex + '"' + ' --no-commit-id --name-only -r ' + sh1a, '')
-                # files = get_commited_files(LINGUAGENS, sh1a, git_path)
                 files_interest = files_interest + [git_path + '/' + file for file in files.split('\n') if git_path + '/' + file not in files_interest and len(file) > 0 and
                     len(run_shell_scripts('[ -f "' + git_path + '/' + file + '" ] && echo "Arquivo existe"', '')) > 0]
 
     except Exception as e:
         logging.warning('Arquivo nao encontrato - ' + file)
     endTime = int(round(time.time() * 1000))
-    info_file('output/arquivos_interesse.txt', list(set(files_interest)))
+    # info_file('output/arquivos_interesse.txt', list(set(files_interest)))
     print 'Encontrato ' + str(len(files_interest)) + ' arquivos'
     return list(set(files_interest))
 
@@ -94,7 +91,7 @@ def commits_regex_by_file(regex_list, files, git_path=''):
     commits2 = {}
 
     print 'Buscando commits de arquivos pela lista de metodos.....'
-    tat = '\(|.'.join(map(str, regex_list[0:1001]))
+    tat = '\(|.'.join(map(str, regex_list))
     for file in files:
         #Hashs dos commits que usaram o atributo nesse arquivo
         commit_hash = run_shell_scripts(commit_sha1_by_regex_file(tat, file, git_path, SINCE, UNTIL), '')
@@ -223,6 +220,9 @@ def start_extraction():
     load_files()
     load_imports()
     load_methods()
+    general = {}
+    s_author = {}
+    all_files_interest = []
     for project in projects:
         p = project.split('/')
         PROJETO_ATUAL = p[len(p) - 1]
@@ -232,24 +232,24 @@ def start_extraction():
         commits_sh1a = find_commits(list_import_regex, True, project)
         
         # Busca os arquivos de interesse presentes no commits que possuiam referencia aos import dos 
-        files_interest = get_interest_files(commits_sh1a, list_import_regex, project)
+        files_project = get_interest_files(commits_sh1a, list_import_regex, project)
+        all_files_interest = all_files_interest + files_project
 
         # Extrai todos os commits que os arquivos de interesse tiveram, 
         # buscando os commits que possuem uso dos metodos presentes na lista
         # commits = commits_regex_by_file(list_api_methods, files_interest, project)
-        commits = commits_regex_by_file(list_api_methods, files_interest, project)
-        # print [key for key in commits.keys()]
-
+        commits = commits_regex_by_file(list_api_methods, files_project, project)
+        
         commits = count_commits(commits, project)
 
-        general = summary(commits)
-        s_author = summary_author(commits)
+        general.update(summary(commits))
+        s_author.update(summary_author(commits))
 
-        try:
-            tuplas_geral(general)
-            tuplas_resumo(s_author)
-            find_your_library(s_author)
-            expert_recomendation(s_author)
-        except Exception as e:
-            logging.warning('0 Commits encontrados no projeto, verifique os parâmetros e api que desejam buscar')
-            print '0 Commits encontratos no projeto, verifique os parâmetros e api que desejam buscar'
+    try:
+        tuplas_geral(general)
+        tuplas_resumo(s_author)
+        find_your_library(s_author)
+        expert_recomendation(s_author)
+    except Exception as e:
+        logging.warning('0 Commits encontrados no projeto, verifique os parâmetros e api que desejam buscar')
+        print '0 Commits encontratos no projeto, verifique os parâmetros e api que desejam buscar'
