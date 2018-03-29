@@ -72,7 +72,7 @@ def get_interest_files(commits_sh1a, regex_list, git_path=''):
             if(len(sh1a) > 0):
                 full_path = git_path + '/' + file
 
-                files = run_shell_scripts('git -C ' + git_path + ' diff-tree -G' + '"' + regex + '"' + ' --no-commit-id --name-only -r ' + sh1a, '')
+                files = run_shell_scripts('git -C ' + git_path + ' show --pretty="" -G' + '"' + regex + '"' + ' --no-commit-id --name-only -r ' + sh1a, '')
                 files_interest = files_interest + [git_path + '/' + file for file in files.split('\n') if git_path + '/' + file not in files_interest and len(file) > 0 and
                     len(run_shell_scripts('[ -f "' + git_path + '/' + file + '" ] && echo "Arquivo existe"', '')) > 0]
 
@@ -86,15 +86,29 @@ def get_interest_files(commits_sh1a, regex_list, git_path=''):
 # Busca os commits que possuem referencia às expressões regulares em cada arquivo de uma lista de arquivos
 # PRECISA AINDA VERIFICAR SE REALMENTE FAZ REFERENCIA A API, VERIFICAR SE A CLASSE OU MÉTODO É DA API
 def commits_regex_by_file(regex_list, files, git_path=''):
+    import progressbar
+    barA = progressbar.ProgressBar()
+    barM = progressbar.ProgressBar(max_value=len(files), redirect_stdout=True)
     global commitsObj
     global developers
     commits2 = {}
 
     print 'Buscando commits de arquivos pela lista de metodos.....'
     tat = '\(|.'.join(map(str, regex_list))
+    i = 0
+    j = 0
     for file in files:
+        i = i + 1
+        k = 100*i/len(files)
+        # barA.update(k)
         #Hashs dos commits que usaram o atributo nesse arquivo
+        # print i
+        # for tat in regex_list:
+        j = j + 1
+        barM.update(j)
+        # print str(i) + '/43' + '-----' + str(j)
         commit_hash = run_shell_scripts(commit_sha1_by_regex_file(tat, file, git_path, SINCE, UNTIL), '')
+        # print commit_hash
         if len(commit_hash) > 0:
             commits = strip_data_commit(commit_hash)
             for commit in commits:
@@ -172,7 +186,7 @@ def load_methods():
     global list_api_methods
 
     print 'Carregando metodos da API.....'
-    file_methods = 'input/metodos_commons.txt'
+    file_methods = 'input/metodos_log4j.txt'
     list_api_methods = get_list_lines_from_file(file_methods)
     # print list_api_methods
     print 'Metodos no arquivo: ' + str(len(list_api_methods))
@@ -244,6 +258,16 @@ def start_extraction():
 
         general.update(summary(commits))
         s_author.update(summary_author(commits))
+
+        # list_regex = '\(|.'.join(map(str, list_api_methods))
+        
+        # for file in files_project:
+        #     file_path = project + '/' + file
+        #     m = '|'.join(map(str, list_api_methods))
+        #     # a = commits_regex_by_file(list_api_methods, files_project, project)
+        #     commit_hash = run_shell_scripts(get_amount_commits(m, file, project, SINCE, UNTIL), '')
+        #     # print commit_hash
+        #     # print a
 
     try:
         tuplas_geral(general)

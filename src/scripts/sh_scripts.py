@@ -72,13 +72,14 @@ def see_changed_files(file_type, git_folder):
 
 def commit_sha1_by_file(file_path, git_folder, since=datetime.date(1990, 1, 1), until=datetime.date(2030, 1, 1)):
     script = DEFINE_GIT_FOLDER(
-        git_folder) + ' log ' + DEFINE_PERIOD(since, until) + ' --format=format:%H ' + file_path
+        git_folder) + ' log ' + DEFINE_PERIOD(since, until) + ' --format=format:%H -- ' + file_path
     logging.info(script)
+    # print script
     return script
 
 
 def commit_sha1_by_regex(regex, git_folder, since=datetime.date(1990, 1, 1), until=datetime.date(2030, 1, 1)):
-    script = DEFINE_GIT_FOLDER(git_folder) + ' log ' + DEFINE_PERIOD(since, until) + ' --follow -G' + '"' + regex + '"' + ' --format=format:"%H|%an|%at" .'
+    script = DEFINE_GIT_FOLDER(git_folder) + ' log ' + DEFINE_PERIOD(since, until) + ' --follow -G' + '"' + regex + '"' + ' --format=format:"%H|%an|%at" -- .'
     logging.info(script)
 
     return script
@@ -86,10 +87,9 @@ def commit_sha1_by_regex(regex, git_folder, since=datetime.date(1990, 1, 1), unt
 
 def commit_sha1_by_regex_file(regex, file_path, git_folder, since=datetime.date(1990,1,1), until=datetime.date(2030,1,1)):
     # print DEFINE_PERIOD(since, until)
-    script = DEFINE_GIT_FOLDER(git_folder) + ' log ' + DEFINE_PERIOD(since, until) + ' --follow -G' + '".' + regex + '\("' + ' --format=format:"%h|%an|%at|%ae" ' + file_path
+    script = DEFINE_GIT_FOLDER(git_folder) + ' log ' + ' --follow -G' + '".' + regex + '\("' + ' --format=format:"%h|%an|%at|%ae" -- ' + file_path
     logging.info(script)
     # print script
-
     return script
 
 
@@ -104,6 +104,14 @@ def commited_files(sh1a, file_type, git_folder):
 def get_all_commit(sh1a, file_path, git_folder):
     script = DEFINE_GIT_FOLDER(git_folder) + ' show ' + sh1a + ' ' + file_path
     logging.info(script)
+    return script
+
+def get_amount_commits(regex, file_path, git_folder, since=datetime.date(1990,1,1), until=datetime.date(2030,1,1)):
+    from datetime import timedelta
+    # print DEFINE_PERIOD(since, until)
+    script = DEFINE_GIT_FOLDER(git_folder) + ' log -1  --follow -G' + '".' + regex + '\("' + ' --format=format:"%h|%an|%at|%ae" -- ' + file_path 
+    logging.info(script)
+    # print script
     return script
 
 

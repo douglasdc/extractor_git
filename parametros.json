@@ -1,6 +1,6 @@
 {
     "projetos":[
-        "/mnt/c/Users/Douglas/Documents/Camile_projects/geotool-sos"
+        "/mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste01"
     ],
     "code_java":true,
     "code_php":true,
@@ -10,6 +10,6 @@
     "por_projeto":true,
     "linhas_identicas": true,
     "data_inicio":"2011-2-1",
-    "data_fim":"2017-11-27",
+    "data_fim":"2018-11-27",
     "oraculo_david_ma": false
 }
