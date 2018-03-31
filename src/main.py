@@ -74,7 +74,7 @@ def get_interest_files(commits_sh1a, regex_list, git_path=''):
 
                 files = run_shell_scripts('git -C ' + git_path + ' show --pretty="" -G' + '"' + regex + '"' + ' --no-commit-id --name-only -r ' + sh1a, '')
                 files_interest = files_interest + [git_path + '/' + file for file in files.split('\n') if git_path + '/' + file not in files_interest and len(file) > 0 and
-                    len(run_shell_scripts('[ -f "' + git_path + '/' + file + '" ] && echo "Arquivo existe"', '')) > 0]
+                    len(run_shell_scripts('[ ! -f "' + git_path + '/' + file + '" ] && echo "Arquivo existe"', '')) > 0]
 
     except Exception as e:
         logging.warning('Arquivo nao encontrato - ' + file)
