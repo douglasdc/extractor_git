@@ -1,11 +1,11 @@
 #coding:utf-8
 
-from utils import *
+from .utils import *
 
 def tuplas_geral(commits_summary):
     temp = []
     for c in commits_summary.values():
-        for key, value in c['metodos'].iteritems():
+        for key, value in c['metodos'].items():
             a = c.copy()
             del a['metodos']
             del a['arquivos']
@@ -19,22 +19,22 @@ def tuplas_geral(commits_summary):
     return temp
 
 
-def tuplas_resumo(commits_author):
+def tuplas_resumo(commits_author, file_name):
     temp = []
-    for key, value in commits_author.iteritems():
+    for key, value in commits_author.items():
         autor = value.copy()
         autor['metodos'] = ' | '.join(map(str, autor['metodos'].keys()))
         autor['desenvolvedor'] = autor.pop('dev')
         temp.append(autor)
 
-    write_csv('output', 'tuplas_resumo', temp)
+    write_csv('output', file_name, temp)
 
     return temp
 
 
 def find_libray__csv(library_expertise, expertise_distance):
     developers = []
-    for dev, value in library_expertise.iteritems():
+    for dev, value in library_expertise.items():
         temp = {}
         temp['exp_dist'] = expertise_distance[dev]
         temp['desenvolvedor'] = dev

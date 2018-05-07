@@ -1,3 +1,4 @@
-frequencia_removidos,quantidade_removidos,frequencia_total,quantidade_inseridos,quantidade_total,metodos,frequencia_inseridos,desenvolvedor
-1,1,6,4,5,info | getLogger | setLevel | isDebugEnabled | getName,5,Da Vinci
-2,2,12,5,5,info | debug | isDebugEnabled | setLevel | isInfoEnabled,10,Mona Lisa
+frequencia_inseridos,quantidade_removidos,quantidade_inseridos,metodos,quantidade_total,desenvolvedor,frequencia_removidos,frequencia_total
+4,0,2,getPath | or,2,oyevstafyev,4,8
+123,20,23,byteCountToDisplaySize | remove | get | equals | toInputStream | getTempDirectoryPath | add | hasNext | delete | append | getPath | getName | toString | next | closeQuietly | or | getInstance | size | getParent | getFile | length | start | copyURLToFile,23,Sergiy Shyrkov,88,211
+2,0,2,start | stop,2,Thomas Draier,0,2

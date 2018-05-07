@@ -1,6 +1,6 @@
 {
     "projetos":[
-        "/mnt/c/Users/Douglas/Dropbox/TCC_DouglasCerqueira/Projetos/Teste01"
+        "/mnt/c/Users/Douglas/Documents/Camile_projects/commons/dxm"
     ],
     "code_java":true,
     "code_php":true,
@@ -9,7 +9,8 @@
     "considerar_removidos":true,
     "por_projeto":true,
     "linhas_identicas": true,
-    "data_inicio":"2011-2-1",
-    "data_fim":"2018-11-27",
-    "oraculo_david_ma": false
+    "data_inicio":"2017-12-30",
+    "data_fim":"2018-01-30",
+    "oraculo_david_ma": true,
+    "oraculo_david_ma_dias":60
 }

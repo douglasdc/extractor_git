@@ -1,3 +1,4 @@
-relative_depth,breadth,depth,relative_breadth,dev
-3.2,5,6,3.5,Da Vinci
-3.8,5,12,3.5,Mona Lisa
+depth,breadth,relative_depth,relative_breadth,dev
+8,2,0.29569892473118276,1.0,oyevstafyev
+211,23,22.370967741935484,21.5,Sergiy Shyrkov
+2,2,1.3333333333333333,1.5,Thomas Draier
