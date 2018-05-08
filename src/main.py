@@ -117,12 +117,12 @@ def commits_regex_by_file(regex_list, files, since, until, git_path=''):
                 if commit[0] not in commits:
                     temp = {}
                     temp['commit'] = commit[0]
-                    if 'Maurício' in commit[1] or 'Mauricio' in commit[1]:
-                        temp['autor'] = 'Mauricio'
-                    elif 'Barry' in commit[1] or 'bcron10' in commit[1]:
-                        temp['autor'] = 'Barry Cronin'
-                    else:
-                        temp['autor'] = commit[1]
+                    # if 'Maurício' in commit[1] or 'Mauricio' in commit[1]:
+                    #     temp['autor'] = 'Mauricio'
+                    # elif 'Barry' in commit[1] or 'bcron10' in commit[1]:
+                    #     temp['autor'] = 'Barry Cronin'
+                    # else:
+                    temp['autor'] = commit[1]
                     temp['timestamp'] = commit[2]
                     temp['email'] = commit[3]
                     temp['metodos'] = []

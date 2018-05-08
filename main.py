@@ -4,8 +4,7 @@ import logging
 from datetime import datetime
 
 def main():
-    import sys
-    # sys.path.append('/')
+
     start_extraction()
 
 if __name__ == "__main__":
