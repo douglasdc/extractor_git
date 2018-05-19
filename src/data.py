@@ -21,6 +21,7 @@ def summary_author(commits):
             temp = {}
             temp['dev'] = value['autor']
             temp['metodos'] = value['metodos']
+            temp['email'] = value['email']
             temp['quantidade_total'] = len(value['metodos'])
             temp['quantidade_inseridos'] = sum(1 for key, value in value['metodos'].items() if value['adicionou'] > 0)
             temp['quantidade_removidos'] = temp['quantidade_total'] - temp['quantidade_inseridos']

@@ -25,6 +25,7 @@ def tuplas_resumo(commits_author, file_name):
         autor = value.copy()
         autor['metodos'] = ' | '.join(map(str, autor['metodos'].keys()))
         autor['desenvolvedor'] = autor.pop('dev')
+        autor['email'] = autor.pop('email')
         temp.append(autor)
 
     write_csv('output', file_name, temp)

@@ -1,4 +1,4 @@
-frequencia_inseridos,frequencia_removidos,quantidade_inseridos,metodos,quantidade_removidos,quantidade_total,desenvolvedor,frequencia_total
-4,4,2,getPath | or,0,2,oyevstafyev,8
-2,0,2,start | stop,0,2,Thomas Draier,2
-123,88,23,getInstance | getPath | byteCountToDisplaySize | get | closeQuietly | add | remove | getFile | toInputStream | or | equals | toString | size | length | copyURLToFile | append | getTempDirectoryPath | hasNext | start | next | getParent | getName | delete,20,23,Sergiy Shyrkov,211
+frequencia_total,quantidade_total,metodos,frequencia_inseridos,desenvolvedor,quantidade_removidos,quantidade_inseridos,frequencia_removidos,email
+8,2,getPath | or,4,oyevstafyev,0,2,4,oievstafiev@jahia.com
+211,23,next | getName | size | copyURLToFile | getInstance | delete | getParent | toInputStream | equals | getFile | closeQuietly | or | byteCountToDisplaySize | getTempDirectoryPath | getPath | append | remove | hasNext | length | toString | get | add | start,123,Sergiy Shyrkov,20,23,88,sshyrkov@jahia.com
+2,2,start | stop,2,Thomas Draier,0,2,0,tdraier@jahia.com

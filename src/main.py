@@ -8,12 +8,13 @@ import time
 from .scripts.run_shell import run_shell_scripts
 from .scripts.sh_scripts import *
 from .utils import *
-from .commit import Commit, Author
+# from .commit import Commit, Author
 from .metricas.find_your_library import library_expertise, expertise_distance
 from .metricas.expert_recomendation import depth_method, breadth_method, relative_breadth, relative_depth
 from .parser import *
 from .data import *
 from .data_export import *
+from .models import Author, Commit, Method
 from . import settings
 
 commitsObj = {}
@@ -91,6 +92,7 @@ def get_interest_files(commits_sh1a, regex_list, git_path=''):
 # Busca os commits que possuem referencia às expressões regulares em cada arquivo de uma lista de arquivos
 # PRECISA AINDA VERIFICAR SE REALMENTE FAZ REFERENCIA A API, VERIFICAR SE A CLASSE OU MÉTODO É DA API
 def commits_regex_by_file(regex_list, files, since, until, git_path=''):
+    autores = {}
     import progressbar
     # barA = progressbar.ProgressBar()
     barM = progressbar.ProgressBar(max_value=len(files), redirect_stdout=True)
@@ -115,6 +117,12 @@ def commits_regex_by_file(regex_list, files, since, until, git_path=''):
                     id_commit_method[commit[0]] = []
 
                 if commit[0] not in commits:
+                    nc = Commit(commit[0], commit[2], settings.PROJETO_ATUAL)
+                    autor = Author(commit[1], commit[3])
+                    if commit[1] not in autores:
+                        autores[commit[1]] = autor
+                        print(autor.name)
+                    nc.add_file(file)
                     temp = {}
                     temp['commit'] = commit[0]
                     temp['autor'] = commit[1]

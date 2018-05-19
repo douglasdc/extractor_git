@@ -1,4 +1,4 @@
-breadth,relative_depth,depth,relative_breadth,dev
-2,0.29569892473118276,8,1.0,oyevstafyev
-2,1.3333333333333333,2,1.5,Thomas Draier
-23,22.370967741935484,211,21.5,Sergiy Shyrkov
+depth,relative_breadth,breadth,dev,relative_depth
+8,1.0,2,oyevstafyev,0.29569892473118276
+211,21.5,23,Sergiy Shyrkov,22.370967741935484
+2,1.5,2,Thomas Draier,1.3333333333333333
