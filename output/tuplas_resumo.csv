@@ -1,4 +1,4 @@
-frequencia_inseridos,quantidade_removidos,quantidade_inseridos,metodos,quantidade_total,desenvolvedor,frequencia_removidos,frequencia_total
-4,0,2,getPath | or,2,oyevstafyev,4,8
-123,20,23,byteCountToDisplaySize | remove | get | equals | toInputStream | getTempDirectoryPath | add | hasNext | delete | append | getPath | getName | toString | next | closeQuietly | or | getInstance | size | getParent | getFile | length | start | copyURLToFile,23,Sergiy Shyrkov,88,211
-2,0,2,start | stop,2,Thomas Draier,0,2
+frequencia_inseridos,frequencia_removidos,quantidade_inseridos,metodos,quantidade_removidos,quantidade_total,desenvolvedor,frequencia_total
+4,4,2,getPath | or,0,2,oyevstafyev,8
+2,0,2,start | stop,0,2,Thomas Draier,2
+123,88,23,getInstance | getPath | byteCountToDisplaySize | get | closeQuietly | add | remove | getFile | toInputStream | or | equals | toString | size | length | copyURLToFile | append | getTempDirectoryPath | hasNext | start | next | getParent | getName | delete,20,23,Sergiy Shyrkov,211
