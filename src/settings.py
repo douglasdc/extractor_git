@@ -5,6 +5,7 @@ from .utils import get_list_lines_from_file
 PROJETOS = []
 LINGUAGENS = []
 PROJETO_ATUAL = []
+PROJECT_PATH = ''
 CONSIDERAR_REMOCAO = True
 REMOVER_LINHAS_IDENTICAS = True
 SINCE = ''
@@ -64,7 +65,7 @@ def load_methods():
     global LIST_API_METHODS
 
     print('Carregando metodos da API.....')
-    file_methods = 'input/metodos_commons.txt'
+    file_methods = 'input/metodos_hadoop.txt'
     LIST_API_METHODS = get_list_lines_from_file(file_methods)
 
     print('Metodos no arquivo: ' + str(len(LIST_API_METHODS)))

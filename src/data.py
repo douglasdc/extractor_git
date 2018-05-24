@@ -4,6 +4,17 @@ from datetime import datetime
 
 from .scripts.run_shell import run_shell_scripts
 from .scripts.sh_scripts import *
+from .models import get_amount_inserted, get_amount_removed, get_frequency_inserted, get_frequency_removed
+
+def summary_method(method):
+    
+    tempMethod = {}
+    if (method.amount_inserted + method.amount_removed) > 0:
+        tempMethod['adicionou'] = method.amount_inserted
+        tempMethod['removeu'] = method.amount_removed
+
+    return tempMethod
+    
 
 def summary(commits):
     from datetime import datetime
@@ -11,8 +22,43 @@ def summary(commits):
         value['metodos'] = {keys: values for keys, values in value['metodos'].items() if (values['adicionou'] + values['removeu']) > 0}
         value['momento'] = "{:%d %b %Y %H:%M:%S}".format(datetime.fromtimestamp(float(value['timestamp'])))
 
+    # print(commits)
     return commits
 
+def summarys(authors):
+    summary = {}
+    from datetime import datetime
+    for key, value in authors.items():
+        for commit in value.commits:
+            # print(len(value.commits))
+            files = []
+            methods = {}
+            for file in commit.files:
+                files.append(file.path)
+                for method in file.methods:
+                    if (method.amount_inserted + method.amount_removed) > 0:
+                        tempMethod = {}
+                        tempMethod['adicionou'] = method.amount_inserted
+                        tempMethod['removeu'] = method.amount_removed
+
+                        methods[method.name] = tempMethod
+            
+            tempCommit = {}
+            tempCommit['arquivos'] = files
+            tempCommit['momento'] = "{:%d %b %Y %H:%M:%S}".format(datetime.fromtimestamp(float(commit.timestamp)))
+            tempCommit['email'] = value.email
+            tempCommit['timestamp'] = commit.timestamp
+            tempCommit['commit'] = commit.sha1
+            tempCommit['autor'] = value.name
+            tempCommit['metodos'] = methods
+
+            summary[commit.sha1] = tempCommit
+
+            # print(commit.sha1)
+
+    # print(summary)
+    return summary
+                    
 
 def summary_author(commits):
     autores = {}
@@ -47,7 +93,48 @@ def summary_author(commits):
             autores[value['autor']]['frequencia_inseridos'] = autores[value['autor']]['frequencia_inseridos'] + sum(value['adicionou'] for key, value in value['metodos'].items())
             autores[value['autor']]['frequencia_removidos'] = autores[value['autor']]['frequencia_total'] - autores[value['autor']]['frequencia_inseridos']
     
+    print(autores)
     return autores
+
+def summary_authors(authors):
+    summary = {}
+    from datetime import datetime
+    for key, value in authors.items():
+        author = {}
+        methods = {}
+        authorMethods = value.get_methods()
+        # if value.name == 'oyevstafyev':
+        #     print(authorMethods['equals'].amount_inserted)
+        #     print(authorMethods['or'].amount_inserted)
+        for key, method in authorMethods.items():
+            if (method.amount_inserted + method.amount_removed) > 0:
+                tempMethod = {}
+                tempMethod['adicionou'] = method.amount_inserted
+                tempMethod['removeu'] = method.amount_removed
+
+                methods[method.name] = tempMethod
+        
+        # author['frequencia_inseridos'] = get_frequency_inserted(authorMethods.values())
+        # author['frequencia_removidos'] = get_frequency_removed(authorMethods.values())
+        # author['quantidade_inseridos'] = get_amount_inserted(authorMethods.values())
+        # author['quantidade_removidos'] = get_amount_removed(authorMethods.values())
+        author['metodos'] = methods
+        author['dev'] = value.name
+        author['email'] = value.email
+
+        # print(author)
+
+
+        # for commit in value.commits:
+        #     commit.get_methods()
+            # print(len(value.commits))
+            # files = []
+            # methods = {}
+            # for file in commit.files:
+            #     print(file.methods)
+        
+    return {}
+
 
 # Retorna uma lista no formato
 # [

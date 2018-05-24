@@ -1,7 +1,12 @@
 #coding:utf-8
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 from src.main import start_extraction
 import logging
 from datetime import datetime
+
 
 def main():
 

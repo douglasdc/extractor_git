@@ -1,5 +1,6 @@
 #coding:utf-8
 import string, re, regex
+from .models import Method
 
 def find_patters_commit(commit, metodos, remove_lines_iquals):
     re_metodos = r'.' + '\(|.'.join(map(str, metodos)) + '\('
@@ -21,3 +22,28 @@ def find_patters_commit(commit, metodos, remove_lines_iquals):
     
     # print contagem
     return contagem
+
+def find_patters_commits(entire_commit, methods, value, remove_lines_equals=True):
+    re_methods = r'.' + '\(|.'.join(map(str, methods)) + '\('
+    # print(entire_commit)
+    inserted = [re.sub('\+\s+', '', value) for value in entire_commit.split('\n') if re.search(re_methods, value) and re.search(r'^\+\s+', value)]
+    removed = [re.sub('\-\s+', '', value) for value in entire_commit.split('\n') if re.search(re_methods, value) and re.search(r'^\-\s+', value)]
+    # if value == 'oyevstafyev':
+    #     print(inserted)
+    #     print(removed)
+    if remove_lines_equals:
+        for value in inserted:
+            if value in removed and len(value) > 0:
+                inserted.remove(value)
+                removed.remove(value)
+
+    quantified_methods = []
+    for method in methods:
+        amount_inserted = sum(1 for value in inserted if re.search(r'.' + method + '\(', value))
+        amount_removed = sum(1 for value in removed if re.search(r'.' + method + '\(', value))
+       
+        m = Method(method, '', amount_inserted, amount_removed, 0, 0)
+        
+        quantified_methods.append(m)
+
+    return quantified_methods

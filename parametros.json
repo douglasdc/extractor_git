@@ -1,6 +1,6 @@
 {
     "projetos":[
-        "/mnt/c/Users/Douglas/Documents/camille_projects/commons/dxm"
+        "/mnt/c/Users/Douglas/Documents/camille_projects/hadoop/hive-on-spark"
     ],
     "code_java":true,
     "code_php":true,
@@ -9,8 +9,8 @@
     "considerar_removidos":true,
     "por_projeto":true,
     "linhas_identicas": true,
-    "data_inicio":"2017-12-30",
+    "data_inicio":"2015-12-30",
     "data_fim":"2018-10-30",
-    "oraculo_david_ma": true,
+    "oraculo_david_ma": false,
     "oraculo_david_ma_dias":60
 }

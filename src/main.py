@@ -14,9 +14,10 @@ from .metricas.expert_recomendation import depth_method, breadth_method, relativ
 from .parser import *
 from .data import *
 from .data_export import *
-from .models import Author, Commit, Method
+from .models import Author, Commit, Method, File
 from . import settings
 
+autores = {}
 commitsObj = {}
 developers = {}
 projects = {}
@@ -41,7 +42,6 @@ def find_commits(list_regex, since, until, only_id=False, git_path=''):
     print('Buscando commits pelos imports da API.....')
 
     list_regex = '|'.join(map(str, list_regex))
-
     result = []
     if only_id:
         ids = run_shell_scripts(commit_sha1_by_regex(list_regex, git_path, since, until), '')
@@ -92,7 +92,7 @@ def get_interest_files(commits_sh1a, regex_list, git_path=''):
 # Busca os commits que possuem referencia às expressões regulares em cada arquivo de uma lista de arquivos
 # PRECISA AINDA VERIFICAR SE REALMENTE FAZ REFERENCIA A API, VERIFICAR SE A CLASSE OU MÉTODO É DA API
 def commits_regex_by_file(regex_list, files, since, until, git_path=''):
-    autores = {}
+    global autores
     import progressbar
     # barA = progressbar.ProgressBar()
     barM = progressbar.ProgressBar(max_value=len(files), redirect_stdout=True)
@@ -106,23 +106,29 @@ def commits_regex_by_file(regex_list, files, since, until, git_path=''):
     j = 0
     for file in files:
         j = j + 1
-        barM.update(j)
+        # barM.update(j)
         commit_hash = run_shell_scripts(commit_sha1_by_regex_file(tat, file, git_path, since, until), '')
 
         if len(commit_hash) > 0:
             commits = strip_data_commit(commit_hash)
+            
             for commit in commits:
-
                 if commit[0] not in id_commit_method:
                     id_commit_method[commit[0]] = []
 
                 if commit[0] not in commits:
                     nc = Commit(commit[0], commit[2], settings.PROJETO_ATUAL)
-                    autor = Author(commit[1], commit[3])
+                    nc.add_file(File(file))
+                    if(commit[1] == 'oyevstafyev'):
+                        print(file)
                     if commit[1] not in autores:
+                        autor = Author(commit[1], commit[3])
                         autores[commit[1]] = autor
-                        print(autor.name)
-                    nc.add_file(file)
+                        autor.add_commit(nc)
+
+                    else:
+                        autores[commit[1]].add_commit(nc)
+
                     temp = {}
                     temp['commit'] = commit[0]
                     temp['autor'] = commit[1]
@@ -161,13 +167,32 @@ def expert_recomendation(commits):
     expertise__csv(dm, bm, rd, rb)
 
 
-def count_commits(commits, project):
+def count_commits(commits, project_path):
     # print(commits)
+    global autores
     commits = commits.copy()
+
+    i = 0
+    # for key, value in autores.items():
+    #     if value.name =='oyevstafyev':
+    #         for commit in value.commits:
+    #             i = i + 1
+    #             for file in commit.files:
+    #                 # print(file.path)
+    #                 entire_commit = run_shell_scripts(get_all_commit(commit.sha1, file.path, project_path), '')
+    #                 methods_file = find_patters_commits(entire_commit, settings.LIST_API_METHODS,value.name, settings.CONSIDERAR_REMOCAO)
+    #                 # print(methods_file)
+    #                 if value.name == 'oyevstafyev':
+    #                     for method in methods_file:
+    #                         if method.amount_inserted: print(method.name)
+    #                 file.add_methods(methods_file)
+
+    
+    print(len(commits))
     for key, value in commits.items():
         commit_all = ''
         for file in value['arquivos']:
-            commit_all = run_shell_scripts(get_all_commit(key, file, project), '')
+            commit_all = run_shell_scripts(get_all_commit(key, file, project_path), '')
 
         contagem = find_patters_commit(commit_all, settings.LIST_API_METHODS, settings.CONSIDERAR_REMOCAO)
         commits[key]['metodos'] = contagem
@@ -176,16 +201,15 @@ def count_commits(commits, project):
 
 def extract_developers():
     print('Iniciando.....')
-    global PROJETO_ATUAL
     settings.init()
     general = {}
     s_author = {}
     all_files_interest = []
     for project in settings.PROJETOS:
         p = project.split('/')
-        PROJETO_ATUAL = p[len(p) - 1]
+        settings.PROJETO_ATUAL = p[len(p) - 1]
         
-        print('Inicando extracao no projeto - '  + PROJETO_ATUAL)
+        print('Inicando extracao no projeto - '  + settings.PROJETO_ATUAL)
 
         # Busca os commits que possuiram referencia aos imports
         commits_sh1a = find_commits(settings.LIST_IMPORT_REGEX, settings.SINCE, settings.UNTIL, True, project)
@@ -200,8 +224,9 @@ def extract_developers():
         commits = commits_regex_by_file(settings.LIST_API_METHODS, files_project, settings.SINCE, settings.UNTIL, project)
 
         commits = count_commits(commits, project)
-
-        general.update(summary(commits))
+        # print(commits)
+        general.update(summarys(commits))
+        summary_author(commits)
         s_author.update(summary_author(commits))
 
     try:
@@ -227,7 +252,7 @@ def extract_oraculo__david_ma():
     s_author = {}
     for project in settings.PROJETOS:
         p = project.split('/')
-        PROJETO_ATUAL = p[len(p) - 1]
+        settings.PROJETO_ATUAL = p[len(p) - 1]
 
         commits_sh1a = find_commits(settings.LIST_IMPORT_REGEX, since, until, True, project)
         files_project = get_interest_files(commits_sh1a, settings.LIST_IMPORT_REGEX, project)
