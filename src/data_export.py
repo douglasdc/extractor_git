@@ -14,6 +14,7 @@ def tuplas_geral(commits_summary):
             a['removeu'] = value['removeu']
             temp.append(a)
     
+    # print(temp)
     write_csv('output', 'tuplas_extraidas', temp)
 
     return temp

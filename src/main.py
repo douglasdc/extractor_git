@@ -4,6 +4,8 @@ from subprocess import PIPE, Popen
 import re, csv, json, logging
 import timeit
 import time
+from multiprocessing import Manager, Process, cpu_count, Value
+import threading
 
 from .scripts.run_shell import run_shell_scripts
 from .scripts.sh_scripts import *
@@ -17,31 +19,23 @@ from .data_export import *
 from .models import Author, Commit, Method, File
 from . import settings
 
-autores = {}
-commitsObj = {}
-developers = {}
-projects = {}
-list_import_regex = []
-list_api_methods = []
-id_commit_method = {}
+manager = Manager()
+# autores = manager.dict()   
+# commitsObj = {}
+# developers = {}
+# projects = {}
+# list_import_regex = []
+# list_api_methods = []
+# id_commit_method = {}
 
-COMMIT_USER_METHOD = {}
-AUTHOR_METHOD_RESUMO = {}
-AUTHOR_METHOD_USE = {}
-
-DEV_COMMIT = {}
-DEV_METHOD = {}
-SINCE = ''
-UNTIL = ''
-
-# def new_file_interest(path):
-#     return files_interest.append(path, git_path)
 
 # Busca os commits que possuem referencia às expressões regulares de uma lista
+o = 0
 def find_commits(list_regex, since, until, only_id=False, git_path=''):
     print('Buscando commits pelos imports da API.....')
 
     list_regex = '|'.join(map(str, list_regex))
+
     result = []
     if only_id:
         ids = run_shell_scripts(commit_sha1_by_regex(list_regex, git_path, since, until), '')
@@ -89,21 +83,16 @@ def get_interest_files(commits_sh1a, regex_list, git_path=''):
     print('Encontrato ' + str(len(files_interest)) + ' arquivos')
     return list(set(files_interest))
 
-# Busca os commits que possuem referencia às expressões regulares em cada arquivo de uma lista de arquivos
-# PRECISA AINDA VERIFICAR SE REALMENTE FAZ REFERENCIA A API, VERIFICAR SE A CLASSE OU MÉTODO É DA API
-def commits_regex_by_file(regex_list, files, since, until, git_path=''):
-    global autores
+
+def extract_commits_regex_by_file(files, regex_list, since, until, autores, git_path=''):
+
     import progressbar
     # barA = progressbar.ProgressBar()
-    barM = progressbar.ProgressBar(max_value=len(files), redirect_stdout=True)
-    global commitsObj
-    global developers
-    commits2 = {}
+    # barM = progressbar.ProgressBar(max_value=len(files), redirect_stdout=True)
 
-    print('Buscando commits de arquivos pela lista de metodos.....')
     tat = '\(|.'.join(map(str, regex_list))
-
     j = 0
+    mf = []
     for file in files:
         j = j + 1
         # barM.update(j)
@@ -113,38 +102,78 @@ def commits_regex_by_file(regex_list, files, since, until, git_path=''):
             commits = strip_data_commit(commit_hash)
             
             for commit in commits:
-                if commit[0] not in id_commit_method:
-                    id_commit_method[commit[0]] = []
+                nc = Commit(commit[0], commit[2], settings.PROJETO_ATUAL)
+                nc.add_file(File(file))
+                if commit[1] not in autores:
+                    autor = Author(commit[1], commit[3])
+                    autor.add_commit(nc)
+                    autores[commit[1]] = autor
 
-                if commit[0] not in commits:
-                    nc = Commit(commit[0], commit[2], settings.PROJETO_ATUAL)
-                    nc.add_file(File(file))
-                    if(commit[1] == 'oyevstafyev'):
-                        print(file)
-                    if commit[1] not in autores:
-                        autor = Author(commit[1], commit[3])
-                        autores[commit[1]] = autor
-                        autor.add_commit(nc)
-
-                    else:
-                        autores[commit[1]].add_commit(nc)
-
-                    temp = {}
-                    temp['commit'] = commit[0]
-                    temp['autor'] = commit[1]
-                    temp['timestamp'] = commit[2]
-                    temp['email'] = commit[3]
-                    temp['metodos'] = []
-                    temp['arquivos'] = []
-                    temp['arquivos'].append(file)
-
-                    commits2[commit[0]] = temp
                 else:
-                    commits2[commit[0]]['arquivos'].append(file)
+                    autores[commit[1]].add_commit(nc)
+                    autores[commit[1]] = autores[commit[1]]
 
-    info_file('output/commits_atributos.txt', id_commit_method)
-    print('Encontrato ' + str(len(commits2)) + ' commits')
-    return commits2
+    return autores
+                    
+
+def using_threads(files, regex_list, since, until, git_path=''):
+    threads = []
+    i = 0
+    tat = split_list(regex_list, len(regex_list)/100)
+    for t in tat:
+        i += 1
+        t = threading.Thread(target=extract_commits_regex_by_file, args=(files, t, since, until, i, git_path))
+        t.daemon = True
+        t.start()
+        threads.append(t)
+    
+    for t in threads:
+        t.join()
+
+def using_process(files, regex_list, since, until, git_path=''):
+    threads = []
+    i = 0
+    tat = split_list(regex_list, len(regex_list)/100)
+    autores = manager.dict()
+    # print(type(dict(autores)))
+    for t in tat:
+        i += 1
+        p = Process(target=extract_commits_regex_by_file, args=(files, t, since, until, autores, git_path))
+        p.daemon = True
+        p.start()
+        threads.append(p)
+    
+    for t in threads:
+        t.join()
+
+    print(autores)
+    return dict(autores)
+
+# Busca os commits que possuem referencia às expressões regulares em cada arquivo de uma lista de arquivos
+# PRECISA AINDA VERIFICAR SE REALMENTE FAZ REFERENCIA A API, VERIFICAR SE A CLASSE OU MÉTODO É DA API
+def commits_regex_by_file(regex_list, files, since, until, git_path=''):
+    
+    from queue import Queue
+    # global autores
+    import progressbar
+    # barA = progressbar.ProgressBar()
+    # barM = progressbar.ProgressBar(max_value=len(files), redirect_stdout=True)
+    # global commitsObj
+    # global developers
+    # global commits2
+
+    compress_queue = Queue()
+
+    print('Buscando commits de arquivos pela lista de metodos.....')
+    threads = []
+    i = 0
+    autores = extract_commits_regex_by_file(files, regex_list, since, until, {}, git_path)
+    # autores = using_process(files, regex_list, since, until, git_path)
+    # autores = using_threads(files, regex_list, since, until, git_path)
+        
+    # info_file('output/commits_atributos.txt', id_commit_method)
+    # print('Encontrato ' + str(len(commits2)) + ' commits')
+    return autores
 
 def find_your_library(commits):
     print('Calculando metricas do Find Your Library.....')
@@ -167,36 +196,18 @@ def expert_recomendation(commits):
     expertise__csv(dm, bm, rd, rb)
 
 
-def count_commits(commits, project_path):
-    # print(commits)
-    global autores
-    commits = commits.copy()
-
-    i = 0
-    # for key, value in autores.items():
-    #     if value.name =='oyevstafyev':
-    #         for commit in value.commits:
-    #             i = i + 1
-    #             for file in commit.files:
-    #                 # print(file.path)
-    #                 entire_commit = run_shell_scripts(get_all_commit(commit.sha1, file.path, project_path), '')
-    #                 methods_file = find_patters_commits(entire_commit, settings.LIST_API_METHODS,value.name, settings.CONSIDERAR_REMOCAO)
-    #                 # print(methods_file)
-    #                 if value.name == 'oyevstafyev':
-    #                     for method in methods_file:
-    #                         if method.amount_inserted: print(method.name)
-    #                 file.add_methods(methods_file)
-
+def count_commits(autores, project_path):
     
-    print(len(commits))
-    for key, value in commits.items():
-        commit_all = ''
-        for file in value['arquivos']:
-            commit_all = run_shell_scripts(get_all_commit(key, file, project_path), '')
+    i = 0
+    for key, value in autores.items():
+        for key, commit in value.commits.items():
+            for file in commit.files:
+                entire_commit = run_shell_scripts(get_all_commit(commit.sha1, file.path, project_path), '')
+                methods_file = find_patters_commits(entire_commit, settings.LIST_API_METHODS,value.name, settings.CONSIDERAR_REMOCAO)
 
-        contagem = find_patters_commit(commit_all, settings.LIST_API_METHODS, settings.CONSIDERAR_REMOCAO)
-        commits[key]['metodos'] = contagem
-    return commits
+                file.add_methods(methods_file)
+
+    return autores
 
 
 def extract_developers():
@@ -205,6 +216,8 @@ def extract_developers():
     general = {}
     s_author = {}
     all_files_interest = []
+
+    # teste()
     for project in settings.PROJETOS:
         p = project.split('/')
         settings.PROJETO_ATUAL = p[len(p) - 1]
@@ -222,12 +235,12 @@ def extract_developers():
         # buscando os commits que possuem uso dos metodos presentes na lista
         # commits = commits_regex_by_file(list_api_methods, files_interest, project)
         commits = commits_regex_by_file(settings.LIST_API_METHODS, files_project, settings.SINCE, settings.UNTIL, project)
-
-        commits = count_commits(commits, project)
         # print(commits)
+        commits = count_commits(commits, project)
         general.update(summarys(commits))
-        summary_author(commits)
-        s_author.update(summary_author(commits))
+        
+        # summary_authors(commits)
+        s_author.update(summary_authors(commits))
 
     try:
         tuplas_geral(general)
@@ -246,6 +259,8 @@ def extract_oraculo__david_ma():
 
     since = settings.UNTIL + timedelta(days=1)
     until = settings.UNTIL + timedelta(days=settings.ORACULO_DAVID_MA_DIAS)
+
+    teste()
 
     print('\n\n# == BUSCANDO ORÁCULO\n\n')
     all_files_interest = []

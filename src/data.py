@@ -27,21 +27,28 @@ def summary(commits):
 
 def summarys(authors):
     summary = {}
+    # print(authors.items())
     from datetime import datetime
     for key, value in authors.items():
-        for commit in value.commits:
+        for key, commit in value.commits.items():
             # print(len(value.commits))
             files = []
             methods = {}
             for file in commit.files:
                 files.append(file.path)
+                # print(file.methods)
                 for method in file.methods:
+                    # print(method.name)
                     if (method.amount_inserted + method.amount_removed) > 0:
                         tempMethod = {}
                         tempMethod['adicionou'] = method.amount_inserted
                         tempMethod['removeu'] = method.amount_removed
 
                         methods[method.name] = tempMethod
+
+                        # if value.name =='oyevstafyev':
+                        #     print(method.name)
+                        #     print(file.path)
             
             tempCommit = {}
             tempCommit['arquivos'] = files
@@ -56,7 +63,6 @@ def summarys(authors):
 
             # print(commit.sha1)
 
-    # print(summary)
     return summary
                     
 
@@ -114,14 +120,17 @@ def summary_authors(authors):
 
                 methods[method.name] = tempMethod
         
-        # author['frequencia_inseridos'] = get_frequency_inserted(authorMethods.values())
-        # author['frequencia_removidos'] = get_frequency_removed(authorMethods.values())
-        # author['quantidade_inseridos'] = get_amount_inserted(authorMethods.values())
-        # author['quantidade_removidos'] = get_amount_removed(authorMethods.values())
+        author['frequencia_inseridos'] = get_frequency_inserted(authorMethods.values())
+        author['frequencia_removidos'] = get_frequency_removed(authorMethods.values())
+        author['frequencia_total'] = author['frequencia_inseridos'] + author['frequencia_removidos']
+        author['quantidade_inseridos'] = get_amount_inserted(authorMethods.values())
+        author['quantidade_removidos'] = get_amount_removed(authorMethods.values())
+        author['quantidade_total'] = author['quantidade_inseridos'] + author['quantidade_removidos']
         author['metodos'] = methods
         author['dev'] = value.name
         author['email'] = value.email
 
+        summary[value.name] = author
         # print(author)
 
 
@@ -133,7 +142,7 @@ def summary_authors(authors):
             # for file in commit.files:
             #     print(file.methods)
         
-    return {}
+    return summary
 
 
 # Retorna uma lista no formato

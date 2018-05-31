@@ -1,5 +1,6 @@
 #coding:utf-8
 import csv
+import logging
 
 def strip_data_commit(commits):
     return [commit.split('|') for commit in commits.split('\n')]
@@ -25,11 +26,28 @@ def info_file(file_path, data):
 
 def write_csv(out_path, file_name, out_dict):
     if len(out_dict) > 0:
-        with open(out_path + '/' + file_name + '.csv', 'w') as output_file:
+        with open(out_path + '/' + file_name + '.csv', 'w', encoding='utf-8') as output_file:
             dict_writer = csv.DictWriter(
                 output_file, fieldnames=out_dict[0].keys(), extrasaction='ignore')
             dict_writer.writeheader()
             for value in out_dict:
-                dict_writer.writerow(value)
+                try:
+                    dict_writer.writerow(value)
+                except Exception as e:
+                    logging.info('Erro ao escrever a linha >> ' + value)
+                    print("Erro ao escrever linha no arquivo " + file_name + "csv")
+                    
     else:
         print("Nenhum dado para escrever no arquivo")
+
+
+def split_list(itens, parts):
+    avg = len(itens) / float(parts)
+    out = []
+    last = 0.0
+
+    while last < len(itens):
+        out.append(itens[int(last):int(last + avg)])
+        last += avg
+
+    return out

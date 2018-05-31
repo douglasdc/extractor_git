@@ -19,15 +19,14 @@ class Author:
         self.commits = {}
 
     def add_commit(self, _commit):
-        # if not any(item.sha1 == _commit.sha1 for item in self.commits):
-        #     self.commits.append(_commit)
-
         if _commit.sha1 in self.commits:
-            self.commits.files.add_files(_commit.files)
+            self.commits[_commit.sha1].add_files(_commit.files)
+        else:
+            self.commits[_commit.sha1] = _commit
 
     def get_methods(self):
         methods = {}
-        for commit in self.commits:
+        for key, commit in self.commits.items():
             for key, method in commit.get_methods().items():
                 if key in methods:
                     methods[method.name].amount_inserted +=  method.amount_inserted
@@ -45,6 +44,10 @@ class Commit:
 
     def add_file(self, _file):
         self.files.append(_file)
+
+    def add_files(self, _files):
+        for f in _files:
+            self.files.append(f)
 
     def get_methods(self):
         methods = {}
