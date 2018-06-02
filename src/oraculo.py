@@ -1,61 +1,37 @@
 #coding:utf-8
+import os
 
-from scripts.run_shell import run_shell_scripts
-from scripts.sh_scripts import get_first_commit
+from .data import *
+from .data_export import *
+from .models import *
+from .utils import delete_files
 
-def david_ma(since, until, files, regex, amount):
-    import progressbar
-    barA = progressbar.ProgressBar()
-    barM = progressbar.ProgressBar(max_value=len(
-        regex_list) * len(files))
-    global commitsObj
-    global developers
-    commits2 = {}
+def oraculo_david_ma(before_extracted, authors_extracted):
+    folder = 'oraculo'
+    path = 'output/' + folder
+    if not os.path.exists(path):
+        os.makedirs(path)
 
-    print 'Buscando commits de arquivos pela lista de metodos.....'
-    # tat = '\(|.'.join(map(str, regex_list))
-    i = 0
-    j = 0
-    for file in files:
-        i = i + 1
-        k = 100 * i / len(files)
-        # barA.update(k)
-        #Hashs dos commits que usaram o atributo nesse arquivo
-        # print i
-        for tat in regex_list:
-            j = j + 1
-            barM.update(j)
-            # print str(i) + '/43' + '-----' + str(j)
-            commit_hash = run_shell_scripts(commit_sha1_by_regex_file(
-                tat, file, git_path, SINCE, UNTIL), '')
-            # print commit_hash
-            if len(commit_hash) > 0:
-                commits = strip_data_commit(commit_hash)
-                for commit in commits:
+    delete_files(path)
 
-                    if commit[0] not in id_commit_method:
-                        id_commit_method[commit[0]] = []
+    # Extracao do resumo do oraculo pelos commits feitos no período definido para extração do oráculo
+    summary = summarys(authors_extracted)
+    tuplas_resumo_commit(summary, 'oraculo_david_ma')
 
-                    if commit[0] not in commits:
-                        temp = {}
-                        temp['commit'] = commit[0]
-                        if 'Maurício' in commit[1] or 'Mauricio' in commit[1]:
-                            temp['autor'] = 'Mauricio'
-                        elif 'Barry' in commit[1] or 'bcron10' in commit[1]:
-                            temp['autor'] = 'Barry Cronin'
-                        else:
-                            temp['autor'] = commit[1]
-                        temp['timestamp'] = commit[2]
-                        temp['email'] = commit[3]
-                        temp['metodos'] = []
-                        temp['arquivos'] = []
-                        temp['arquivos'].append(file)
-
-                        commits2[commit[0]] = temp
-                    else:
-                        commits2[commit[0]]['arquivos'].append(file)
-
-    info_file('output/commits_atributos.txt', id_commit_method)
-    print 'Encontrato ' + str(len(commits2)) + ' commits'
-    return commits2
+    all_commits = {}
+    for key, value in authors_extracted.items():
+        all_commits.update({x.timestamp:{'author':key, 'commit':x} for x in value.commits.values()})
     
+    i = 0
+    sorted_commits = sorted(all_commits.items(), key= lambda x: x[0])
+    for commit in sorted_commits:
+        i+=1
+        if commit[1]['author'] not in before_extracted:
+            name = authors_extracted[commit[1]['author']].name
+            email = authors_extracted[commit[1]['author']].email
+            before_extracted[commit[1]['author']] = Author(name, email)
+
+        before_extracted[commit[1]['author']].add_commit(commit[1]['commit'])
+        
+        small_summary = summary_authors(before_extracted)
+        tuplas_resumo(small_summary, folder + '/' + str(i) + '_' + commit[1]['author'] + '_oraculo David Ma')

@@ -12,6 +12,7 @@ SINCE = ''
 UNTIL = ''
 ORACULO_DAVID_MA = False
 ORACULO_DAVID_MA_DIAS = 0
+MULTIPROCESSING = False
 
 LIST_API_METHODS = []
 LIST_IMPORT_REGEX = []
@@ -26,6 +27,7 @@ def load_files():
     global UNTIL
     global ORACULO_DAVID_MA
     global ORACULO_DAVID_MA_DIAS
+    global MULTIPROCESSING
 
     print('Carregando parametros.....')
     try:
@@ -37,6 +39,7 @@ def load_files():
         REMOVER_LINHAS_IDENTICAS = parameters['linhas_identicas']
         ORACULO_DAVID_MA = parameters['oraculo_david_ma']
         ORACULO_DAVID_MA_DIAS = parameters['oraculo_david_ma_dias']
+        MULTIPROCESSING = parameters['multiprocessing']
 
         if parameters['code_java']: LINGUAGENS.append('java')
         if parameters['code_python']: LINGUAGENS.append('py')

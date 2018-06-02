@@ -1,5 +1,4 @@
 #coding:utf-8
-
 from .utils import *
 
 def tuplas_geral(commits_summary):
@@ -14,11 +13,25 @@ def tuplas_geral(commits_summary):
             a['removeu'] = value['removeu']
             temp.append(a)
     
-    # print(temp)
     write_csv('output', 'tuplas_extraidas', temp)
 
     return temp
 
+def tuplas_resumo_commit(commits_summary, file_name):
+    temp = []
+    for c in commits_summary.values():
+        a = c.copy()
+        del a['metodos']
+        del a['arquivos']
+        a['metodo'] = ' | '.join(map(str, c['metodos'].keys()))
+        
+        temp.append(a)
+    
+    temp = sorted(temp, key = lambda x: x['timestamp'])
+    
+    write_csv('output', file_name, temp)
+    
+    return temp
 
 def tuplas_resumo(commits_author, file_name):
     temp = []
@@ -32,7 +45,6 @@ def tuplas_resumo(commits_author, file_name):
     write_csv('output', file_name, temp)
 
     return temp
-
 
 def find_libray__csv(library_expertise, expertise_distance):
     developers = []

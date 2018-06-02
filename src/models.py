@@ -46,7 +46,10 @@ class Commit:
         self.files.append(_file)
 
     def add_files(self, _files):
+        print('files')
+        print(_files)
         for f in _files:
+            print(self.files)
             self.files.append(f)
 
     def get_methods(self):
@@ -87,6 +90,14 @@ class Method:
         self.amount_removed = _amount_removed
         self.frequency_inserted = _frequency_inserted
         self.frequency_removed = _frequency_removed
+
+    def get_frequency(self, removed=True, inserted=True):
+        if removed and inserted:
+            return self.amount_inserted + self.amount_removed
+        elif removed and not inserted:
+            return self.amount_removed
+        else:
+            return self.amount_inserted
 
     def __contains__(self, elem):
         return self.name == elem.name

@@ -1,0 +1,8 @@
+metodo,frequencia_removidos,quantidade_inseridos,timestamp,frequencia_inseridos,quantidade_total,email,frequencia_total,momento,commit,quantidade_removidos,autor
+stop | values | get | size | equals,7,2,1490648178,2,7,sshyrkov@jahia.com,9,27 Mar 2017 17:56:18,6b4e137,5,Sergiy Shyrkov
+getInstance,1,1,1494948364,1,2,dgriffon@jahia.com,2,16 May 2017 12:26:04,1526f08,1,David Griffon
+delete | size | write | or | getInstance | get | getCause | toString | length | hasNext | copy | add | getName | equals,27,14,1509357485,30,27,oievstafiev@jahia.com,57,30 Oct 2017 06:58:05,619ea21,13,oyevstafyev
+write,1,1,1510677841,1,2,oievstafiev@jahia.com,2,14 Nov 2017 13:44:01,d7ed825,1,Oleksandr Ievstafiev
+get | getName | equals,15,3,1511442519,15,6,sshyrkov@jahia.com,30,23 Nov 2017 10:08:39,e9c08ca,3,Sergiy Shyrkov
+get,5,1,1511786094,7,2,dgriffon@jahia.com,12,27 Nov 2017 09:34:54,71e3b64,1,David Griffon
+get,7,1,1511788127,7,2,dgriffon@jahia.com,14,27 Nov 2017 10:08:47,351ef8a,1,David Griffon
