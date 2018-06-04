@@ -8,8 +8,6 @@ import numpy
 # provided_symbol = {metodo: quantidade_uso}
 # usage_symbol = {dev:{metodo:quantidade_usada}}
 def library_expertise(provided_symbol, usage_symbol):
-    print('Calculando library expertise.....')
-    print('A API forneceu ' + str(len(provided_symbol)) + ' simbolos')
     developers = {}
     for dev, value in usage_symbol.items():
         usage = sum(1 for v in value.values() if v > 0)
@@ -22,7 +20,6 @@ def library_expertise(provided_symbol, usage_symbol):
 
 
 def expertise_distance(library_expertise):
-    print('Calculando expertise distance.....')
     developers = {}
     for dev, value in library_expertise.items():
         uns = numpy.ones(1)

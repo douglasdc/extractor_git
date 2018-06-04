@@ -1,19 +1,9 @@
 #coding:utf-8
 from datetime import datetime, date
 
-from .scripts.run_shell import run_shell_scripts
-from .scripts.sh_scripts import *
-from .models import get_amount_inserted, get_amount_removed, get_frequency_inserted, get_frequency_removed
-
-def summary_method(method):
-    
-    tempMethod = {}
-    if (method.amount_inserted + method.amount_removed) > 0:
-        tempMethod['adicionou'] = method.amount_inserted
-        tempMethod['removeu'] = method.amount_removed
-
-    return tempMethod
-    
+from ..scripts.run_shell import run_shell_scripts
+from ..scripts.sh_scripts import *
+from ..models import get_amount_inserted, get_amount_removed, get_frequency_inserted, get_frequency_removed
 
 def summarys(authors):
     from datetime import datetime
@@ -53,35 +43,6 @@ def summarys(authors):
 
     return summary
 
-
-# def summary_commits(authors):
-#     summary = {}
-#     for key, value in authors.items():
-#         commit = {}
-#         methods = {}
-#         for key, commit in value.commits.items():
-#             commit_methods = commit.get_methods()
-#             for key, method in commit_methods.items():
-#                 if (method.amount_inserted + method.amount_removed) > 0:
-#                     tempMethod = {}
-#                     tempMethod['adicionou'] = method.amount_inserted
-#                     tempMethod['removeu'] = method.amount_removed
-
-#                     methods[method.name] = tempMethod
-
-#             commit['frequencia_inseridos'] = get_frequency_inserted(commit_methods.values())
-#             commit['frequencia_removidos'] = get_frequency_removed(commit_methods.values())
-#             commit['frequencia_total'] = commit['frequencia_inseridos'] + commit['frequencia_removidos']
-#             commit['quantidade_inseridos'] = get_amount_inserted(commit_methods.values())
-#             commit['quantidade_removidos'] = get_amount_removed(commit_methods.values())
-#             commit['quantidade_total'] = commit['quantidade_inseridos'] + commit['quantidade_removidos']
-#             commit['metodos'] = methods
-#             commit['dev'] = value.name
-#             commit['email'] = value.email
-
-#             # su
-
-
 def summary_authors(authors):
     summary = {}
     for key, value in authors.items():
@@ -110,15 +71,13 @@ def summary_authors(authors):
 
     return summary
 
-
-
 # Retorna uma lista no formato
 # [
 #     'Da Vinci':{'metodo': 0, 'metodo': 0},
 #     'Mona lisa':{'metodo': 0, 'metodo': 0},
 # ]
 # Que contem a frequencia de uso de cada método por cada desenvolvedor
-def autor_methods_frequency_new(commits, removed=True):
+def autor_methods_frequency(commits, removed=True):
     autor = {}
     for key, value in commits.items():
         for commit in value.commits.values():

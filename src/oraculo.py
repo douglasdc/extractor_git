@@ -1,10 +1,12 @@
 #coding:utf-8
 import os
 
-from .data import *
-from .data_export import *
+from .data_manager.data import *
+from .data_manager.data_export import *
 from .models import *
 from .utils import delete_files
+from .metricas.metrics import export_expert_recommendation, export_find_your_library
+from . import settings
 
 def oraculo_david_ma(before_extracted, authors_extracted):
     folder = 'oraculo'
@@ -35,3 +37,9 @@ def oraculo_david_ma(before_extracted, authors_extracted):
         
         small_summary = summary_authors(before_extracted)
         tuplas_resumo(small_summary, folder + '/' + str(i) + '_' + commit[1]['author'] + '_oraculo David Ma')
+
+        file_name = folder + '/FL_'+str(i) +'_' + commit[1]['author']
+        export_find_your_library(before_extracted, settings.LIST_API_METHODS, file_name, settings.CONSIDERAR_REMOCAO)
+
+        file_name = folder + '/ER_'+str(i) +'_' + commit[1]['author']
+        export_expert_recommendation(before_extracted, file_name,  settings.CONSIDERAR_REMOCAO)

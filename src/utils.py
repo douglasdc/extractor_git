@@ -57,6 +57,7 @@ def delete_files(folder, file=''):
         try:
             if os.path.isfile(file_path):
                 os.unlink(file_path)
+            logging.info("Arquivo deletado, arquivo: " + the_file)
 
         except Exception as e:
             print(e)

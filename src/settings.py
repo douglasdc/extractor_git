@@ -13,6 +13,8 @@ UNTIL = ''
 ORACULO_DAVID_MA = False
 ORACULO_DAVID_MA_DIAS = 0
 MULTIPROCESSING = False
+IMPORT_FILE = ""
+API_FILE = ""
 
 LIST_API_METHODS = []
 LIST_IMPORT_REGEX = []
@@ -28,6 +30,8 @@ def load_files():
     global ORACULO_DAVID_MA
     global ORACULO_DAVID_MA_DIAS
     global MULTIPROCESSING
+    global IMPORT_FILE
+    global API_FILE
 
     print('Carregando parametros.....')
     try:
@@ -40,6 +44,8 @@ def load_files():
         ORACULO_DAVID_MA = parameters['oraculo_david_ma']
         ORACULO_DAVID_MA_DIAS = parameters['oraculo_david_ma_dias']
         MULTIPROCESSING = parameters['multiprocessing']
+        IMPORT_FILE = parameters['import_file']
+        API_FILE = parameters['api_file']
 
         if parameters['code_java']: LINGUAGENS.append('java')
         if parameters['code_python']: LINGUAGENS.append('py')
@@ -58,7 +64,7 @@ def load_imports():
     global LIST_IMPORT_REGEX
 
     print('Carregando imports da API.....')
-    file_imports = 'input/imports.txt'
+    file_imports = IMPORT_FILE
     LIST_IMPORT_REGEX = get_list_lines_from_file(file_imports)
 
     print('Imports no arquivo: ' + str(len(LIST_IMPORT_REGEX)))
@@ -68,7 +74,7 @@ def load_methods():
     global LIST_API_METHODS
 
     print('Carregando metodos da API.....')
-    file_methods = 'input/metodos_commons.txt'
+    file_methods = API_FILE
     LIST_API_METHODS = get_list_lines_from_file(file_methods)
 
     print('Metodos no arquivo: ' + str(len(LIST_API_METHODS)))

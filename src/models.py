@@ -46,10 +46,7 @@ class Commit:
         self.files.append(_file)
 
     def add_files(self, _files):
-        print('files')
-        print(_files)
         for f in _files:
-            print(self.files)
             self.files.append(f)
 
     def get_methods(self):

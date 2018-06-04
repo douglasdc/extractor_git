@@ -2,6 +2,8 @@
     "projetos":[
         "/mnt/c/Users/Douglas/Documents/camille_projects/commons/dxm"
     ],
+    "import_file":"input/imports.txt",
+    "api_file":"input/metodos_commons.txt",
     "code_java":true,
     "code_php":true,
     "code_javascript":true,

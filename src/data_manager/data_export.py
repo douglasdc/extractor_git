@@ -1,5 +1,5 @@
 #coding:utf-8
-from .utils import *
+from ..utils import *
 
 def tuplas_geral(commits_summary):
     temp = []
@@ -46,7 +46,7 @@ def tuplas_resumo(commits_author, file_name):
 
     return temp
 
-def find_libray__csv(library_expertise, expertise_distance):
+def find_libray__csv(library_expertise, expertise_distance, file_name):
     developers = []
     for dev, value in library_expertise.items():
         temp = {}
@@ -55,10 +55,10 @@ def find_libray__csv(library_expertise, expertise_distance):
         temp['lib_exp'] = value
         developers.append(temp)
 
-    write_csv('output', 'find_your_library', developers)
+    write_csv('output', file_name, developers)
 
 
-def expertise__csv(depth_method, breadth_method, relative_depth, relative_breadth):
+def expertise__csv(depth_method, breadth_method, relative_depth, relative_breadth, file_name):
     developers = []
     for dev in depth_method.keys():
         temp = {} 
@@ -70,4 +70,4 @@ def expertise__csv(depth_method, breadth_method, relative_depth, relative_breadt
 
         developers.append(temp)
     
-    write_csv('output', 'expert_recommendation', developers)
+    write_csv('output', file_name, developers)

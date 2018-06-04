@@ -11,14 +11,15 @@ from .scripts.sh_scripts import *
 from .utils import *
 from .metricas.find_your_library import library_expertise, expertise_distance
 from .metricas.expert_recomendation import depth_method, breadth_method, relative_breadth, relative_depth
+from .metricas.metrics import export_expert_recommendation, export_find_your_library
 from .parser import *
-from .data import *
-from .data_export import *
+from .data_manager.data import *
+from .data_manager.data_export import *
 from .models import Author, Commit, Method, File
 from .oraculo import oraculo_david_ma
 from . import settings
 
-manager = Manager()
+# manager = Manager()
 
 # Busca os commits que possuem referencia às expressões regulares de uma lista
 o = 0
@@ -166,28 +167,6 @@ def count_commits(autores, project_path):
 
     return autores
 
-
-def find_your_library(authors_extracted):
-    print('Calculando metricas do Find Your Library.....')
-    summary = autor_methods_frequency_new(authors_extracted, settings.CONSIDERAR_REMOCAO)
-    # autor = autor_methods_frequency(commits, settings.CONSIDERAR_REMOCAO)
-
-    le = library_expertise(settings.LIST_API_METHODS, summary)
-    ed = expertise_distance(le)
-    find_libray__csv(le, ed)
-
-
-def expert_recomendation(authors_extracted):
-    print("Calculando metricas do Expert Recommendation.....")
-    summary = autor_methods_frequency_new(authors_extracted, settings.CONSIDERAR_REMOCAO)
-
-    dm = depth_method(summary)
-    bm = breadth_method(summary)
-    rd = relative_depth(summary)
-    rb = relative_breadth(summary)
-
-    expertise__csv(dm, bm, rd, rb)
-
 def extract_developers(since, until):
 
     all_files_interest = []
@@ -207,7 +186,6 @@ def extract_developers(since, until):
 
         # Extrai todos os commits que os arquivos de interesse tiveram,
         # buscando os commits que possuem uso dos metodos presentes na lista
-        # commits = commits_regex_by_file(list_api_methods, files_interest, project)
         commits_regex_by_file(authors_extracted, settings.LIST_API_METHODS, files_project, settings.SINCE, settings.UNTIL, project)
         count_commits(authors_extracted, project)
 
@@ -224,8 +202,8 @@ def extract_metrics():
         tuplas_geral(complete_summary)
         tuplas_resumo(small_summary, 'tuplas_resumo')
 
-        find_your_library(authors_extracted)
-        expert_recomendation(authors_extracted)
+        export_find_your_library(authors_extracted, settings.LIST_API_METHODS, "find_your_library", settings.CONSIDERAR_REMOCAO)
+        export_expert_recommendation(authors_extracted,"expert_recommendation", settings.CONSIDERAR_REMOCAO)
 
         return authors_extracted
     except Exception as e:
@@ -233,8 +211,6 @@ def extract_metrics():
         logging.warning('0 Commits encontrados no projeto, verifique os parâmetros e api que desejam buscar')
         print('0 Commits encontratos no projeto, verifique os parâmetros e api que desejam buscar')
 
-
-        
 
 def extract_oraculo__david_ma(before_extracted=None):
     print('\n\n# == BUSCANDO ORÁCULO\n\n')
@@ -244,9 +220,6 @@ def extract_oraculo__david_ma(before_extracted=None):
 
     authors_extracted = extract_developers(since, until)
     oraculo_david_ma(before_extracted, authors_extracted)
-
-    
-    # tuplas_resumo(small_summary, 'oraculo_david_ma')
 
 
 def start_extraction():
