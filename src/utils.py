@@ -26,8 +26,10 @@ def info_file(file_path, data):
 def write_csv(out_path, file_name, out_dict):
     if len(out_dict) > 0:
         with open(out_path + '/' + file_name + '.csv', 'w', encoding='utf-8') as output_file:
+            keys = list((out_dict[0].keys()))
+            keys.sort()
             dict_writer = csv.DictWriter(
-                output_file, fieldnames=out_dict[0].keys(), extrasaction='ignore')
+                output_file, fieldnames=keys, extrasaction='ignore')
             dict_writer.writeheader()
             for value in out_dict:
                 try:

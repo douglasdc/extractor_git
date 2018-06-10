@@ -107,21 +107,6 @@ def extract_commits_regex_by_file(files, regex_list, since, until, autores, git_
 
     return autores
                     
-
-def using_threads(files, regex_list, since, until, git_path=''):
-    threads = []
-    i = 0
-    tat = split_list(regex_list, len(regex_list)/100)
-    for t in tat:
-        i += 1
-        t = threading.Thread(target=extract_commits_regex_by_file, args=(files, t, since, until, i, git_path))
-        t.daemon = True
-        t.start()
-        threads.append(t)
-    
-    for t in threads:
-        t.join()
-
 def using_process(files, regex_list, since, until, git_path=''):
     process = []
     methods_list = split_list(regex_list, len(regex_list)/100)
@@ -225,7 +210,7 @@ def extract_oraculo__david_ma(before_extracted=None):
 def start_extraction():
     print('Iniciando.....')
     settings.init()
-
+    
     authors_extracted = extract_metrics()
     if settings.ORACULO_DAVID_MA:
         extract_oraculo__david_ma(authors_extracted)

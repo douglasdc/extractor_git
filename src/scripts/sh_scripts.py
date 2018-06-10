@@ -134,3 +134,8 @@ def search_for_single_file(git_path, file):
         script = '[ -f "' + git_path + '/' + file + '" ] && echo "Arquivo existe"'
 
     return script
+
+def tt(git_path, since=datetime.date(1990,1,1), until=datetime.date(2030,1,1)):
+    script = DEFINE_GIT_FOLDER(git_path) + ' log ' + DEFINE_PERIOD(since, until) + ' --pretty=format:"##--##commit|%h|%an|%at|%ae" -p --reverse'
+    # print(script)
+    return script

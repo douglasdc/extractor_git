@@ -1,8 +1,21 @@
-commit,momento,frequencia_removidos,frequencia_inseridos,metodo,quantidade_total,autor,frequencia_total,timestamp,quantidade_inseridos,quantidade_removidos,email
-6b4e137,27 Mar 2017 17:56:18,7,2,size | stop | equals | values | get,7,Sergiy Shyrkov,9,1490648178,2,5,sshyrkov@jahia.com
-1526f08,16 May 2017 12:26:04,1,1,getInstance,2,David Griffon,2,1494948364,1,1,dgriffon@jahia.com
-619ea21,30 Oct 2017 06:58:05,27,30,getCause | equals | getInstance | hasNext | copy | write | add | or | toString | get | getName | delete | size | length,27,oyevstafyev,57,1509357485,14,13,oievstafiev@jahia.com
-d7ed825,14 Nov 2017 13:44:01,1,1,write,2,Oleksandr Ievstafiev,2,1510677841,1,1,oievstafiev@jahia.com
-e9c08ca,23 Nov 2017 10:08:39,15,15,get | equals | getName,6,Sergiy Shyrkov,30,1511442519,3,3,sshyrkov@jahia.com
-71e3b64,27 Nov 2017 09:34:54,5,7,get,2,David Griffon,12,1511786094,1,1,dgriffon@jahia.com
-351ef8a,27 Nov 2017 10:08:47,7,7,get,2,David Griffon,14,1511788127,1,1,dgriffon@jahia.com
+autor,commit,email,frequencia_inseridos,frequencia_removidos,frequencia_total,metodo,momento,quantidade_inseridos,quantidade_removidos,quantidade_total,timestamp
+Sergiy Shyrkov,1229b42,sshyrkov@jahia.com,46,46,92,get | byteCountToDisplaySize | add | equals | length | getInstance | hasNext | append | getPath | getName | or | getParent | next | toString | size,31 Jan 2018 19:49:20,15,15,30,1517438960
+Florent BOURASSE,a2ec2b8,fbourasse@jahia.com,2,0,2,or,21 Feb 2018 10:07:39,1,0,1,1519218459
+bpapez,4b23511,bpapez@jahia.com,6,6,12,values | length | append,27 Feb 2018 05:40:46,3,3,6,1519720846
+Sergiy Shyrkov,5520682,sshyrkov@jahia.com,11,7,18,close | equals | valueOf | getInstance,04 Mar 2018 06:46:46,4,3,7,1520156806
+Sergiy Shyrkov,adefc42,sshyrkov@jahia.com,41,40,81,equals | add | remove | getInstance | hasNext | start | getPath | delete | closeQuietly | getFile | or | getParent | next | toString | size | getName,04 Mar 2018 12:41:17,16,16,32,1520178077
+jkevan,7b8f8e9,kevan@jahia.com,1,0,1,getPath,05 Mar 2018 11:11:48,1,0,1,1520259108
+Sergiy Shyrkov,310af1e,sshyrkov@jahia.com,3,1,4,equals | getInstance,06 Mar 2018 10:23:23,2,1,3,1520342603
+Sergiy Shyrkov,956e0ec,sshyrkov@jahia.com,0,2,2,or,07 Mar 2018 13:13:56,0,1,1,1520439236
+Sergiy Shyrkov,a484059,sshyrkov@jahia.com,1,0,1,getInstance,09 Mar 2018 12:03:32,1,0,1,1520607812
+Sergiy Shyrkov,efa66c3,sshyrkov@jahia.com,4,0,4,getFile | copyURLToFile | getInstance | or,14 Mar 2018 11:02:36,4,0,4,1521036156
+Sergiy Shyrkov,ae49198,sshyrkov@jahia.com,8,1,9,getPath | getTempDirectoryPath | remove | getInstance,14 Mar 2018 11:21:04,4,1,5,1521037264
+oyevstafyev,1dab890,oievstafiev@jahia.com,5,5,10,getPath | equals | or,16 Mar 2018 06:48:46,3,3,6,1521193726
+Sergiy Shyrkov,b2dedd7,sshyrkov@jahia.com,12,1,13,getPath | equals | getInstance | toInputStream,16 Mar 2018 12:54:42,4,1,5,1521215682
+Thomas Draier,ec5b6db,tdraier@jahia.com,2,0,2,stop | start,22 Mar 2018 12:54:58,2,0,2,1521734098
+David Griffon,e79694d,dgriffon@jahia.com,1,0,1,getInstance,23 Mar 2018 13:11:25,1,0,1,1521821485
+David Griffon,a0dd033,dgriffon@jahia.com,1,1,2,getInstance,27 Mar 2018 05:01:45,1,1,2,1522137705
+Thomas Draier,1199072,tdraier@jahia.com,4,3,7,get | toString | length | size | append,28 Mar 2018 11:21:03,4,2,6,1522246863
+Florent BOURASSE,d84c278,fbourasse@jahia.com,0,1,1,getInstance,29 Mar 2018 14:59:55,0,1,1,1522346395
+Thomas Draier,e20de49,tdraier@jahia.com,1,2,3,getPath | or,15 May 2018 12:38:12,1,2,3,1526398692
+Sergiy Shyrkov,c41adcb,sshyrkov@jahia.com,3,0,3,getMessageDigest | read | getInstance,16 May 2018 16:40:27,3,0,3,1526499627

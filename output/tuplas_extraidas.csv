@@ -1,293 +1,533 @@
-commit,momento,frequencia_removidos,frequencia_inseridos,removeu,metodo,quantidade_total,adicionou,autor,frequencia_total,timestamp,quantidade_inseridos,quantidade_removidos,email
-b2057f8,14 Mar 2017 06:23:55,2,2,1,equals,3,0,Sergiy Shyrkov,4,1489483435,1,2,sshyrkov@jahia.com
-b2057f8,14 Mar 2017 06:23:55,2,2,1,get,3,2,Sergiy Shyrkov,4,1489483435,1,2,sshyrkov@jahia.com
-ebde80c,27 Oct 2017 05:12:00,1,1,1,get,2,1,Sergiy Shyrkov,2,1509091920,1,1,sshyrkov@jahia.com
-ac0c735,18 Aug 2017 06:53:21,2,0,2,getInstance,1,0,oyevstafyev,2,1503050001,0,1,oievstafiev@jahia.com
-e9c08ca,23 Nov 2017 10:08:39,4,4,2,equals,4,2,Sergiy Shyrkov,8,1511442519,2,2,sshyrkov@jahia.com
-e9c08ca,23 Nov 2017 10:08:39,4,4,2,getName,4,2,Sergiy Shyrkov,8,1511442519,2,2,sshyrkov@jahia.com
-71e268d,17 Aug 2017 10:17:43,1,0,1,get,1,0,Thomas Draier,1,1502975863,0,1,tdraier@jahia.com
-717df2b,08 Mar 2017 11:49:32,6,4,1,toString,7,0,oyevstafyev,10,1488984572,4,3,oievstafiev@jahia.com
-717df2b,08 Mar 2017 11:49:32,6,4,4,getFile,7,1,oyevstafyev,10,1488984572,4,3,oievstafiev@jahia.com
-717df2b,08 Mar 2017 11:49:32,6,4,1,or,7,1,oyevstafyev,10,1488984572,4,3,oievstafiev@jahia.com
-717df2b,08 Mar 2017 11:49:32,6,4,0,isDirectory,7,1,oyevstafyev,10,1488984572,4,3,oievstafiev@jahia.com
-717df2b,08 Mar 2017 11:49:32,6,4,0,length,7,1,oyevstafyev,10,1488984572,4,3,oievstafiev@jahia.com
-c3e0d49,03 Mar 2017 08:15:34,3,0,2,or,2,0,Sergiy Shyrkov,3,1488539734,0,2,sshyrkov@jahia.com
-c3e0d49,03 Mar 2017 08:15:34,3,0,1,getInstance,2,0,Sergiy Shyrkov,3,1488539734,0,2,sshyrkov@jahia.com
-c0a03fb,08 Mar 2017 14:32:52,25,33,0,equals,26,1,oyevstafyev,58,1488994372,14,12,oievstafiev@jahia.com
-c0a03fb,08 Mar 2017 14:32:52,25,33,0,getInstance,26,1,oyevstafyev,58,1488994372,14,12,oievstafiev@jahia.com
-c0a03fb,08 Mar 2017 14:32:52,25,33,0,getExtension,26,1,oyevstafyev,58,1488994372,14,12,oievstafiev@jahia.com
-c0a03fb,08 Mar 2017 14:32:52,25,33,0,size,26,2,oyevstafyev,58,1488994372,14,12,oievstafiev@jahia.com
-c0a03fb,08 Mar 2017 14:32:52,25,33,0,write,26,1,oyevstafyev,58,1488994372,14,12,oievstafiev@jahia.com
-c0a03fb,08 Mar 2017 14:32:52,25,33,0,toString,26,8,oyevstafyev,58,1488994372,14,12,oievstafiev@jahia.com
-c0a03fb,08 Mar 2017 14:32:52,25,33,0,get,26,5,oyevstafyev,58,1488994372,14,12,oievstafiev@jahia.com
-c0a03fb,08 Mar 2017 14:32:52,25,33,0,close,26,5,oyevstafyev,58,1488994372,14,12,oievstafiev@jahia.com
-c0a03fb,08 Mar 2017 14:32:52,25,33,0,isDirectory,26,2,oyevstafyev,58,1488994372,14,12,oievstafiev@jahia.com
-c0a03fb,08 Mar 2017 14:32:52,25,33,0,getName,26,1,oyevstafyev,58,1488994372,14,12,oievstafiev@jahia.com
-c0a03fb,08 Mar 2017 14:32:52,25,33,0,read,26,1,oyevstafyev,58,1488994372,14,12,oievstafiev@jahia.com
-c0a03fb,08 Mar 2017 14:32:52,25,33,0,listFiles,26,1,oyevstafyev,58,1488994372,14,12,oievstafiev@jahia.com
-c0a03fb,08 Mar 2017 14:32:52,25,33,0,getFile,26,1,oyevstafyev,58,1488994372,14,12,oievstafiev@jahia.com
-c0a03fb,08 Mar 2017 14:32:52,25,33,0,length,26,1,oyevstafyev,58,1488994372,14,12,oievstafiev@jahia.com
-77e2bf7,24 Nov 2017 07:48:14,17,12,3,close,13,0,Sergiy Shyrkov,29,1511520494,5,8,sshyrkov@jahia.com
-77e2bf7,24 Nov 2017 07:48:14,17,12,3,equals,13,2,Sergiy Shyrkov,29,1511520494,5,8,sshyrkov@jahia.com
-77e2bf7,24 Nov 2017 07:48:14,17,12,3,getInstance,13,5,Sergiy Shyrkov,29,1511520494,5,8,sshyrkov@jahia.com
-77e2bf7,24 Nov 2017 07:48:14,17,12,1,or,13,0,Sergiy Shyrkov,29,1511520494,5,8,sshyrkov@jahia.com
-77e2bf7,24 Nov 2017 07:48:14,17,12,3,getName,13,2,Sergiy Shyrkov,29,1511520494,5,8,sshyrkov@jahia.com
-77e2bf7,24 Nov 2017 07:48:14,17,12,0,deleteQuietly,13,2,Sergiy Shyrkov,29,1511520494,5,8,sshyrkov@jahia.com
-77e2bf7,24 Nov 2017 07:48:14,17,12,2,delete,13,0,Sergiy Shyrkov,29,1511520494,5,8,sshyrkov@jahia.com
-77e2bf7,24 Nov 2017 07:48:14,17,12,0,copyInputStreamToFile,13,1,Sergiy Shyrkov,29,1511520494,5,8,sshyrkov@jahia.com
-77e2bf7,24 Nov 2017 07:48:14,17,12,1,write,13,0,Sergiy Shyrkov,29,1511520494,5,8,sshyrkov@jahia.com
-77e2bf7,24 Nov 2017 07:48:14,17,12,1,read,13,0,Sergiy Shyrkov,29,1511520494,5,8,sshyrkov@jahia.com
-0e4718a,17 May 2017 08:25:53,0,4,0,close,1,4,Sergiy Shyrkov,4,1495020353,1,0,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,3,listFiles,78,3,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,1,getCause,78,1,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,14,getPath,78,14,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,11,equals,78,11,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,5,getInstance,78,5,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,1,matches,78,1,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,2,copy,78,2,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,16,add,78,16,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,2,writeLines,78,2,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,8,write,78,8,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,2,get,78,1,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,1,stop,78,1,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,4,readLines,78,4,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,2,remove,78,2,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,1,valueOf,78,1,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,13,getName,78,13,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,8,closeQuietly,78,8,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,3,delete,78,3,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,1,setName,78,1,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,4,start,78,4,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,5,length,78,6,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,1,moveDirectory,78,1,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,1,copyDirectory,78,1,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,1,handleDirectory,78,1,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,1,openOutputStream,78,1,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,22,or,78,22,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,2,toByteArray,78,2,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,13,toString,78,12,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,3,close,78,3,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,1,getParent,78,1,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,1,deleteDirectory,78,1,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,1,isDirectory,78,1,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,12,deleteQuietly,78,12,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,1,copyFile,78,1,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,1,append,78,1,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,3,read,78,3,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,5,size,78,3,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,7,getFile,78,7,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-660b03d,15 Feb 2017 14:31:34,184,181,1,forceDelete,78,1,Sergiy Shyrkov,365,1487179894,39,39,sshyrkov@jahia.com
-dfe6c93,27 Oct 2017 05:12:00,1,1,1,get,2,1,Sergiy Shyrkov,2,1509091920,1,1,sshyrkov@jahia.com
-474ff59,26 Oct 2017 06:00:09,2,2,2,get,2,2,Sergiy Shyrkov,4,1509008409,1,1,sshyrkov@jahia.com
-5bc9e85,18 Oct 2017 15:59:31,0,12,0,getParent,6,1,Sergiy Shyrkov,12,1508353171,6,0,sshyrkov@jahia.com
-5bc9e85,18 Oct 2017 15:59:31,0,12,0,remove,6,1,Sergiy Shyrkov,12,1508353171,6,0,sshyrkov@jahia.com
-5bc9e85,18 Oct 2017 15:59:31,0,12,0,getInstance,6,6,Sergiy Shyrkov,12,1508353171,6,0,sshyrkov@jahia.com
-5bc9e85,18 Oct 2017 15:59:31,0,12,0,toInputStream,6,1,Sergiy Shyrkov,12,1508353171,6,0,sshyrkov@jahia.com
-5bc9e85,18 Oct 2017 15:59:31,0,12,0,getPath,6,1,Sergiy Shyrkov,12,1508353171,6,0,sshyrkov@jahia.com
-5bc9e85,18 Oct 2017 15:59:31,0,12,0,get,6,2,Sergiy Shyrkov,12,1508353171,6,0,sshyrkov@jahia.com
-444ea9d,01 Mar 2017 08:08:37,98,96,13,getPath,34,12,bpapez,194,1488366517,17,17,bpapez@jahia.com
-444ea9d,01 Mar 2017 08:08:37,98,96,7,equals,34,7,bpapez,194,1488366517,17,17,bpapez@jahia.com
-444ea9d,01 Mar 2017 08:08:37,98,96,1,init,34,1,bpapez,194,1488366517,17,17,bpapez@jahia.com
-444ea9d,01 Mar 2017 08:08:37,98,96,6,getInstance,34,6,bpapez,194,1488366517,17,17,bpapez@jahia.com
-444ea9d,01 Mar 2017 08:08:37,98,96,10,create,34,10,bpapez,194,1488366517,17,17,bpapez@jahia.com
-444ea9d,01 Mar 2017 08:08:37,98,96,4,hasNext,34,4,bpapez,194,1488366517,17,17,bpapez@jahia.com
-444ea9d,01 Mar 2017 08:08:37,98,96,2,deleteQuietly,34,2,bpapez,194,1488366517,17,17,bpapez@jahia.com
-444ea9d,01 Mar 2017 08:08:37,98,96,23,add,34,22,bpapez,194,1488366517,17,17,bpapez@jahia.com
-444ea9d,01 Mar 2017 08:08:37,98,96,9,or,34,9,bpapez,194,1488366517,17,17,bpapez@jahia.com
-444ea9d,01 Mar 2017 08:08:37,98,96,5,toString,34,5,bpapez,194,1488366517,17,17,bpapez@jahia.com
-444ea9d,01 Mar 2017 08:08:37,98,96,3,get,34,3,bpapez,194,1488366517,17,17,bpapez@jahia.com
-444ea9d,01 Mar 2017 08:08:37,98,96,3,close,34,3,bpapez,194,1488366517,17,17,bpapez@jahia.com
-444ea9d,01 Mar 2017 08:08:37,98,96,1,remove,34,1,bpapez,194,1488366517,17,17,bpapez@jahia.com
-444ea9d,01 Mar 2017 08:08:37,98,96,1,valueOf,34,1,bpapez,194,1488366517,17,17,bpapez@jahia.com
-444ea9d,01 Mar 2017 08:08:37,98,96,1,getName,34,1,bpapez,194,1488366517,17,17,bpapez@jahia.com
-444ea9d,01 Mar 2017 08:08:37,98,96,4,next,34,4,bpapez,194,1488366517,17,17,bpapez@jahia.com
-444ea9d,01 Mar 2017 08:08:37,98,96,5,size,34,5,bpapez,194,1488366517,17,17,bpapez@jahia.com
-2f40900,17 Feb 2017 08:33:58,82,86,16,equals,12,16,bpapez,168,1487331238,7,5,bpapez@jahia.com
-2f40900,17 Feb 2017 08:33:58,82,86,1,remove,12,1,bpapez,168,1487331238,7,5,bpapez@jahia.com
-2f40900,17 Feb 2017 08:33:58,82,86,1,getName,12,1,bpapez,168,1487331238,7,5,bpapez@jahia.com
-2f40900,17 Feb 2017 08:33:58,82,86,0,hasNext,12,1,bpapez,168,1487331238,7,5,bpapez@jahia.com
-2f40900,17 Feb 2017 08:33:58,82,86,19,toString,12,19,bpapez,168,1487331238,7,5,bpapez@jahia.com
-2f40900,17 Feb 2017 08:33:58,82,86,45,add,12,46,bpapez,168,1487331238,7,5,bpapez@jahia.com
-2f40900,17 Feb 2017 08:33:58,82,86,0,init,12,2,bpapez,168,1487331238,7,5,bpapez@jahia.com
-d635f5c,04 Sep 2017 09:22:29,42,41,1,getPath,30,1,Sergiy Shyrkov,83,1504527749,15,15,sshyrkov@jahia.com
-d635f5c,04 Sep 2017 09:22:29,42,41,1,values,30,1,Sergiy Shyrkov,83,1504527749,15,15,sshyrkov@jahia.com
-d635f5c,04 Sep 2017 09:22:29,42,41,2,getExtension,30,2,Sergiy Shyrkov,83,1504527749,15,15,sshyrkov@jahia.com
-d635f5c,04 Sep 2017 09:22:29,42,41,2,getInstance,30,2,Sergiy Shyrkov,83,1504527749,15,15,sshyrkov@jahia.com
-d635f5c,04 Sep 2017 09:22:29,42,41,1,getBaseName,30,1,Sergiy Shyrkov,83,1504527749,15,15,sshyrkov@jahia.com
-d635f5c,04 Sep 2017 09:22:29,42,41,1,toString,30,1,Sergiy Shyrkov,83,1504527749,15,15,sshyrkov@jahia.com
-d635f5c,04 Sep 2017 09:22:29,42,41,1,next,30,1,Sergiy Shyrkov,83,1504527749,15,15,sshyrkov@jahia.com
-d635f5c,04 Sep 2017 09:22:29,42,41,13,or,30,13,Sergiy Shyrkov,83,1504527749,15,15,sshyrkov@jahia.com
-d635f5c,04 Sep 2017 09:22:29,42,41,1,close,30,1,Sergiy Shyrkov,83,1504527749,15,15,sshyrkov@jahia.com
-d635f5c,04 Sep 2017 09:22:29,42,41,1,flush,30,1,Sergiy Shyrkov,83,1504527749,15,15,sshyrkov@jahia.com
-d635f5c,04 Sep 2017 09:22:29,42,41,3,getName,30,3,Sergiy Shyrkov,83,1504527749,15,15,sshyrkov@jahia.com
-d635f5c,04 Sep 2017 09:22:29,42,41,2,closeQuietly,30,2,Sergiy Shyrkov,83,1504527749,15,15,sshyrkov@jahia.com
-d635f5c,04 Sep 2017 09:22:29,42,41,5,append,30,5,Sergiy Shyrkov,83,1504527749,15,15,sshyrkov@jahia.com
-d635f5c,04 Sep 2017 09:22:29,42,41,1,size,30,1,Sergiy Shyrkov,83,1504527749,15,15,sshyrkov@jahia.com
-d635f5c,04 Sep 2017 09:22:29,42,41,1,length,30,1,Sergiy Shyrkov,83,1504527749,15,15,sshyrkov@jahia.com
-085b054,03 Mar 2017 08:14:48,0,3,0,or,2,2,Sergiy Shyrkov,3,1488539688,2,0,sshyrkov@jahia.com
-085b054,03 Mar 2017 08:14:48,0,3,0,getInstance,2,1,Sergiy Shyrkov,3,1488539688,2,0,sshyrkov@jahia.com
-ebc2013,14 Mar 2017 12:19:14,1,2,0,or,3,1,oyevstafyev,3,1489504754,2,1,oievstafiev@jahia.com
-ebc2013,14 Mar 2017 12:19:14,1,2,1,get,3,1,oyevstafyev,3,1489504754,2,1,oievstafiev@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,1,getPrefix,56,1,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,4,getPath,56,4,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,1,compare,56,1,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,14,equals,56,14,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,19,getInstance,56,19,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,5,hasNext,56,5,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,1,copy,56,1,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,10,add,56,10,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,1,toCharArray,56,1,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,7,get,56,7,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,3,valueOf,56,3,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,15,getName,56,15,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,4,closeQuietly,56,4,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,3,matches,56,3,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,1,values,56,1,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,1,getSize,56,1,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,1,mark,56,1,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,7,size,56,7,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,1,normalize,56,1,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,18,or,56,18,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,6,toString,56,6,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,1,close,56,1,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,6,getParent,56,6,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,13,length,56,13,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,1,isDirectory,56,1,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,3,deleteQuietly,56,3,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,20,append,56,20,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-c48a714,27 Oct 2017 13:28:02,170,170,3,next,56,3,Sergiy Shyrkov,340,1509121682,28,28,sshyrkov@jahia.com
-91be26c,13 Feb 2017 07:36:57,3,9,0,equals,8,1,David Griffon,12,1486982217,6,2,dgriffon@jahia.com
-91be26c,13 Feb 2017 07:36:57,3,9,0,getInstance,8,2,David Griffon,12,1486982217,6,2,dgriffon@jahia.com
-91be26c,13 Feb 2017 07:36:57,3,9,2,toString,8,3,David Griffon,12,1486982217,6,2,dgriffon@jahia.com
-91be26c,13 Feb 2017 07:36:57,3,9,0,add,8,1,David Griffon,12,1486982217,6,2,dgriffon@jahia.com
-91be26c,13 Feb 2017 07:36:57,3,9,0,getBytes,8,1,David Griffon,12,1486982217,6,2,dgriffon@jahia.com
-91be26c,13 Feb 2017 07:36:57,3,9,1,get,8,1,David Griffon,12,1486982217,6,2,dgriffon@jahia.com
-04704ba,16 Feb 2017 14:52:14,65,138,11,getPath,27,6,bpapez,203,1487267534,14,13,bpapez@jahia.com
-04704ba,16 Feb 2017 14:52:14,65,138,6,writeStringToFile,27,0,bpapez,203,1487267534,14,13,bpapez@jahia.com
-04704ba,16 Feb 2017 14:52:14,65,138,4,equals,27,17,bpapez,203,1487267534,14,13,bpapez@jahia.com
-04704ba,16 Feb 2017 14:52:14,65,138,8,init,27,22,bpapez,203,1487267534,14,13,bpapez@jahia.com
-04704ba,16 Feb 2017 14:52:14,65,138,14,getInstance,27,3,bpapez,203,1487267534,14,13,bpapez@jahia.com
-04704ba,16 Feb 2017 14:52:14,65,138,0,hasNext,27,4,bpapez,203,1487267534,14,13,bpapez@jahia.com
-04704ba,16 Feb 2017 14:52:14,65,138,3,toString,27,20,bpapez,203,1487267534,14,13,bpapez@jahia.com
-04704ba,16 Feb 2017 14:52:14,65,138,7,add,27,46,bpapez,203,1487267534,14,13,bpapez@jahia.com
-04704ba,16 Feb 2017 14:52:14,65,138,1,getName,27,1,bpapez,203,1487267534,14,13,bpapez@jahia.com
-04704ba,16 Feb 2017 14:52:14,65,138,2,get,27,2,bpapez,203,1487267534,14,13,bpapez@jahia.com
-04704ba,16 Feb 2017 14:52:14,65,138,1,remove,27,3,bpapez,203,1487267534,14,13,bpapez@jahia.com
-04704ba,16 Feb 2017 14:52:14,65,138,0,or,27,2,bpapez,203,1487267534,14,13,bpapez@jahia.com
-04704ba,16 Feb 2017 14:52:14,65,138,6,deleteQuietly,27,0,bpapez,203,1487267534,14,13,bpapez@jahia.com
-04704ba,16 Feb 2017 14:52:14,65,138,0,refresh,27,9,bpapez,203,1487267534,14,13,bpapez@jahia.com
-04704ba,16 Feb 2017 14:52:14,65,138,0,next,27,2,bpapez,203,1487267534,14,13,bpapez@jahia.com
-04704ba,16 Feb 2017 14:52:14,65,138,1,size,27,0,bpapez,203,1487267534,14,13,bpapez@jahia.com
-04704ba,16 Feb 2017 14:52:14,65,138,1,copy,27,1,bpapez,203,1487267534,14,13,bpapez@jahia.com
-c9e7d4e,17 Aug 2017 07:17:08,0,1,0,get,1,1,Thomas Draier,1,1502965028,1,0,tdraier@jahia.com
-1306eb1,07 Mar 2017 13:06:08,1,6,0,getFile,3,5,oyevstafyev,7,1488902768,2,1,oievstafiev@jahia.com
-1306eb1,07 Mar 2017 13:06:08,1,6,1,size,3,1,oyevstafyev,7,1488902768,2,1,oievstafiev@jahia.com
-5c3be12,07 Mar 2017 10:54:57,7,2,4,toString,5,0,oyevstafyev,9,1488894897,2,3,oievstafiev@jahia.com
-5c3be12,07 Mar 2017 10:54:57,7,2,2,size,5,1,oyevstafyev,9,1488894897,2,3,oievstafiev@jahia.com
-5c3be12,07 Mar 2017 10:54:57,7,2,1,get,5,1,oyevstafyev,9,1488894897,2,3,oievstafiev@jahia.com
-ef0b258,16 Nov 2017 09:41:22,22,25,4,getParent,18,4,Sergiy Shyrkov,47,1510836082,9,9,sshyrkov@jahia.com
-ef0b258,16 Nov 2017 09:41:22,22,25,1,copyInputStreamToFile,18,1,Sergiy Shyrkov,47,1510836082,9,9,sshyrkov@jahia.com
-ef0b258,16 Nov 2017 09:41:22,22,25,2,closeQuietly,18,3,Sergiy Shyrkov,47,1510836082,9,9,sshyrkov@jahia.com
-ef0b258,16 Nov 2017 09:41:22,22,25,1,getName,18,1,Sergiy Shyrkov,47,1510836082,9,9,sshyrkov@jahia.com
-ef0b258,16 Nov 2017 09:41:22,22,25,1,toString,18,1,Sergiy Shyrkov,47,1510836082,9,9,sshyrkov@jahia.com
-ef0b258,16 Nov 2017 09:41:22,22,25,8,read,18,10,Sergiy Shyrkov,47,1510836082,9,9,sshyrkov@jahia.com
-ef0b258,16 Nov 2017 09:41:22,22,25,1,get,18,1,Sergiy Shyrkov,47,1510836082,9,9,sshyrkov@jahia.com
-ef0b258,16 Nov 2017 09:41:22,22,25,3,write,18,3,Sergiy Shyrkov,47,1510836082,9,9,sshyrkov@jahia.com
-ef0b258,16 Nov 2017 09:41:22,22,25,1,getChildren,18,1,Sergiy Shyrkov,47,1510836082,9,9,sshyrkov@jahia.com
-a41fe2d,19 Jun 2017 04:01:35,1,0,1,getInstance,1,0,Sergiy Shyrkov,1,1497855695,0,1,sshyrkov@jahia.com
-b080017,07 Mar 2017 04:52:41,0,20,0,equals,12,2,oyevstafyev,20,1488873161,12,0,oievstafiev@jahia.com
-b080017,07 Mar 2017 04:52:41,0,20,0,getInstance,12,1,oyevstafyev,20,1488873161,12,0,oievstafiev@jahia.com
-b080017,07 Mar 2017 04:52:41,0,20,0,toString,12,4,oyevstafyev,20,1488873161,12,0,oievstafiev@jahia.com
-b080017,07 Mar 2017 04:52:41,0,20,0,write,12,1,oyevstafyev,20,1488873161,12,0,oievstafiev@jahia.com
-b080017,07 Mar 2017 04:52:41,0,20,0,add,12,1,oyevstafyev,20,1488873161,12,0,oievstafiev@jahia.com
-b080017,07 Mar 2017 04:52:41,0,20,0,or,12,1,oyevstafyev,20,1488873161,12,0,oievstafiev@jahia.com
-b080017,07 Mar 2017 04:52:41,0,20,0,get,12,1,oyevstafyev,20,1488873161,12,0,oievstafiev@jahia.com
-b080017,07 Mar 2017 04:52:41,0,20,0,isDirectory,12,1,oyevstafyev,20,1488873161,12,0,oievstafiev@jahia.com
-b080017,07 Mar 2017 04:52:41,0,20,0,getName,12,2,oyevstafyev,20,1488873161,12,0,oievstafiev@jahia.com
-b080017,07 Mar 2017 04:52:41,0,20,0,read,12,1,oyevstafyev,20,1488873161,12,0,oievstafiev@jahia.com
-b080017,07 Mar 2017 04:52:41,0,20,0,listFiles,12,1,oyevstafyev,20,1488873161,12,0,oievstafiev@jahia.com
-b080017,07 Mar 2017 04:52:41,0,20,0,size,12,4,oyevstafyev,20,1488873161,12,0,oievstafiev@jahia.com
-d7778f9,08 Mar 2017 12:39:24,1,2,1,toString,2,2,oyevstafyev,3,1488987564,1,1,oievstafiev@jahia.com
-83fccd9,10 Mar 2017 10:38:57,14,15,0,equals,16,1,Sergiy Shyrkov,29,1489153137,9,7,sshyrkov@jahia.com
-83fccd9,10 Mar 2017 10:38:57,14,15,1,getInstance,16,1,Sergiy Shyrkov,29,1489153137,9,7,sshyrkov@jahia.com
-83fccd9,10 Mar 2017 10:38:57,14,15,1,copy,16,1,Sergiy Shyrkov,29,1489153137,9,7,sshyrkov@jahia.com
-83fccd9,10 Mar 2017 10:38:57,14,15,5,or,16,4,Sergiy Shyrkov,29,1489153137,9,7,sshyrkov@jahia.com
-83fccd9,10 Mar 2017 10:38:57,14,15,1,closeQuietly,16,1,Sergiy Shyrkov,29,1489153137,9,7,sshyrkov@jahia.com
-83fccd9,10 Mar 2017 10:38:57,14,15,1,toString,16,1,Sergiy Shyrkov,29,1489153137,9,7,sshyrkov@jahia.com
-83fccd9,10 Mar 2017 10:38:57,14,15,0,size,16,1,Sergiy Shyrkov,29,1489153137,9,7,sshyrkov@jahia.com
-83fccd9,10 Mar 2017 10:38:57,14,15,1,toCharArray,16,0,Sergiy Shyrkov,29,1489153137,9,7,sshyrkov@jahia.com
-83fccd9,10 Mar 2017 10:38:57,14,15,4,length,16,4,Sergiy Shyrkov,29,1489153137,9,7,sshyrkov@jahia.com
-83fccd9,10 Mar 2017 10:38:57,14,15,0,get,16,1,Sergiy Shyrkov,29,1489153137,9,7,sshyrkov@jahia.com
-d955545,07 Mar 2017 16:38:10,5,12,1,equals,7,0,oyevstafyev,17,1488915490,2,5,oievstafiev@jahia.com
-d955545,07 Mar 2017 16:38:10,5,12,1,getName,7,0,oyevstafyev,17,1488915490,2,5,oievstafiev@jahia.com
-d955545,07 Mar 2017 16:38:10,5,12,0,toString,7,8,oyevstafyev,17,1488915490,2,5,oievstafiev@jahia.com
-d955545,07 Mar 2017 16:38:10,5,12,1,getFile,7,0,oyevstafyev,17,1488915490,2,5,oievstafiev@jahia.com
-d955545,07 Mar 2017 16:38:10,5,12,1,add,7,0,oyevstafyev,17,1488915490,2,5,oievstafiev@jahia.com
-d955545,07 Mar 2017 16:38:10,5,12,1,size,7,0,oyevstafyev,17,1488915490,2,5,oievstafiev@jahia.com
-d955545,07 Mar 2017 16:38:10,5,12,0,get,7,4,oyevstafyev,17,1488915490,2,5,oievstafiev@jahia.com
-d96830e,22 Feb 2017 06:27:00,2,5,1,getPath,6,2,David Griffon,7,1487755620,4,2,dgriffon@jahia.com
-d96830e,22 Feb 2017 06:27:00,2,5,0,add,6,1,David Griffon,7,1487755620,4,2,dgriffon@jahia.com
-d96830e,22 Feb 2017 06:27:00,2,5,0,equals,6,1,David Griffon,7,1487755620,4,2,dgriffon@jahia.com
-d96830e,22 Feb 2017 06:27:00,2,5,1,remove,6,1,David Griffon,7,1487755620,4,2,dgriffon@jahia.com
-1477af3,06 Jun 2017 11:35:14,0,2,0,run,2,1,Sergiy Shyrkov,2,1496759714,2,0,sshyrkov@jahia.com
-1477af3,06 Jun 2017 11:35:14,0,2,0,getInstance,2,1,Sergiy Shyrkov,2,1496759714,2,0,sshyrkov@jahia.com
-12dc5cc,31 Aug 2017 10:01:49,0,1,0,getName,1,1,jkevan,1,1504184509,1,0,kevan@jahia.com
-8f55b75,11 May 2017 10:58:00,2,2,1,add,4,1,Sergiy Shyrkov,4,1494511080,2,2,sshyrkov@jahia.com
-8f55b75,11 May 2017 10:58:00,2,2,1,length,4,1,Sergiy Shyrkov,4,1494511080,2,2,sshyrkov@jahia.com
-61e62c6,03 Mar 2017 08:34:29,0,3,0,or,2,2,Sergiy Shyrkov,3,1488540869,2,0,sshyrkov@jahia.com
-61e62c6,03 Mar 2017 08:34:29,0,3,0,getInstance,2,1,Sergiy Shyrkov,3,1488540869,2,0,sshyrkov@jahia.com
-52b66b0,06 Jun 2017 18:51:08,0,1,0,getInstance,1,1,Sergiy Shyrkov,1,1496785868,1,0,sshyrkov@jahia.com
-ab59341,20 Mar 2017 13:55:03,34,16,0,iterateFiles,25,1,Sergiy Shyrkov,50,1490028903,10,15,sshyrkov@jahia.com
-ab59341,20 Mar 2017 13:55:03,34,16,1,equals,25,2,Sergiy Shyrkov,50,1490028903,10,15,sshyrkov@jahia.com
-ab59341,20 Mar 2017 13:55:03,34,16,1,getExtension,25,1,Sergiy Shyrkov,50,1490028903,10,15,sshyrkov@jahia.com
-ab59341,20 Mar 2017 13:55:03,34,16,1,getInstance,25,0,Sergiy Shyrkov,50,1490028903,10,15,sshyrkov@jahia.com
-ab59341,20 Mar 2017 13:55:03,34,16,0,normalize,25,2,Sergiy Shyrkov,50,1490028903,10,15,sshyrkov@jahia.com
-ab59341,20 Mar 2017 13:55:03,34,16,1,listFiles,25,0,Sergiy Shyrkov,50,1490028903,10,15,sshyrkov@jahia.com
-ab59341,20 Mar 2017 13:55:03,34,16,1,getFile,25,0,Sergiy Shyrkov,50,1490028903,10,15,sshyrkov@jahia.com
-ab59341,20 Mar 2017 13:55:03,34,16,0,writeStringToFile,25,2,Sergiy Shyrkov,50,1490028903,10,15,sshyrkov@jahia.com
-ab59341,20 Mar 2017 13:55:03,34,16,1,or,25,0,Sergiy Shyrkov,50,1490028903,10,15,sshyrkov@jahia.com
-ab59341,20 Mar 2017 13:55:03,34,16,8,toString,25,1,Sergiy Shyrkov,50,1490028903,10,15,sshyrkov@jahia.com
-ab59341,20 Mar 2017 13:55:03,34,16,5,get,25,0,Sergiy Shyrkov,50,1490028903,10,15,sshyrkov@jahia.com
-ab59341,20 Mar 2017 13:55:03,34,16,5,close,25,0,Sergiy Shyrkov,50,1490028903,10,15,sshyrkov@jahia.com
-ab59341,20 Mar 2017 13:55:03,34,16,0,getParent,25,2,Sergiy Shyrkov,50,1490028903,10,15,sshyrkov@jahia.com
-ab59341,20 Mar 2017 13:55:03,34,16,0,readFileToString,25,2,Sergiy Shyrkov,50,1490028903,10,15,sshyrkov@jahia.com
-ab59341,20 Mar 2017 13:55:03,34,16,2,isDirectory,25,0,Sergiy Shyrkov,50,1490028903,10,15,sshyrkov@jahia.com
-ab59341,20 Mar 2017 13:55:03,34,16,1,getName,25,0,Sergiy Shyrkov,50,1490028903,10,15,sshyrkov@jahia.com
-ab59341,20 Mar 2017 13:55:03,34,16,1,read,25,0,Sergiy Shyrkov,50,1490028903,10,15,sshyrkov@jahia.com
-ab59341,20 Mar 2017 13:55:03,34,16,1,write,25,0,Sergiy Shyrkov,50,1490028903,10,15,sshyrkov@jahia.com
-ab59341,20 Mar 2017 13:55:03,34,16,2,size,25,0,Sergiy Shyrkov,50,1490028903,10,15,sshyrkov@jahia.com
-ab59341,20 Mar 2017 13:55:03,34,16,1,length,25,0,Sergiy Shyrkov,50,1490028903,10,15,sshyrkov@jahia.com
-5732fad,02 Feb 2017 10:07:43,0,76,0,getPath,13,11,David Griffon,76,1486040863,13,0,dgriffon@jahia.com
-5732fad,02 Feb 2017 10:07:43,0,76,0,add,13,6,David Griffon,76,1486040863,13,0,dgriffon@jahia.com
-5732fad,02 Feb 2017 10:07:43,0,76,0,equals,13,5,David Griffon,76,1486040863,13,0,dgriffon@jahia.com
-5732fad,02 Feb 2017 10:07:43,0,76,0,init,13,8,David Griffon,76,1486040863,13,0,dgriffon@jahia.com
-5732fad,02 Feb 2017 10:07:43,0,76,0,getInstance,13,19,David Griffon,76,1486040863,13,0,dgriffon@jahia.com
-5732fad,02 Feb 2017 10:07:43,0,76,0,deleteQuietly,13,8,David Griffon,76,1486040863,13,0,dgriffon@jahia.com
-5732fad,02 Feb 2017 10:07:43,0,76,0,writeStringToFile,13,8,David Griffon,76,1486040863,13,0,dgriffon@jahia.com
-5732fad,02 Feb 2017 10:07:43,0,76,0,toString,13,3,David Griffon,76,1486040863,13,0,dgriffon@jahia.com
-5732fad,02 Feb 2017 10:07:43,0,76,0,get,13,2,David Griffon,76,1486040863,13,0,dgriffon@jahia.com
-5732fad,02 Feb 2017 10:07:43,0,76,0,remove,13,2,David Griffon,76,1486040863,13,0,dgriffon@jahia.com
-5732fad,02 Feb 2017 10:07:43,0,76,0,getName,13,2,David Griffon,76,1486040863,13,0,dgriffon@jahia.com
-5732fad,02 Feb 2017 10:07:43,0,76,0,copy,13,1,David Griffon,76,1486040863,13,0,dgriffon@jahia.com
-5732fad,02 Feb 2017 10:07:43,0,76,0,size,13,1,David Griffon,76,1486040863,13,0,dgriffon@jahia.com
-ab22be7,15 Feb 2017 11:08:40,0,7,0,deleteQuietly,4,1,Sergiy Shyrkov,7,1487167720,4,0,sshyrkov@jahia.com
-ab22be7,15 Feb 2017 11:08:40,0,7,0,or,4,1,Sergiy Shyrkov,7,1487167720,4,0,sshyrkov@jahia.com
-ab22be7,15 Feb 2017 11:08:40,0,7,0,toFile,4,1,Sergiy Shyrkov,7,1487167720,4,0,sshyrkov@jahia.com
-ab22be7,15 Feb 2017 11:08:40,0,7,0,getInstance,4,4,Sergiy Shyrkov,7,1487167720,4,0,sshyrkov@jahia.com
-a7ce26f,15 Feb 2017 18:09:49,95,102,12,getPath,34,12,Sergiy Shyrkov,197,1487192989,17,17,sshyrkov@jahia.com
-a7ce26f,15 Feb 2017 18:09:49,95,102,22,add,34,24,Sergiy Shyrkov,197,1487192989,17,17,sshyrkov@jahia.com
-a7ce26f,15 Feb 2017 18:09:49,95,102,6,equals,34,6,Sergiy Shyrkov,197,1487192989,17,17,sshyrkov@jahia.com
-a7ce26f,15 Feb 2017 18:09:49,95,102,1,init,34,1,Sergiy Shyrkov,197,1487192989,17,17,sshyrkov@jahia.com
-a7ce26f,15 Feb 2017 18:09:49,95,102,6,getInstance,34,6,Sergiy Shyrkov,197,1487192989,17,17,sshyrkov@jahia.com
-a7ce26f,15 Feb 2017 18:09:49,95,102,10,create,34,10,Sergiy Shyrkov,197,1487192989,17,17,sshyrkov@jahia.com
-a7ce26f,15 Feb 2017 18:09:49,95,102,4,hasNext,34,4,Sergiy Shyrkov,197,1487192989,17,17,sshyrkov@jahia.com
-a7ce26f,15 Feb 2017 18:09:49,95,102,2,deleteQuietly,34,2,Sergiy Shyrkov,197,1487192989,17,17,sshyrkov@jahia.com
-a7ce26f,15 Feb 2017 18:09:49,95,102,4,next,34,4,Sergiy Shyrkov,197,1487192989,17,17,sshyrkov@jahia.com
-a7ce26f,15 Feb 2017 18:09:49,95,102,9,or,34,12,Sergiy Shyrkov,197,1487192989,17,17,sshyrkov@jahia.com
-a7ce26f,15 Feb 2017 18:09:49,95,102,5,toString,34,5,Sergiy Shyrkov,197,1487192989,17,17,sshyrkov@jahia.com
-a7ce26f,15 Feb 2017 18:09:49,95,102,3,get,34,3,Sergiy Shyrkov,197,1487192989,17,17,sshyrkov@jahia.com
-a7ce26f,15 Feb 2017 18:09:49,95,102,3,close,34,3,Sergiy Shyrkov,197,1487192989,17,17,sshyrkov@jahia.com
-a7ce26f,15 Feb 2017 18:09:49,95,102,1,remove,34,1,Sergiy Shyrkov,197,1487192989,17,17,sshyrkov@jahia.com
-a7ce26f,15 Feb 2017 18:09:49,95,102,1,valueOf,34,2,Sergiy Shyrkov,197,1487192989,17,17,sshyrkov@jahia.com
-a7ce26f,15 Feb 2017 18:09:49,95,102,1,getName,34,1,Sergiy Shyrkov,197,1487192989,17,17,sshyrkov@jahia.com
-a7ce26f,15 Feb 2017 18:09:49,95,102,5,size,34,6,Sergiy Shyrkov,197,1487192989,17,17,sshyrkov@jahia.com
+adicionou,autor,commit,email,frequencia_inseridos,frequencia_removidos,frequencia_total,metodo,momento,quantidade_inseridos,quantidade_removidos,quantidade_total,removeu,timestamp
+1,bpapez,bc56728,bpapez@jahia.com,2,3,5,get,06 Mar 2017 14:06:35,2,3,5,1,1488819995
+1,bpapez,bc56728,bpapez@jahia.com,2,3,5,add,06 Mar 2017 14:06:35,2,3,5,1,1488819995
+0,bpapez,bc56728,bpapez@jahia.com,2,3,5,or,06 Mar 2017 14:06:35,2,3,5,1,1488819995
+1,Sergiy Shyrkov,e99d827,sshyrkov@jahia.com,1,0,1,or,15 May 2017 06:40:42,1,0,1,0,1494841242
+0,jkevan,0e4bda9,kevan@jahia.com,0,1,1,or,04 Jul 2017 14:09:05,0,1,1,1,1499188145
+0,Sergiy Shyrkov,0ccfdc6,sshyrkov@jahia.com,0,1,1,or,10 Feb 2017 08:42:22,0,1,1,1,1486726942
+1,bpapez,9a4d67e,bpapez@jahia.com,1,1,2,remove,21 Feb 2017 08:26:53,1,1,2,1,1487676413
+1,Sergiy Shyrkov,b2075ae,sshyrkov@jahia.com,1,0,1,or,10 Feb 2017 08:16:17,1,0,1,0,1486725377
+3,bpapez,444ea9d,bpapez@jahia.com,96,98,194,get,01 Mar 2017 08:08:37,17,17,34,3,1488366517
+10,bpapez,444ea9d,bpapez@jahia.com,96,98,194,create,01 Mar 2017 08:08:37,17,17,34,10,1488366517
+22,bpapez,444ea9d,bpapez@jahia.com,96,98,194,add,01 Mar 2017 08:08:37,17,17,34,23,1488366517
+1,bpapez,444ea9d,bpapez@jahia.com,96,98,194,remove,01 Mar 2017 08:08:37,17,17,34,1,1488366517
+9,bpapez,444ea9d,bpapez@jahia.com,96,98,194,or,01 Mar 2017 08:08:37,17,17,34,9,1488366517
+6,bpapez,444ea9d,bpapez@jahia.com,96,98,194,getInstance,01 Mar 2017 08:08:37,17,17,34,6,1488366517
+4,bpapez,444ea9d,bpapez@jahia.com,96,98,194,hasNext,01 Mar 2017 08:08:37,17,17,34,4,1488366517
+12,bpapez,444ea9d,bpapez@jahia.com,96,98,194,getPath,01 Mar 2017 08:08:37,17,17,34,13,1488366517
+3,bpapez,444ea9d,bpapez@jahia.com,96,98,194,close,01 Mar 2017 08:08:37,17,17,34,3,1488366517
+1,bpapez,444ea9d,bpapez@jahia.com,96,98,194,valueOf,01 Mar 2017 08:08:37,17,17,34,1,1488366517
+7,bpapez,444ea9d,bpapez@jahia.com,96,98,194,equals,01 Mar 2017 08:08:37,17,17,34,7,1488366517
+1,bpapez,444ea9d,bpapez@jahia.com,96,98,194,init,01 Mar 2017 08:08:37,17,17,34,1,1488366517
+2,bpapez,444ea9d,bpapez@jahia.com,96,98,194,deleteQuietly,01 Mar 2017 08:08:37,17,17,34,2,1488366517
+1,bpapez,444ea9d,bpapez@jahia.com,96,98,194,getName,01 Mar 2017 08:08:37,17,17,34,1,1488366517
+4,bpapez,444ea9d,bpapez@jahia.com,96,98,194,next,01 Mar 2017 08:08:37,17,17,34,4,1488366517
+5,bpapez,444ea9d,bpapez@jahia.com,96,98,194,toString,01 Mar 2017 08:08:37,17,17,34,5,1488366517
+5,bpapez,444ea9d,bpapez@jahia.com,96,98,194,size,01 Mar 2017 08:08:37,17,17,34,5,1488366517
+3,bpapez,70e3898,bpapez@jahia.com,73,71,144,equals,27 Dec 2017 11:05:36,20,19,39,3,1514383536
+1,bpapez,70e3898,bpapez@jahia.com,73,71,144,get,27 Dec 2017 11:05:36,20,19,39,1,1514383536
+1,bpapez,70e3898,bpapez@jahia.com,73,71,144,getParent,27 Dec 2017 11:05:36,20,19,39,0,1514383536
+1,bpapez,70e3898,bpapez@jahia.com,73,71,144,add,27 Dec 2017 11:05:36,20,19,39,1,1514383536
+1,bpapez,70e3898,bpapez@jahia.com,73,71,144,remove,27 Dec 2017 11:05:36,20,19,39,1,1514383536
+6,bpapez,70e3898,bpapez@jahia.com,73,71,144,length,27 Dec 2017 11:05:36,20,19,39,6,1514383536
+1,bpapez,70e3898,bpapez@jahia.com,73,71,144,matches,27 Dec 2017 11:05:36,20,19,39,1,1514383536
+1,bpapez,70e3898,bpapez@jahia.com,73,71,144,init,27 Dec 2017 11:05:36,20,19,39,1,1514383536
+6,bpapez,70e3898,bpapez@jahia.com,73,71,144,append,27 Dec 2017 11:05:36,20,19,39,6,1514383536
+1,bpapez,70e3898,bpapez@jahia.com,73,71,144,start,27 Dec 2017 11:05:36,20,19,39,1,1514383536
+32,bpapez,70e3898,bpapez@jahia.com,73,71,144,getInstance,27 Dec 2017 11:05:36,20,19,39,32,1514383536
+2,bpapez,70e3898,bpapez@jahia.com,73,71,144,stop,27 Dec 2017 11:05:36,20,19,39,2,1514383536
+1,bpapez,70e3898,bpapez@jahia.com,73,71,144,valueOf,27 Dec 2017 11:05:36,20,19,39,1,1514383536
+1,bpapez,70e3898,bpapez@jahia.com,73,71,144,closeQuietly,27 Dec 2017 11:05:36,20,19,39,1,1514383536
+5,bpapez,70e3898,bpapez@jahia.com,73,71,144,or,27 Dec 2017 11:05:36,20,19,39,4,1514383536
+1,bpapez,70e3898,bpapez@jahia.com,73,71,144,values,27 Dec 2017 11:05:36,20,19,39,1,1514383536
+1,bpapez,70e3898,bpapez@jahia.com,73,71,144,flush,27 Dec 2017 11:05:36,20,19,39,1,1514383536
+4,bpapez,70e3898,bpapez@jahia.com,73,71,144,toString,27 Dec 2017 11:05:36,20,19,39,4,1514383536
+1,bpapez,70e3898,bpapez@jahia.com,73,71,144,size,27 Dec 2017 11:05:36,20,19,39,1,1514383536
+3,bpapez,70e3898,bpapez@jahia.com,73,71,144,getName,27 Dec 2017 11:05:36,20,19,39,3,1514383536
+1,David Griffon,1526f08,dgriffon@jahia.com,1,0,1,getInstance,16 May 2017 12:26:04,1,0,1,0,1494948364
+1,Thomas Draier,c9e7d4e,tdraier@jahia.com,7,5,12,get,17 Aug 2017 07:17:08,6,5,11,1,1502965028
+1,Thomas Draier,c9e7d4e,tdraier@jahia.com,7,5,12,getName,17 Aug 2017 07:17:08,6,5,11,1,1502965028
+1,Thomas Draier,c9e7d4e,tdraier@jahia.com,7,5,12,or,17 Aug 2017 07:17:08,6,5,11,1,1502965028
+1,Thomas Draier,c9e7d4e,tdraier@jahia.com,7,5,12,getParent,17 Aug 2017 07:17:08,6,5,11,1,1502965028
+1,Thomas Draier,c9e7d4e,tdraier@jahia.com,7,5,12,getInstance,17 Aug 2017 07:17:08,6,5,11,0,1502965028
+1,Thomas Draier,c9e7d4e,tdraier@jahia.com,7,5,12,hasNext,17 Aug 2017 07:17:08,6,5,11,1,1502965028
+1,jkevan,5df00b7,kevan@jahia.com,16,2,18,length,29 Nov 2017 12:40:54,3,2,5,0,1511970054
+10,jkevan,5df00b7,kevan@jahia.com,16,2,18,append,29 Nov 2017 12:40:54,3,2,5,1,1511970054
+5,jkevan,5df00b7,kevan@jahia.com,16,2,18,size,29 Nov 2017 12:40:54,3,2,5,1,1511970054
+0,jkevan,1673fdf,kevan@jahia.com,0,1,1,equals,26 May 2017 13:52:33,0,1,1,1,1495817553
+4,Thomas Draier,431d6d6,tdraier@jahia.com,8,1,9,getName,09 Aug 2017 10:15:06,4,1,5,1,1502284506
+1,Thomas Draier,431d6d6,tdraier@jahia.com,8,1,9,values,09 Aug 2017 10:15:06,4,1,5,0,1502284506
+1,Thomas Draier,431d6d6,tdraier@jahia.com,8,1,9,equals,09 Aug 2017 10:15:06,4,1,5,0,1502284506
+2,Thomas Draier,431d6d6,tdraier@jahia.com,8,1,9,get,09 Aug 2017 10:15:06,4,1,5,0,1502284506
+3,Sergiy Shyrkov,1790f6f,sshyrkov@jahia.com,7,9,16,get,16 Nov 2017 11:30:14,4,4,8,3,1510842614
+2,Sergiy Shyrkov,1790f6f,sshyrkov@jahia.com,7,9,16,add,16 Nov 2017 11:30:14,4,4,8,2,1510842614
+1,Sergiy Shyrkov,1790f6f,sshyrkov@jahia.com,7,9,16,equals,16 Nov 2017 11:30:14,4,4,8,1,1510842614
+1,Sergiy Shyrkov,1790f6f,sshyrkov@jahia.com,7,9,16,getPath,16 Nov 2017 11:30:14,4,4,8,3,1510842614
+1,Sergiy Shyrkov,44734b5,sshyrkov@jahia.com,1,1,2,size,30 Jun 2017 08:34:33,1,1,2,1,1498822473
+2,bpapez,04704ba,bpapez@jahia.com,138,65,203,get,16 Feb 2017 14:52:14,14,13,27,2,1487267534
+0,bpapez,04704ba,bpapez@jahia.com,138,65,203,writeStringToFile,16 Feb 2017 14:52:14,14,13,27,6,1487267534
+0,bpapez,04704ba,bpapez@jahia.com,138,65,203,deleteQuietly,16 Feb 2017 14:52:14,14,13,27,6,1487267534
+1,bpapez,04704ba,bpapez@jahia.com,138,65,203,copy,16 Feb 2017 14:52:14,14,13,27,1,1487267534
+46,bpapez,04704ba,bpapez@jahia.com,138,65,203,add,16 Feb 2017 14:52:14,14,13,27,7,1487267534
+3,bpapez,04704ba,bpapez@jahia.com,138,65,203,remove,16 Feb 2017 14:52:14,14,13,27,1,1487267534
+3,bpapez,04704ba,bpapez@jahia.com,138,65,203,getInstance,16 Feb 2017 14:52:14,14,13,27,14,1487267534
+22,bpapez,04704ba,bpapez@jahia.com,138,65,203,init,16 Feb 2017 14:52:14,14,13,27,8,1487267534
+0,bpapez,04704ba,bpapez@jahia.com,138,65,203,size,16 Feb 2017 14:52:14,14,13,27,1,1487267534
+6,bpapez,04704ba,bpapez@jahia.com,138,65,203,getPath,16 Feb 2017 14:52:14,14,13,27,11,1487267534
+4,bpapez,04704ba,bpapez@jahia.com,138,65,203,hasNext,16 Feb 2017 14:52:14,14,13,27,0,1487267534
+2,bpapez,04704ba,bpapez@jahia.com,138,65,203,or,16 Feb 2017 14:52:14,14,13,27,0,1487267534
+1,bpapez,04704ba,bpapez@jahia.com,138,65,203,getName,16 Feb 2017 14:52:14,14,13,27,1,1487267534
+2,bpapez,04704ba,bpapez@jahia.com,138,65,203,next,16 Feb 2017 14:52:14,14,13,27,0,1487267534
+20,bpapez,04704ba,bpapez@jahia.com,138,65,203,toString,16 Feb 2017 14:52:14,14,13,27,3,1487267534
+17,bpapez,04704ba,bpapez@jahia.com,138,65,203,equals,16 Feb 2017 14:52:14,14,13,27,4,1487267534
+9,bpapez,04704ba,bpapez@jahia.com,138,65,203,refresh,16 Feb 2017 14:52:14,14,13,27,0,1487267534
+1,jkevan,26e3604,kevan@jahia.com,4,0,4,delete,04 Jul 2017 11:28:28,3,0,3,0,1499178508
+1,jkevan,26e3604,kevan@jahia.com,4,0,4,getInstance,04 Jul 2017 11:28:28,3,0,3,0,1499178508
+1,jkevan,26e3604,kevan@jahia.com,4,0,4,or,04 Jul 2017 11:28:28,3,0,3,0,1499178508
+2,Sergiy Shyrkov,20ccbc7,sshyrkov@jahia.com,11,0,11,getName,16 Feb 2017 05:44:16,4,0,4,0,1487234656
+6,Sergiy Shyrkov,20ccbc7,sshyrkov@jahia.com,11,0,11,get,16 Feb 2017 05:44:16,4,0,4,0,1487234656
+2,Sergiy Shyrkov,20ccbc7,sshyrkov@jahia.com,11,0,11,or,16 Feb 2017 05:44:16,4,0,4,0,1487234656
+1,Sergiy Shyrkov,20ccbc7,sshyrkov@jahia.com,11,0,11,add,16 Feb 2017 05:44:16,4,0,4,0,1487234656
+3,Sergiy Shyrkov,c3903fb,sshyrkov@jahia.com,4,2,6,equals,15 Feb 2017 11:05:52,2,1,3,2,1487167552
+1,Sergiy Shyrkov,c3903fb,sshyrkov@jahia.com,4,2,6,size,15 Feb 2017 11:05:52,2,1,3,0,1487167552
+1,bpapez,8a66e1c,bpapez@jahia.com,1,0,1,getInstance,21 Feb 2017 08:26:04,1,0,1,0,1487676364
+1,Sergiy Shyrkov,ef0b258,sshyrkov@jahia.com,25,22,47,get,16 Nov 2017 09:41:22,9,9,18,1,1510836082
+1,Sergiy Shyrkov,ef0b258,sshyrkov@jahia.com,25,22,47,copyInputStreamToFile,16 Nov 2017 09:41:22,9,9,18,1,1510836082
+4,Sergiy Shyrkov,ef0b258,sshyrkov@jahia.com,25,22,47,getParent,16 Nov 2017 09:41:22,9,9,18,4,1510836082
+3,Sergiy Shyrkov,ef0b258,sshyrkov@jahia.com,25,22,47,closeQuietly,16 Nov 2017 09:41:22,9,9,18,2,1510836082
+10,Sergiy Shyrkov,ef0b258,sshyrkov@jahia.com,25,22,47,read,16 Nov 2017 09:41:22,9,9,18,8,1510836082
+1,Sergiy Shyrkov,ef0b258,sshyrkov@jahia.com,25,22,47,getName,16 Nov 2017 09:41:22,9,9,18,1,1510836082
+3,Sergiy Shyrkov,ef0b258,sshyrkov@jahia.com,25,22,47,write,16 Nov 2017 09:41:22,9,9,18,3,1510836082
+1,Sergiy Shyrkov,ef0b258,sshyrkov@jahia.com,25,22,47,toString,16 Nov 2017 09:41:22,9,9,18,1,1510836082
+1,Sergiy Shyrkov,ef0b258,sshyrkov@jahia.com,25,22,47,getChildren,16 Nov 2017 09:41:22,9,9,18,1,1510836082
+1,Sergiy Shyrkov,83fccd9,sshyrkov@jahia.com,15,14,29,get,10 Mar 2017 10:38:57,9,7,16,0,1489153137
+0,Sergiy Shyrkov,83fccd9,sshyrkov@jahia.com,15,14,29,toCharArray,10 Mar 2017 10:38:57,9,7,16,1,1489153137
+1,Sergiy Shyrkov,83fccd9,sshyrkov@jahia.com,15,14,29,closeQuietly,10 Mar 2017 10:38:57,9,7,16,1,1489153137
+1,Sergiy Shyrkov,83fccd9,sshyrkov@jahia.com,15,14,29,copy,10 Mar 2017 10:38:57,9,7,16,1,1489153137
+4,Sergiy Shyrkov,83fccd9,sshyrkov@jahia.com,15,14,29,or,10 Mar 2017 10:38:57,9,7,16,5,1489153137
+1,Sergiy Shyrkov,83fccd9,sshyrkov@jahia.com,15,14,29,toString,10 Mar 2017 10:38:57,9,7,16,1,1489153137
+1,Sergiy Shyrkov,83fccd9,sshyrkov@jahia.com,15,14,29,equals,10 Mar 2017 10:38:57,9,7,16,0,1489153137
+4,Sergiy Shyrkov,83fccd9,sshyrkov@jahia.com,15,14,29,length,10 Mar 2017 10:38:57,9,7,16,4,1489153137
+1,Sergiy Shyrkov,83fccd9,sshyrkov@jahia.com,15,14,29,size,10 Mar 2017 10:38:57,9,7,16,0,1489153137
+1,Sergiy Shyrkov,83fccd9,sshyrkov@jahia.com,15,14,29,getInstance,10 Mar 2017 10:38:57,9,7,16,1,1489153137
+1,bpapez,4e00a0c,bpapez@jahia.com,18,18,36,getBytes,28 Dec 2017 14:06:38,10,10,20,1,1514480798
+1,bpapez,4e00a0c,bpapez@jahia.com,18,18,36,getPath,28 Dec 2017 14:06:38,10,10,20,1,1514480798
+2,bpapez,4e00a0c,bpapez@jahia.com,18,18,36,getParent,28 Dec 2017 14:06:38,10,10,20,2,1514480798
+1,bpapez,4e00a0c,bpapez@jahia.com,18,18,36,closeQuietly,28 Dec 2017 14:06:38,10,10,20,1,1514480798
+1,bpapez,4e00a0c,bpapez@jahia.com,18,18,36,read,28 Dec 2017 14:06:38,10,10,20,1,1514480798
+3,bpapez,4e00a0c,bpapez@jahia.com,18,18,36,or,28 Dec 2017 14:06:38,10,10,20,3,1514480798
+3,bpapez,4e00a0c,bpapez@jahia.com,18,18,36,getName,28 Dec 2017 14:06:38,10,10,20,3,1514480798
+1,bpapez,4e00a0c,bpapez@jahia.com,18,18,36,deleteQuietly,28 Dec 2017 14:06:38,10,10,20,1,1514480798
+2,bpapez,4e00a0c,bpapez@jahia.com,18,18,36,getInstance,28 Dec 2017 14:06:38,10,10,20,2,1514480798
+3,bpapez,4e00a0c,bpapez@jahia.com,18,18,36,add,28 Dec 2017 14:06:38,10,10,20,3,1514480798
+0,oyevstafyev,28f91d9,oievstafiev@jahia.com,1,4,5,getName,17 Mar 2017 12:29:28,1,4,5,1,1489764568
+0,oyevstafyev,28f91d9,oievstafiev@jahia.com,1,4,5,next,17 Mar 2017 12:29:28,1,4,5,1,1489764568
+1,oyevstafyev,28f91d9,oievstafiev@jahia.com,1,4,5,getInstance,17 Mar 2017 12:29:28,1,4,5,1,1489764568
+0,oyevstafyev,28f91d9,oievstafiev@jahia.com,1,4,5,hasNext,17 Mar 2017 12:29:28,1,4,5,1,1489764568
+2,David Griffon,d96830e,dgriffon@jahia.com,5,2,7,getPath,22 Feb 2017 06:27:00,4,2,6,1,1487755620
+1,David Griffon,d96830e,dgriffon@jahia.com,5,2,7,add,22 Feb 2017 06:27:00,4,2,6,0,1487755620
+1,David Griffon,d96830e,dgriffon@jahia.com,5,2,7,equals,22 Feb 2017 06:27:00,4,2,6,0,1487755620
+1,David Griffon,d96830e,dgriffon@jahia.com,5,2,7,remove,22 Feb 2017 06:27:00,4,2,6,1,1487755620
+1,Sergiy Shyrkov,326dbad,sshyrkov@jahia.com,1,2,3,getInstance,15 Mar 2017 11:55:43,1,1,2,1,1489589743
+1,Sergiy Shyrkov,ab59341,sshyrkov@jahia.com,4,3,7,getName,20 Mar 2017 13:55:03,3,2,5,0,1490028903
+1,Sergiy Shyrkov,ab59341,sshyrkov@jahia.com,4,3,7,getExtension,20 Mar 2017 13:55:03,3,2,5,1,1490028903
+2,Sergiy Shyrkov,ab59341,sshyrkov@jahia.com,4,3,7,getInstance,20 Mar 2017 13:55:03,3,2,5,2,1490028903
+1,Sergiy Shyrkov,1477af3,sshyrkov@jahia.com,2,0,2,run,06 Jun 2017 11:35:14,2,0,2,0,1496759714
+1,Sergiy Shyrkov,1477af3,sshyrkov@jahia.com,2,0,2,getInstance,06 Jun 2017 11:35:14,2,0,2,0,1496759714
+4,Sergiy Shyrkov,0e4718a,sshyrkov@jahia.com,4,0,4,close,17 May 2017 08:25:53,1,0,1,0,1495020353
+0,jkevan,56a0e0c,kevan@jahia.com,1,5,6,add,20 Apr 2017 04:07:47,1,3,4,3,1492672067
+0,jkevan,56a0e0c,kevan@jahia.com,1,5,6,remove,20 Apr 2017 04:07:47,1,3,4,1,1492672067
+1,jkevan,56a0e0c,kevan@jahia.com,1,5,6,copy,20 Apr 2017 04:07:47,1,3,4,1,1492672067
+1,jkevan,14bd82c,kevan@jahia.com,3,5,8,get,10 May 2017 10:59:06,3,2,5,2,1494424746
+1,jkevan,14bd82c,kevan@jahia.com,3,5,8,equals,10 May 2017 10:59:06,3,2,5,0,1494424746
+1,jkevan,14bd82c,kevan@jahia.com,3,5,8,size,10 May 2017 10:59:06,3,2,5,3,1494424746
+0,oyevstafyev,c0a03fb,oievstafiev@jahia.com,3,25,28,get,08 Mar 2017 14:32:52,2,12,14,5,1488994372
+0,oyevstafyev,c0a03fb,oievstafiev@jahia.com,3,25,28,listFiles,08 Mar 2017 14:32:52,2,12,14,1,1488994372
+0,oyevstafyev,c0a03fb,oievstafiev@jahia.com,3,25,28,read,08 Mar 2017 14:32:52,2,12,14,1,1488994372
+1,oyevstafyev,c0a03fb,oievstafiev@jahia.com,3,25,28,getExtension,08 Mar 2017 14:32:52,2,12,14,0,1488994372
+0,oyevstafyev,c0a03fb,oievstafiev@jahia.com,3,25,28,length,08 Mar 2017 14:32:52,2,12,14,1,1488994372
+2,oyevstafyev,c0a03fb,oievstafiev@jahia.com,3,25,28,getInstance,08 Mar 2017 14:32:52,2,12,14,1,1488994372
+0,oyevstafyev,c0a03fb,oievstafiev@jahia.com,3,25,28,size,08 Mar 2017 14:32:52,2,12,14,2,1488994372
+0,oyevstafyev,c0a03fb,oievstafiev@jahia.com,3,25,28,getName,08 Mar 2017 14:32:52,2,12,14,1,1488994372
+0,oyevstafyev,c0a03fb,oievstafiev@jahia.com,3,25,28,isDirectory,08 Mar 2017 14:32:52,2,12,14,2,1488994372
+0,oyevstafyev,c0a03fb,oievstafiev@jahia.com,3,25,28,getFile,08 Mar 2017 14:32:52,2,12,14,1,1488994372
+0,oyevstafyev,c0a03fb,oievstafiev@jahia.com,3,25,28,write,08 Mar 2017 14:32:52,2,12,14,1,1488994372
+0,oyevstafyev,c0a03fb,oievstafiev@jahia.com,3,25,28,toString,08 Mar 2017 14:32:52,2,12,14,8,1488994372
+0,oyevstafyev,c0a03fb,oievstafiev@jahia.com,3,25,28,equals,08 Mar 2017 14:32:52,2,12,14,1,1488994372
+1,Thomas Draier,4807f74,tdraier@jahia.com,2,2,4,getPath,09 Jun 2017 06:05:36,2,2,4,1,1496999136
+1,Thomas Draier,4807f74,tdraier@jahia.com,2,2,4,equals,09 Jun 2017 06:05:36,2,2,4,1,1496999136
+3,Sergiy Shyrkov,a7ce26f,sshyrkov@jahia.com,102,95,197,get,15 Feb 2017 18:09:49,17,17,34,3,1487192989
+10,Sergiy Shyrkov,a7ce26f,sshyrkov@jahia.com,102,95,197,create,15 Feb 2017 18:09:49,17,17,34,10,1487192989
+2,Sergiy Shyrkov,a7ce26f,sshyrkov@jahia.com,102,95,197,deleteQuietly,15 Feb 2017 18:09:49,17,17,34,2,1487192989
+6,Sergiy Shyrkov,a7ce26f,sshyrkov@jahia.com,102,95,197,equals,15 Feb 2017 18:09:49,17,17,34,6,1487192989
+6,Sergiy Shyrkov,a7ce26f,sshyrkov@jahia.com,102,95,197,getInstance,15 Feb 2017 18:09:49,17,17,34,6,1487192989
+4,Sergiy Shyrkov,a7ce26f,sshyrkov@jahia.com,102,95,197,hasNext,15 Feb 2017 18:09:49,17,17,34,4,1487192989
+6,Sergiy Shyrkov,a7ce26f,sshyrkov@jahia.com,102,95,197,size,15 Feb 2017 18:09:49,17,17,34,5,1487192989
+12,Sergiy Shyrkov,a7ce26f,sshyrkov@jahia.com,102,95,197,getPath,15 Feb 2017 18:09:49,17,17,34,12,1487192989
+3,Sergiy Shyrkov,a7ce26f,sshyrkov@jahia.com,102,95,197,close,15 Feb 2017 18:09:49,17,17,34,3,1487192989
+2,Sergiy Shyrkov,a7ce26f,sshyrkov@jahia.com,102,95,197,valueOf,15 Feb 2017 18:09:49,17,17,34,1,1487192989
+1,Sergiy Shyrkov,a7ce26f,sshyrkov@jahia.com,102,95,197,init,15 Feb 2017 18:09:49,17,17,34,1,1487192989
+12,Sergiy Shyrkov,a7ce26f,sshyrkov@jahia.com,102,95,197,or,15 Feb 2017 18:09:49,17,17,34,9,1487192989
+1,Sergiy Shyrkov,a7ce26f,sshyrkov@jahia.com,102,95,197,getName,15 Feb 2017 18:09:49,17,17,34,1,1487192989
+4,Sergiy Shyrkov,a7ce26f,sshyrkov@jahia.com,102,95,197,next,15 Feb 2017 18:09:49,17,17,34,4,1487192989
+5,Sergiy Shyrkov,a7ce26f,sshyrkov@jahia.com,102,95,197,toString,15 Feb 2017 18:09:49,17,17,34,5,1487192989
+1,Sergiy Shyrkov,a7ce26f,sshyrkov@jahia.com,102,95,197,remove,15 Feb 2017 18:09:49,17,17,34,1,1487192989
+24,Sergiy Shyrkov,a7ce26f,sshyrkov@jahia.com,102,95,197,add,15 Feb 2017 18:09:49,17,17,34,22,1487192989
+1,oyevstafyev,d64da91,oievstafiev@jahia.com,16,9,25,get,02 Jun 2017 10:41:00,7,5,12,1,1496410860
+1,oyevstafyev,d64da91,oievstafiev@jahia.com,16,9,25,or,02 Jun 2017 10:41:00,7,5,12,0,1496410860
+4,oyevstafyev,d64da91,oievstafiev@jahia.com,16,9,25,add,02 Jun 2017 10:41:00,7,5,12,1,1496410860
+4,oyevstafyev,d64da91,oievstafiev@jahia.com,16,9,25,equals,02 Jun 2017 10:41:00,7,5,12,4,1496410860
+2,oyevstafyev,d64da91,oievstafiev@jahia.com,16,9,25,toString,02 Jun 2017 10:41:00,7,5,12,2,1496410860
+3,oyevstafyev,d64da91,oievstafiev@jahia.com,16,9,25,size,02 Jun 2017 10:41:00,7,5,12,0,1496410860
+1,oyevstafyev,d64da91,oievstafiev@jahia.com,16,9,25,refresh,02 Jun 2017 10:41:00,7,5,12,1,1496410860
+1,oyevstafyev,61e0b69,oievstafiev@jahia.com,2,2,4,getName,29 Dec 2017 08:55:09,2,2,4,1,1514548509
+1,oyevstafyev,61e0b69,oievstafiev@jahia.com,2,2,4,getInstance,29 Dec 2017 08:55:09,2,2,4,1,1514548509
+9,Thomas Draier,0b2798e,tdraier@jahia.com,9,0,9,getInstance,28 Nov 2017 14:05:11,1,0,1,0,1511888711
+0,Sergiy Shyrkov,085b054,sshyrkov@jahia.com,0,1,1,getInstance,03 Mar 2017 08:14:48,0,1,1,1,1488539688
+4,oyevstafyev,d955545,oievstafiev@jahia.com,12,5,17,get,07 Mar 2017 16:38:10,2,5,7,0,1488915490
+0,oyevstafyev,d955545,oievstafiev@jahia.com,12,5,17,getFile,07 Mar 2017 16:38:10,2,5,7,1,1488915490
+0,oyevstafyev,d955545,oievstafiev@jahia.com,12,5,17,getName,07 Mar 2017 16:38:10,2,5,7,1,1488915490
+0,oyevstafyev,d955545,oievstafiev@jahia.com,12,5,17,add,07 Mar 2017 16:38:10,2,5,7,1,1488915490
+0,oyevstafyev,d955545,oievstafiev@jahia.com,12,5,17,equals,07 Mar 2017 16:38:10,2,5,7,1,1488915490
+8,oyevstafyev,d955545,oievstafiev@jahia.com,12,5,17,toString,07 Mar 2017 16:38:10,2,5,7,0,1488915490
+0,oyevstafyev,d955545,oievstafiev@jahia.com,12,5,17,size,07 Mar 2017 16:38:10,2,5,7,1,1488915490
+4,Thomas Draier,e78e070,tdraier@jahia.com,4,0,4,or,13 Sep 2017 12:40:06,1,0,1,0,1505317206
+1,oyevstafyev,0617616,oievstafiev@jahia.com,2,0,2,add,22 Feb 2017 06:24:40,2,0,2,0,1487755480
+1,oyevstafyev,0617616,oievstafiev@jahia.com,2,0,2,size,22 Feb 2017 06:24:40,2,0,2,0,1487755480
+1,Serge Huber,9b1012f,sergehuber@users.noreply.github.com,2,1,3,getPath,13 Apr 2017 04:51:11,2,1,3,0,1492069871
+1,Serge Huber,9b1012f,sergehuber@users.noreply.github.com,2,1,3,size,13 Apr 2017 04:51:11,2,1,3,1,1492069871
+2,oyevstafyev,d7778f9,oievstafiev@jahia.com,2,1,3,toString,08 Mar 2017 12:39:24,1,1,2,1,1488987564
+1,jkevan,7dc1024,kevan@jahia.com,24,6,30,get,03 Jan 2017 11:23:18,10,4,14,0,1483453398
+2,jkevan,7dc1024,kevan@jahia.com,24,6,30,getPath,03 Jan 2017 11:23:18,10,4,14,0,1483453398
+1,jkevan,7dc1024,kevan@jahia.com,24,6,30,or,03 Jan 2017 11:23:18,10,4,14,1,1483453398
+1,jkevan,7dc1024,kevan@jahia.com,24,6,30,getName,03 Jan 2017 11:23:18,10,4,14,1,1483453398
+1,jkevan,7dc1024,kevan@jahia.com,24,6,30,add,03 Jan 2017 11:23:18,10,4,14,0,1483453398
+1,jkevan,7dc1024,kevan@jahia.com,24,6,30,next,03 Jan 2017 11:23:18,10,4,14,2,1483453398
+1,jkevan,7dc1024,kevan@jahia.com,24,6,30,toString,03 Jan 2017 11:23:18,10,4,14,0,1483453398
+10,jkevan,7dc1024,kevan@jahia.com,24,6,30,append,03 Jan 2017 11:23:18,10,4,14,0,1483453398
+2,jkevan,7dc1024,kevan@jahia.com,24,6,30,hasNext,03 Jan 2017 11:23:18,10,4,14,2,1483453398
+4,jkevan,7dc1024,kevan@jahia.com,24,6,30,size,03 Jan 2017 11:23:18,10,4,14,0,1483453398
+1,oyevstafyev,5c3be12,oievstafiev@jahia.com,2,7,9,get,07 Mar 2017 10:54:57,2,3,5,1,1488894897
+0,oyevstafyev,5c3be12,oievstafiev@jahia.com,2,7,9,toString,07 Mar 2017 10:54:57,2,3,5,4,1488894897
+1,oyevstafyev,5c3be12,oievstafiev@jahia.com,2,7,9,size,07 Mar 2017 10:54:57,2,3,5,2,1488894897
+1,Sergiy Shyrkov,8f55b75,sshyrkov@jahia.com,2,2,4,add,11 May 2017 10:58:00,2,2,4,1,1494511080
+1,Sergiy Shyrkov,8f55b75,sshyrkov@jahia.com,2,2,4,length,11 May 2017 10:58:00,2,2,4,1,1494511080
+3,Sergiy Shyrkov,a7f89c0,sshyrkov@jahia.com,8,8,16,get,04 Sep 2017 06:20:14,4,3,7,2,1504516814
+1,Sergiy Shyrkov,a7f89c0,sshyrkov@jahia.com,8,8,16,add,04 Sep 2017 06:20:14,4,3,7,0,1504516814
+1,Sergiy Shyrkov,a7f89c0,sshyrkov@jahia.com,8,8,16,equals,04 Sep 2017 06:20:14,4,3,7,1,1504516814
+3,Sergiy Shyrkov,a7f89c0,sshyrkov@jahia.com,8,8,16,getName,04 Sep 2017 06:20:14,4,3,7,5,1504516814
+0,Sergiy Shyrkov,5f18317,sshyrkov@jahia.com,0,4,4,values,03 Jan 2017 13:11:22,0,2,2,1,1483459882
+0,Sergiy Shyrkov,5f18317,sshyrkov@jahia.com,0,4,4,getInstance,03 Jan 2017 13:11:22,0,2,2,3,1483459882
+1,oyevstafyev,96155b5,oievstafiev@jahia.com,4,1,5,getName,15 Mar 2017 07:32:16,4,1,5,0,1489573936
+1,oyevstafyev,96155b5,oievstafiev@jahia.com,4,1,5,next,15 Mar 2017 07:32:16,4,1,5,0,1489573936
+1,oyevstafyev,96155b5,oievstafiev@jahia.com,4,1,5,getInstance,15 Mar 2017 07:32:16,4,1,5,1,1489573936
+1,oyevstafyev,96155b5,oievstafiev@jahia.com,4,1,5,hasNext,15 Mar 2017 07:32:16,4,1,5,0,1489573936
+1,jkevan,88fe735,kevan@jahia.com,1,1,2,getName,04 Jan 2017 14:55:21,1,1,2,1,1483552521
+1,oyevstafyev,717df2b,oievstafiev@jahia.com,4,6,10,length,08 Mar 2017 11:49:32,4,3,7,0,1488984572
+1,oyevstafyev,717df2b,oievstafiev@jahia.com,4,6,10,isDirectory,08 Mar 2017 11:49:32,4,3,7,0,1488984572
+0,oyevstafyev,717df2b,oievstafiev@jahia.com,4,6,10,toString,08 Mar 2017 11:49:32,4,3,7,1,1488984572
+1,oyevstafyev,717df2b,oievstafiev@jahia.com,4,6,10,getFile,08 Mar 2017 11:49:32,4,3,7,4,1488984572
+1,oyevstafyev,717df2b,oievstafiev@jahia.com,4,6,10,or,08 Mar 2017 11:49:32,4,3,7,1,1488984572
+2,Sergiy Shyrkov,b2057f8,sshyrkov@jahia.com,2,2,4,get,14 Mar 2017 06:23:55,1,2,3,1,1489483435
+0,Sergiy Shyrkov,b2057f8,sshyrkov@jahia.com,2,2,4,equals,14 Mar 2017 06:23:55,1,2,3,1,1489483435
+1,David Griffon,88ba002,dgriffon@jahia.com,2,0,2,getPath,18 Jan 2017 07:28:56,2,0,2,0,1484735336
+1,David Griffon,88ba002,dgriffon@jahia.com,2,0,2,remove,18 Jan 2017 07:28:56,2,0,2,0,1484735336
+1,Thomas Draier,42816d4,tdraier@jahia.com,1,1,2,or,12 Sep 2017 10:46:02,1,1,2,1,1505223962
+1,Sergiy Shyrkov,d635f5c,sshyrkov@jahia.com,42,42,84,getBaseName,04 Sep 2017 09:22:29,15,15,30,1,1504527749
+2,Sergiy Shyrkov,d635f5c,sshyrkov@jahia.com,42,42,84,getExtension,04 Sep 2017 09:22:29,15,15,30,2,1504527749
+1,Sergiy Shyrkov,d635f5c,sshyrkov@jahia.com,42,42,84,length,04 Sep 2017 09:22:29,15,15,30,1,1504527749
+5,Sergiy Shyrkov,d635f5c,sshyrkov@jahia.com,42,42,84,append,04 Sep 2017 09:22:29,15,15,30,5,1504527749
+2,Sergiy Shyrkov,d635f5c,sshyrkov@jahia.com,42,42,84,getInstance,04 Sep 2017 09:22:29,15,15,30,2,1504527749
+1,Sergiy Shyrkov,d635f5c,sshyrkov@jahia.com,42,42,84,getPath,04 Sep 2017 09:22:29,15,15,30,1,1504527749
+1,Sergiy Shyrkov,d635f5c,sshyrkov@jahia.com,42,42,84,close,04 Sep 2017 09:22:29,15,15,30,1,1504527749
+1,Sergiy Shyrkov,d635f5c,sshyrkov@jahia.com,42,42,84,closeQuietly,04 Sep 2017 09:22:29,15,15,30,1,1504527749
+13,Sergiy Shyrkov,d635f5c,sshyrkov@jahia.com,42,42,84,or,04 Sep 2017 09:22:29,15,15,30,13,1504527749
+1,Sergiy Shyrkov,d635f5c,sshyrkov@jahia.com,42,42,84,values,04 Sep 2017 09:22:29,15,15,30,1,1504527749
+1,Sergiy Shyrkov,d635f5c,sshyrkov@jahia.com,42,42,84,next,04 Sep 2017 09:22:29,15,15,30,1,1504527749
+1,Sergiy Shyrkov,d635f5c,sshyrkov@jahia.com,42,42,84,flush,04 Sep 2017 09:22:29,15,15,30,1,1504527749
+1,Sergiy Shyrkov,d635f5c,sshyrkov@jahia.com,42,42,84,toString,04 Sep 2017 09:22:29,15,15,30,1,1504527749
+1,Sergiy Shyrkov,d635f5c,sshyrkov@jahia.com,42,42,84,size,04 Sep 2017 09:22:29,15,15,30,1,1504527749
+0,Sergiy Shyrkov,d635f5c,sshyrkov@jahia.com,42,42,84,getName,04 Sep 2017 09:22:29,15,15,30,1,1504527749
+1,Sergiy Shyrkov,84b2e3f,sshyrkov@jahia.com,10,11,21,get,28 Mar 2017 06:16:33,7,5,12,2,1490692593
+1,Sergiy Shyrkov,84b2e3f,sshyrkov@jahia.com,10,11,21,values,28 Mar 2017 06:16:33,7,5,12,0,1490692593
+1,Sergiy Shyrkov,84b2e3f,sshyrkov@jahia.com,10,11,21,add,28 Mar 2017 06:16:33,7,5,12,3,1490692593
+3,Sergiy Shyrkov,84b2e3f,sshyrkov@jahia.com,10,11,21,equals,28 Mar 2017 06:16:33,7,5,12,2,1490692593
+2,Sergiy Shyrkov,84b2e3f,sshyrkov@jahia.com,10,11,21,toString,28 Mar 2017 06:16:33,7,5,12,0,1490692593
+1,Sergiy Shyrkov,84b2e3f,sshyrkov@jahia.com,10,11,21,size,28 Mar 2017 06:16:33,7,5,12,3,1490692593
+1,Sergiy Shyrkov,84b2e3f,sshyrkov@jahia.com,10,11,21,refresh,28 Mar 2017 06:16:33,7,5,12,1,1490692593
+5,oyevstafyev,1306eb1,oievstafiev@jahia.com,6,1,7,getFile,07 Mar 2017 13:06:08,2,1,3,0,1488902768
+1,oyevstafyev,1306eb1,oievstafiev@jahia.com,6,1,7,size,07 Mar 2017 13:06:08,2,1,3,1,1488902768
+1,jkevan,a10bef8,kevan@jahia.com,1,0,1,getParent,02 Oct 2017 09:04:54,1,0,1,0,1506945894
+1,Sergiy Shyrkov,c3e0d49,sshyrkov@jahia.com,1,0,1,getInstance,03 Mar 2017 08:15:34,1,0,1,0,1488539734
+1,Sergiy Shyrkov,e9c08ca,sshyrkov@jahia.com,25,23,48,get,23 Nov 2017 10:08:39,6,5,11,0,1511442519
+1,Sergiy Shyrkov,e9c08ca,sshyrkov@jahia.com,25,23,48,or,23 Nov 2017 10:08:39,6,5,11,1,1511442519
+2,Sergiy Shyrkov,e9c08ca,sshyrkov@jahia.com,25,23,48,getName,23 Nov 2017 10:08:39,6,5,11,2,1511442519
+2,Sergiy Shyrkov,e9c08ca,sshyrkov@jahia.com,25,23,48,equals,23 Nov 2017 10:08:39,6,5,11,2,1511442519
+1,Sergiy Shyrkov,e9c08ca,sshyrkov@jahia.com,25,23,48,toString,23 Nov 2017 10:08:39,6,5,11,0,1511442519
+1,Sergiy Shyrkov,e9c08ca,sshyrkov@jahia.com,25,23,48,getInstance,23 Nov 2017 10:08:39,6,5,11,1,1511442519
+1,Florent BOURASSE,9db907a,fbourasse@jahia.com,1,1,2,getInstance,13 Sep 2017 04:32:12,1,1,2,1,1505287932
+0,Sergiy Shyrkov,09c8f41,sshyrkov@jahia.com,0,8,8,getInstance,29 Nov 2017 09:13:50,0,1,1,8,1511957630
+0,Thomas Draier,e1636de,tdraier@jahia.com,1,1,2,get,08 Sep 2017 05:51:08,1,1,2,1,1504860668
+1,Thomas Draier,e1636de,tdraier@jahia.com,1,1,2,toString,08 Sep 2017 05:51:08,1,1,2,0,1504860668
+3,oyevstafyev,1efc624,oievstafiev@jahia.com,8,14,22,getName,12 May 2017 12:47:59,5,6,11,5,1494604079
+0,oyevstafyev,1efc624,oievstafiev@jahia.com,8,14,22,add,12 May 2017 12:47:59,5,6,11,1,1494604079
+1,oyevstafyev,1efc624,oievstafiev@jahia.com,8,14,22,remove,12 May 2017 12:47:59,5,6,11,1,1494604079
+1,oyevstafyev,1efc624,oievstafiev@jahia.com,8,14,22,equals,12 May 2017 12:47:59,5,6,11,2,1494604079
+2,oyevstafyev,1efc624,oievstafiev@jahia.com,8,14,22,hasNext,12 May 2017 12:47:59,5,6,11,3,1494604079
+1,oyevstafyev,1efc624,oievstafiev@jahia.com,8,14,22,next,12 May 2017 12:47:59,5,6,11,2,1494604079
+0,Sergiy Shyrkov,77e2bf7,sshyrkov@jahia.com,12,18,30,close,24 Nov 2017 07:48:14,5,8,13,3,1511520494
+0,Sergiy Shyrkov,77e2bf7,sshyrkov@jahia.com,12,18,30,read,24 Nov 2017 07:48:14,5,8,13,1,1511520494
+0,Sergiy Shyrkov,77e2bf7,sshyrkov@jahia.com,12,18,30,delete,24 Nov 2017 07:48:14,5,8,13,2,1511520494
+2,Sergiy Shyrkov,77e2bf7,sshyrkov@jahia.com,12,18,30,deleteQuietly,24 Nov 2017 07:48:14,5,8,13,0,1511520494
+2,Sergiy Shyrkov,77e2bf7,sshyrkov@jahia.com,12,18,30,getName,24 Nov 2017 07:48:14,5,8,13,3,1511520494
+0,Sergiy Shyrkov,77e2bf7,sshyrkov@jahia.com,12,18,30,write,24 Nov 2017 07:48:14,5,8,13,1,1511520494
+2,Sergiy Shyrkov,77e2bf7,sshyrkov@jahia.com,12,18,30,equals,24 Nov 2017 07:48:14,5,8,13,3,1511520494
+0,Sergiy Shyrkov,77e2bf7,sshyrkov@jahia.com,12,18,30,or,24 Nov 2017 07:48:14,5,8,13,1,1511520494
+1,Sergiy Shyrkov,77e2bf7,sshyrkov@jahia.com,12,18,30,copyInputStreamToFile,24 Nov 2017 07:48:14,5,8,13,0,1511520494
+0,Sergiy Shyrkov,77e2bf7,sshyrkov@jahia.com,12,18,30,getInstance,24 Nov 2017 07:48:14,5,8,13,1,1511520494
+1,oyevstafyev,96fbff8,oievstafiev@jahia.com,4,4,8,getName,21 Nov 2017 07:00:39,3,3,6,1,1511258439
+1,oyevstafyev,96fbff8,oievstafiev@jahia.com,4,4,8,getPath,21 Nov 2017 07:00:39,3,3,6,1,1511258439
+2,oyevstafyev,96fbff8,oievstafiev@jahia.com,4,4,8,or,21 Nov 2017 07:00:39,3,3,6,2,1511258439
+0,Sergiy Shyrkov,61e62c6,sshyrkov@jahia.com,0,1,1,getInstance,03 Mar 2017 08:34:29,0,1,1,1,1488540869
+1,jkevan,ca04fed,kevan@jahia.com,8,0,8,get,12 May 2017 13:05:02,7,0,7,0,1494605102
+2,jkevan,ca04fed,kevan@jahia.com,8,0,8,getName,12 May 2017 13:05:02,7,0,7,0,1494605102
+1,jkevan,ca04fed,kevan@jahia.com,8,0,8,or,12 May 2017 13:05:02,7,0,7,0,1494605102
+1,jkevan,ca04fed,kevan@jahia.com,8,0,8,getParent,12 May 2017 13:05:02,7,0,7,0,1494605102
+1,jkevan,ca04fed,kevan@jahia.com,8,0,8,next,12 May 2017 13:05:02,7,0,7,0,1494605102
+1,jkevan,ca04fed,kevan@jahia.com,8,0,8,getInstance,12 May 2017 13:05:02,7,0,7,0,1494605102
+1,jkevan,ca04fed,kevan@jahia.com,8,0,8,hasNext,12 May 2017 13:05:02,7,0,7,0,1494605102
+1,jkevan,20b33ca,kevan@jahia.com,8,0,8,getName,15 Mar 2017 06:52:00,5,0,5,0,1489571520
+1,jkevan,20b33ca,kevan@jahia.com,8,0,8,stop,15 Mar 2017 06:52:00,5,0,5,0,1489571520
+1,jkevan,20b33ca,kevan@jahia.com,8,0,8,read,15 Mar 2017 06:52:00,5,0,5,0,1489571520
+2,jkevan,20b33ca,kevan@jahia.com,8,0,8,getInstance,15 Mar 2017 06:52:00,5,0,5,0,1489571520
+2,jkevan,20b33ca,kevan@jahia.com,8,0,8,start,15 Mar 2017 06:52:00,5,0,5,0,1489571520
+1,Sergiy Shyrkov,fde4bee,sshyrkov@jahia.com,1,1,2,getPath,24 Jul 2017 08:37:08,1,1,2,1,1500896228
+1,jkevan,12dc5cc,kevan@jahia.com,1,0,1,getName,31 Aug 2017 10:01:49,1,0,1,0,1504184509
+0,oyevstafyev,4a320b4,oievstafiev@jahia.com,1,13,14,remove,17 Mar 2017 12:23:15,1,7,8,1,1489764195
+0,oyevstafyev,4a320b4,oievstafiev@jahia.com,1,13,14,getName,17 Mar 2017 12:23:15,1,7,8,4,1489764195
+0,oyevstafyev,4a320b4,oievstafiev@jahia.com,1,13,14,add,17 Mar 2017 12:23:15,1,7,8,1,1489764195
+0,oyevstafyev,4a320b4,oievstafiev@jahia.com,1,13,14,equals,17 Mar 2017 12:23:15,1,7,8,2,1489764195
+1,oyevstafyev,4a320b4,oievstafiev@jahia.com,1,13,14,getInstance,17 Mar 2017 12:23:15,1,7,8,1,1489764195
+0,oyevstafyev,4a320b4,oievstafiev@jahia.com,1,13,14,hasNext,17 Mar 2017 12:23:15,1,7,8,2,1489764195
+0,oyevstafyev,4a320b4,oievstafiev@jahia.com,1,13,14,next,17 Mar 2017 12:23:15,1,7,8,2,1489764195
+1,oyevstafyev,b080017,oievstafiev@jahia.com,20,0,20,listFiles,07 Mar 2017 04:52:41,12,0,12,0,1488873161
+1,oyevstafyev,b080017,oievstafiev@jahia.com,20,0,20,get,07 Mar 2017 04:52:41,12,0,12,0,1488873161
+1,oyevstafyev,b080017,oievstafiev@jahia.com,20,0,20,read,07 Mar 2017 04:52:41,12,0,12,0,1488873161
+1,oyevstafyev,b080017,oievstafiev@jahia.com,20,0,20,add,07 Mar 2017 04:52:41,12,0,12,0,1488873161
+2,oyevstafyev,b080017,oievstafiev@jahia.com,20,0,20,equals,07 Mar 2017 04:52:41,12,0,12,0,1488873161
+1,oyevstafyev,b080017,oievstafiev@jahia.com,20,0,20,getInstance,07 Mar 2017 04:52:41,12,0,12,0,1488873161
+1,oyevstafyev,b080017,oievstafiev@jahia.com,20,0,20,isDirectory,07 Mar 2017 04:52:41,12,0,12,0,1488873161
+1,oyevstafyev,b080017,oievstafiev@jahia.com,20,0,20,or,07 Mar 2017 04:52:41,12,0,12,0,1488873161
+2,oyevstafyev,b080017,oievstafiev@jahia.com,20,0,20,getName,07 Mar 2017 04:52:41,12,0,12,0,1488873161
+1,oyevstafyev,b080017,oievstafiev@jahia.com,20,0,20,write,07 Mar 2017 04:52:41,12,0,12,0,1488873161
+4,oyevstafyev,b080017,oievstafiev@jahia.com,20,0,20,toString,07 Mar 2017 04:52:41,12,0,12,0,1488873161
+4,oyevstafyev,b080017,oievstafiev@jahia.com,20,0,20,size,07 Mar 2017 04:52:41,12,0,12,0,1488873161
+0,oyevstafyev,ac0c735,oievstafiev@jahia.com,0,2,2,getInstance,18 Aug 2017 06:53:21,0,1,1,2,1503050001
+3,oyevstafyev,751e47a,oievstafiev@jahia.com,16,1,17,next,12 May 2017 05:04:16,7,1,8,0,1494576256
+5,oyevstafyev,751e47a,oievstafiev@jahia.com,16,1,17,getName,12 May 2017 05:04:16,7,1,8,0,1494576256
+1,oyevstafyev,751e47a,oievstafiev@jahia.com,16,1,17,add,12 May 2017 05:04:16,7,1,8,0,1494576256
+1,oyevstafyev,751e47a,oievstafiev@jahia.com,16,1,17,remove,12 May 2017 05:04:16,7,1,8,0,1494576256
+2,oyevstafyev,751e47a,oievstafiev@jahia.com,16,1,17,equals,12 May 2017 05:04:16,7,1,8,0,1494576256
+3,oyevstafyev,751e47a,oievstafiev@jahia.com,16,1,17,hasNext,12 May 2017 05:04:16,7,1,8,0,1494576256
+1,oyevstafyev,751e47a,oievstafiev@jahia.com,16,1,17,getInstance,12 May 2017 05:04:16,7,1,8,1,1494576256
+7,David Griffon,351ef8a,dgriffon@jahia.com,9,9,18,get,27 Nov 2017 10:08:47,3,3,6,7,1511788127
+1,David Griffon,351ef8a,dgriffon@jahia.com,9,9,18,toString,27 Nov 2017 10:08:47,3,3,6,1,1511788127
+1,David Griffon,351ef8a,dgriffon@jahia.com,9,9,18,getInstance,27 Nov 2017 10:08:47,3,3,6,1,1511788127
+1,Sergiy Shyrkov,357aa57,sshyrkov@jahia.com,2,2,4,delete,10 Jul 2017 17:11:41,2,2,4,1,1499717501
+1,Sergiy Shyrkov,357aa57,sshyrkov@jahia.com,2,2,4,getInstance,10 Jul 2017 17:11:41,2,2,4,1,1499717501
+1,Thomas Draier,c58aae5,tdraier@jahia.com,1,1,2,or,12 Sep 2017 10:46:02,1,1,2,1,1505223962
+1,Sergiy Shyrkov,9e661b1,sshyrkov@jahia.com,1,0,1,start,20 Jun 2017 11:03:06,1,0,1,0,1497967386
+1,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,get,07 Dec 2017 12:14:42,21,21,42,1,1512659682
+1,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,matches,07 Dec 2017 12:14:42,21,21,42,1,1512659682
+1,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,copy,07 Dec 2017 12:14:42,21,21,42,1,1512659682
+2,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,close,07 Dec 2017 12:14:42,21,21,42,2,1512659682
+2,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,add,07 Dec 2017 12:14:42,21,21,42,2,1512659682
+5,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,equals,07 Dec 2017 12:14:42,21,21,42,6,1512659682
+3,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,length,07 Dec 2017 12:14:42,21,21,42,3,1512659682
+5,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,getInstance,07 Dec 2017 12:14:42,21,21,42,5,1512659682
+1,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,hasNext,07 Dec 2017 12:14:42,21,21,42,1,1512659682
+1,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,getSize,07 Dec 2017 12:14:42,21,21,42,1,1512659682
+2,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,delete,07 Dec 2017 12:14:42,21,21,42,2,1512659682
+1,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,values,07 Dec 2017 12:14:42,21,21,42,1,1512659682
+2,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,closeQuietly,07 Dec 2017 12:14:42,21,21,42,2,1512659682
+4,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,getCause,07 Dec 2017 12:14:42,21,21,42,4,1512659682
+9,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,or,07 Dec 2017 12:14:42,21,21,42,9,1512659682
+9,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,getName,07 Dec 2017 12:14:42,21,21,42,9,1512659682
+12,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,write,07 Dec 2017 12:14:42,21,21,42,12,1512659682
+1,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,next,07 Dec 2017 12:14:42,21,21,42,1,1512659682
+4,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,toString,07 Dec 2017 12:14:42,21,21,42,4,1512659682
+1,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,size,07 Dec 2017 12:14:42,21,21,42,1,1512659682
+2,Sergiy Shyrkov,d0c455d,sshyrkov@jahia.com,69,70,139,append,07 Dec 2017 12:14:42,21,21,42,2,1512659682
+1,Sergiy Shyrkov,9f01135,sshyrkov@jahia.com,3,3,6,equals,06 Dec 2017 11:17:16,3,3,6,1,1512569836
+1,Sergiy Shyrkov,9f01135,sshyrkov@jahia.com,3,3,6,size,06 Dec 2017 11:17:16,3,3,6,1,1512569836
+1,Sergiy Shyrkov,9f01135,sshyrkov@jahia.com,3,3,6,remove,06 Dec 2017 11:17:16,3,3,6,1,1512569836
+1,Thomas Draier,ce16e57,tdraier@jahia.com,1,1,2,get,27 Nov 2017 10:08:10,1,1,2,1,1511788090
+1,oyevstafyev,619ea21,oievstafiev@jahia.com,30,27,57,get,30 Oct 2017 06:58:05,14,13,27,1,1509357485
+1,oyevstafyev,619ea21,oievstafiev@jahia.com,30,27,57,copy,30 Oct 2017 06:58:05,14,13,27,1,1509357485
+1,oyevstafyev,619ea21,oievstafiev@jahia.com,30,27,57,add,30 Oct 2017 06:58:05,14,13,27,0,1509357485
+3,oyevstafyev,619ea21,oievstafiev@jahia.com,30,27,57,equals,30 Oct 2017 06:58:05,14,13,27,2,1509357485
+2,oyevstafyev,619ea21,oievstafiev@jahia.com,30,27,57,length,30 Oct 2017 06:58:05,14,13,27,2,1509357485
+1,oyevstafyev,619ea21,oievstafiev@jahia.com,30,27,57,getInstance,30 Oct 2017 06:58:05,14,13,27,1,1509357485
+1,oyevstafyev,619ea21,oievstafiev@jahia.com,30,27,57,hasNext,30 Oct 2017 06:58:05,14,13,27,1,1509357485
+1,oyevstafyev,619ea21,oievstafiev@jahia.com,30,27,57,delete,30 Oct 2017 06:58:05,14,13,27,1,1509357485
+2,oyevstafyev,619ea21,oievstafiev@jahia.com,30,27,57,getCause,30 Oct 2017 06:58:05,14,13,27,2,1509357485
+1,oyevstafyev,619ea21,oievstafiev@jahia.com,30,27,57,or,30 Oct 2017 06:58:05,14,13,27,1,1509357485
+4,oyevstafyev,619ea21,oievstafiev@jahia.com,30,27,57,getName,30 Oct 2017 06:58:05,14,13,27,4,1509357485
+10,oyevstafyev,619ea21,oievstafiev@jahia.com,30,27,57,write,30 Oct 2017 06:58:05,14,13,27,9,1509357485
+1,oyevstafyev,619ea21,oievstafiev@jahia.com,30,27,57,toString,30 Oct 2017 06:58:05,14,13,27,1,1509357485
+1,oyevstafyev,619ea21,oievstafiev@jahia.com,30,27,57,size,30 Oct 2017 06:58:05,14,13,27,1,1509357485
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,toCharArray,27 Oct 2017 13:28:02,0,27,27,1,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,mark,27 Oct 2017 13:28:02,0,27,27,1,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,copy,27 Oct 2017 13:28:02,0,27,27,1,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,deleteQuietly,27 Oct 2017 13:28:02,0,27,27,3,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,equals,27 Oct 2017 13:28:02,0,27,27,9,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,length,27 Oct 2017 13:28:02,0,27,27,12,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,getInstance,27 Oct 2017 13:28:02,0,27,27,16,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,hasNext,27 Oct 2017 13:28:02,0,27,27,4,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,append,27 Oct 2017 13:28:02,0,27,27,13,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,getPath,27 Oct 2017 13:28:02,0,27,27,2,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,close,27 Oct 2017 13:28:02,0,27,27,1,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,isDirectory,27 Oct 2017 13:28:02,0,27,27,1,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,compare,27 Oct 2017 13:28:02,0,27,27,1,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,values,27 Oct 2017 13:28:02,0,27,27,1,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,toString,27 Oct 2017 13:28:02,0,27,27,4,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,next,27 Oct 2017 13:28:02,0,27,27,2,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,getName,27 Oct 2017 13:28:02,0,27,27,14,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,get,27 Oct 2017 13:28:02,0,27,27,2,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,add,27 Oct 2017 13:28:02,0,27,27,5,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,matches,27 Oct 2017 13:28:02,0,27,27,2,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,normalize,27 Oct 2017 13:28:02,0,27,27,1,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,valueOf,27 Oct 2017 13:28:02,0,27,27,3,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,or,27 Oct 2017 13:28:02,0,27,27,15,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,getParent,27 Oct 2017 13:28:02,0,27,27,5,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,closeQuietly,27 Oct 2017 13:28:02,0,27,27,4,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,getPrefix,27 Oct 2017 13:28:02,0,27,27,1,1509121682
+0,Sergiy Shyrkov,c48a714,sshyrkov@jahia.com,0,126,126,size,27 Oct 2017 13:28:02,0,27,27,2,1509121682
+2,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,writeLines,15 Feb 2017 14:31:34,39,39,78,2,1487179894
+1,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,deleteDirectory,15 Feb 2017 14:31:34,39,39,78,1,1487179894
+2,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,copy,15 Feb 2017 14:31:34,39,39,78,2,1487179894
+8,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,closeQuietly,15 Feb 2017 14:31:34,39,39,78,8,1487179894
+12,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,deleteQuietly,15 Feb 2017 14:31:34,39,39,78,12,1487179894
+1,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,openOutputStream,15 Feb 2017 14:31:34,39,39,78,1,1487179894
+6,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,length,15 Feb 2017 14:31:34,39,39,78,5,1487179894
+5,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,getInstance,15 Feb 2017 14:31:34,39,39,78,5,1487179894
+2,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,remove,15 Feb 2017 14:31:34,39,39,78,2,1487179894
+4,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,start,15 Feb 2017 14:31:34,39,39,78,4,1487179894
+14,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,getPath,15 Feb 2017 14:31:34,39,39,78,14,1487179894
+1,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,getParent,15 Feb 2017 14:31:34,39,39,78,1,1487179894
+1,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,moveDirectory,15 Feb 2017 14:31:34,39,39,78,1,1487179894
+1,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,isDirectory,15 Feb 2017 14:31:34,39,39,78,1,1487179894
+3,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,delete,15 Feb 2017 14:31:34,39,39,78,3,1487179894
+3,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,listFiles,15 Feb 2017 14:31:34,39,39,78,3,1487179894
+12,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,toString,15 Feb 2017 14:31:34,39,39,78,13,1487179894
+1,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,append,15 Feb 2017 14:31:34,39,39,78,1,1487179894
+1,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,setName,15 Feb 2017 14:31:34,39,39,78,1,1487179894
+2,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,toByteArray,15 Feb 2017 14:31:34,39,39,78,2,1487179894
+3,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,read,15 Feb 2017 14:31:34,39,39,78,3,1487179894
+13,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,getName,15 Feb 2017 14:31:34,39,39,78,13,1487179894
+1,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,get,15 Feb 2017 14:31:34,39,39,78,2,1487179894
+1,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,forceDelete,15 Feb 2017 14:31:34,39,39,78,1,1487179894
+4,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,readLines,15 Feb 2017 14:31:34,39,39,78,4,1487179894
+3,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,close,15 Feb 2017 14:31:34,39,39,78,3,1487179894
+1,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,copyDirectory,15 Feb 2017 14:31:34,39,39,78,1,1487179894
+1,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,matches,15 Feb 2017 14:31:34,39,39,78,1,1487179894
+3,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,size,15 Feb 2017 14:31:34,39,39,78,5,1487179894
+1,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,copyFile,15 Feb 2017 14:31:34,39,39,78,1,1487179894
+1,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,stop,15 Feb 2017 14:31:34,39,39,78,1,1487179894
+1,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,valueOf,15 Feb 2017 14:31:34,39,39,78,1,1487179894
+7,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,getFile,15 Feb 2017 14:31:34,39,39,78,7,1487179894
+1,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,getCause,15 Feb 2017 14:31:34,39,39,78,1,1487179894
+22,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,or,15 Feb 2017 14:31:34,39,39,78,22,1487179894
+1,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,handleDirectory,15 Feb 2017 14:31:34,39,39,78,1,1487179894
+8,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,write,15 Feb 2017 14:31:34,39,39,78,8,1487179894
+11,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,equals,15 Feb 2017 14:31:34,39,39,78,11,1487179894
+16,Sergiy Shyrkov,660b03d,sshyrkov@jahia.com,181,184,365,add,15 Feb 2017 14:31:34,39,39,78,16,1487179894
+1,oyevstafyev,f998162,oievstafiev@jahia.com,13,1,14,remove,17 Mar 2017 05:45:07,7,1,8,0,1489740307
+4,oyevstafyev,f998162,oievstafiev@jahia.com,13,1,14,getName,17 Mar 2017 05:45:07,7,1,8,0,1489740307
+1,oyevstafyev,f998162,oievstafiev@jahia.com,13,1,14,add,17 Mar 2017 05:45:07,7,1,8,0,1489740307
+2,oyevstafyev,f998162,oievstafiev@jahia.com,13,1,14,equals,17 Mar 2017 05:45:07,7,1,8,0,1489740307
+1,oyevstafyev,f998162,oievstafiev@jahia.com,13,1,14,getInstance,17 Mar 2017 05:45:07,7,1,8,1,1489740307
+2,oyevstafyev,f998162,oievstafiev@jahia.com,13,1,14,hasNext,17 Mar 2017 05:45:07,7,1,8,0,1489740307
+2,oyevstafyev,f998162,oievstafiev@jahia.com,13,1,14,next,17 Mar 2017 05:45:07,7,1,8,0,1489740307
+2,oyevstafyev,bd0c282,oievstafiev@jahia.com,12,12,24,values,18 Aug 2017 10:26:39,4,4,8,2,1503062799
+3,oyevstafyev,bd0c282,oievstafiev@jahia.com,12,12,24,get,18 Aug 2017 10:26:39,4,4,8,3,1503062799
+1,oyevstafyev,bd0c282,oievstafiev@jahia.com,12,12,24,equals,18 Aug 2017 10:26:39,4,4,8,1,1503062799
+6,oyevstafyev,bd0c282,oievstafiev@jahia.com,12,12,24,getName,18 Aug 2017 10:26:39,4,4,8,6,1503062799
+7,David Griffon,71e3b64,dgriffon@jahia.com,9,7,16,get,27 Nov 2017 09:34:54,3,3,6,5,1511786094
+1,David Griffon,71e3b64,dgriffon@jahia.com,9,7,16,toString,27 Nov 2017 09:34:54,3,3,6,1,1511786094
+1,David Griffon,71e3b64,dgriffon@jahia.com,9,7,16,getInstance,27 Nov 2017 09:34:54,3,3,6,1,1511786094
+0,Thomas Draier,71e268d,tdraier@jahia.com,0,1,1,get,17 Aug 2017 10:17:43,0,1,1,1,1502975863
+3,Thomas Draier,4cdce81,tdraier@jahia.com,10,9,19,getPath,14 Nov 2017 13:17:13,5,5,10,3,1510676233
+2,Thomas Draier,4cdce81,tdraier@jahia.com,10,9,19,add,14 Nov 2017 13:17:13,5,5,10,2,1510676233
+1,Thomas Draier,4cdce81,tdraier@jahia.com,10,9,19,equals,14 Nov 2017 13:17:13,5,5,10,1,1510676233
+1,Thomas Draier,4cdce81,tdraier@jahia.com,10,9,19,getParent,14 Nov 2017 13:17:13,5,5,10,1,1510676233
+3,Thomas Draier,4cdce81,tdraier@jahia.com,10,9,19,get,14 Nov 2017 13:17:13,5,5,10,2,1510676233
+3,oyevstafyev,96ac8f5,oievstafiev@jahia.com,3,2,5,getPath,15 May 2017 11:29:47,1,1,2,0,1494858587
+0,oyevstafyev,96ac8f5,oievstafiev@jahia.com,3,2,5,next,15 May 2017 11:29:47,1,1,2,2,1494858587
+1,jkevan,236a191,kevan@jahia.com,1,1,2,add,19 Apr 2017 11:02:30,1,1,2,1,1492610550
+1,Sergiy Shyrkov,f3d9a8d,sshyrkov@jahia.com,2,0,2,getPath,16 Nov 2017 06:21:47,2,0,2,0,1510824107
+1,Sergiy Shyrkov,f3d9a8d,sshyrkov@jahia.com,2,0,2,or,16 Nov 2017 06:21:47,2,0,2,0,1510824107
+1,oyevstafyev,59ff2b0,oievstafiev@jahia.com,1,1,2,getInstance,01 Mar 2017 13:33:06,1,1,2,1,1488385986
+2,David Griffon,3e763f7,dgriffon@jahia.com,11,5,16,get,19 Apr 2017 05:23:32,6,5,11,1,1492590212
+1,David Griffon,3e763f7,dgriffon@jahia.com,11,5,16,copy,19 Apr 2017 05:23:32,6,5,11,1,1492590212
+1,David Griffon,3e763f7,dgriffon@jahia.com,11,5,16,or,19 Apr 2017 05:23:32,6,5,11,1,1492590212
+4,David Griffon,3e763f7,dgriffon@jahia.com,11,5,16,add,19 Apr 2017 05:23:32,6,5,11,1,1492590212
+1,David Griffon,3e763f7,dgriffon@jahia.com,11,5,16,remove,19 Apr 2017 05:23:32,6,5,11,0,1492590212
+1,David Griffon,3e763f7,dgriffon@jahia.com,11,5,16,hasNext,19 Apr 2017 05:23:32,6,5,11,1,1492590212
+1,Thomas Draier,4c7335d,tdraier@jahia.com,1,1,2,getParent,28 Nov 2017 13:16:50,1,1,2,1,1511885810
+1,Oleksandr Ievstafiev,d7ed825,oievstafiev@jahia.com,1,1,2,write,14 Nov 2017 13:44:01,1,1,2,1,1510677841
+0,Sergiy Shyrkov,a26359d,sshyrkov@jahia.com,0,11,11,listFiles,10 Mar 2017 11:25:37,0,3,3,2,1489155937
+0,Sergiy Shyrkov,a26359d,sshyrkov@jahia.com,0,11,11,deleteDirectory,10 Mar 2017 11:25:37,0,3,3,1,1489155937
+0,Sergiy Shyrkov,a26359d,sshyrkov@jahia.com,0,11,11,getInstance,10 Mar 2017 11:25:37,0,3,3,8,1489155937
+2,Sergiy Shyrkov,6b4e137,sshyrkov@jahia.com,15,0,15,get,27 Mar 2017 17:56:18,7,0,7,0,1490648178
+1,Sergiy Shyrkov,6b4e137,sshyrkov@jahia.com,15,0,15,stop,27 Mar 2017 17:56:18,7,0,7,0,1490648178
+3,Sergiy Shyrkov,6b4e137,sshyrkov@jahia.com,15,0,15,add,27 Mar 2017 17:56:18,7,0,7,0,1490648178
+4,Sergiy Shyrkov,6b4e137,sshyrkov@jahia.com,15,0,15,equals,27 Mar 2017 17:56:18,7,0,7,0,1490648178
+1,Sergiy Shyrkov,6b4e137,sshyrkov@jahia.com,15,0,15,toString,27 Mar 2017 17:56:18,7,0,7,0,1490648178
+3,Sergiy Shyrkov,6b4e137,sshyrkov@jahia.com,15,0,15,size,27 Mar 2017 17:56:18,7,0,7,0,1490648178
+1,Sergiy Shyrkov,6b4e137,sshyrkov@jahia.com,15,0,15,refresh,27 Mar 2017 17:56:18,7,0,7,0,1490648178
+1,oyevstafyev,fc593fb,oievstafiev@jahia.com,1,1,2,equals,27 Nov 2017 07:00:48,1,1,2,1,1511776848
+1,bpapez,2f40900,bpapez@jahia.com,86,82,168,hasNext,17 Feb 2017 08:33:58,7,5,12,0,1487331238
+1,bpapez,2f40900,bpapez@jahia.com,86,82,168,getName,17 Feb 2017 08:33:58,7,5,12,1,1487331238
+46,bpapez,2f40900,bpapez@jahia.com,86,82,168,add,17 Feb 2017 08:33:58,7,5,12,45,1487331238
+16,bpapez,2f40900,bpapez@jahia.com,86,82,168,equals,17 Feb 2017 08:33:58,7,5,12,16,1487331238
+19,bpapez,2f40900,bpapez@jahia.com,86,82,168,toString,17 Feb 2017 08:33:58,7,5,12,19,1487331238
+1,bpapez,2f40900,bpapez@jahia.com,86,82,168,remove,17 Feb 2017 08:33:58,7,5,12,1,1487331238
+2,bpapez,2f40900,bpapez@jahia.com,86,82,168,init,17 Feb 2017 08:33:58,7,5,12,0,1487331238
+0,Thomas Draier,6a5a4f6,tdraier@jahia.com,4,79,83,get,08 Dec 2017 06:44:27,3,14,17,21,1512726267
+0,Thomas Draier,6a5a4f6,tdraier@jahia.com,4,79,83,copy,08 Dec 2017 06:44:27,3,14,17,2,1512726267
+0,Thomas Draier,6a5a4f6,tdraier@jahia.com,4,79,83,deleteQuietly,08 Dec 2017 06:44:27,3,14,17,4,1512726267
+0,Thomas Draier,6a5a4f6,tdraier@jahia.com,4,79,83,equals,08 Dec 2017 06:44:27,3,14,17,15,1512726267
+1,Thomas Draier,6a5a4f6,tdraier@jahia.com,4,79,83,getInstance,08 Dec 2017 06:44:27,3,14,17,3,1512726267
+0,Thomas Draier,6a5a4f6,tdraier@jahia.com,4,79,83,hasNext,08 Dec 2017 06:44:27,3,14,17,1,1512726267
+2,Thomas Draier,6a5a4f6,tdraier@jahia.com,4,79,83,getPath,08 Dec 2017 06:44:27,3,14,17,1,1512726267
+0,Thomas Draier,6a5a4f6,tdraier@jahia.com,4,79,83,add,08 Dec 2017 06:44:27,3,14,17,5,1512726267
+0,Thomas Draier,6a5a4f6,tdraier@jahia.com,4,79,83,valueOf,08 Dec 2017 06:44:27,3,14,17,3,1512726267
+0,Thomas Draier,6a5a4f6,tdraier@jahia.com,4,79,83,closeQuietly,08 Dec 2017 06:44:27,3,14,17,5,1512726267
+1,Thomas Draier,6a5a4f6,tdraier@jahia.com,4,79,83,or,08 Dec 2017 06:44:27,3,14,17,11,1512726267
+0,Thomas Draier,6a5a4f6,tdraier@jahia.com,4,79,83,getName,08 Dec 2017 06:44:27,3,14,17,5,1512726267
+0,Thomas Draier,6a5a4f6,tdraier@jahia.com,4,79,83,next,08 Dec 2017 06:44:27,3,14,17,1,1512726267
+0,Thomas Draier,6a5a4f6,tdraier@jahia.com,4,79,83,getStream,08 Dec 2017 06:44:27,3,14,17,2,1512726267
+1,Sergiy Shyrkov,9ac5ed6,sshyrkov@jahia.com,105,105,210,get,14 Mar 2017 10:26:45,12,12,24,1,1489498005
+10,Sergiy Shyrkov,9ac5ed6,sshyrkov@jahia.com,105,105,210,add,14 Mar 2017 10:26:45,12,12,24,7,1489498005
+17,Sergiy Shyrkov,9ac5ed6,sshyrkov@jahia.com,105,105,210,equals,14 Mar 2017 10:26:45,12,12,24,17,1489498005
+10,Sergiy Shyrkov,9ac5ed6,sshyrkov@jahia.com,105,105,210,getInstance,14 Mar 2017 10:26:45,12,12,24,10,1489498005
+11,Sergiy Shyrkov,9ac5ed6,sshyrkov@jahia.com,105,105,210,hasNext,14 Mar 2017 10:26:45,12,12,24,11,1489498005
+3,Sergiy Shyrkov,9ac5ed6,sshyrkov@jahia.com,105,105,210,getPath,14 Mar 2017 10:26:45,12,12,24,3,1489498005
+40,Sergiy Shyrkov,9ac5ed6,sshyrkov@jahia.com,105,105,210,getName,14 Mar 2017 10:26:45,12,12,24,43,1489498005
+1,Sergiy Shyrkov,9ac5ed6,sshyrkov@jahia.com,105,105,210,or,14 Mar 2017 10:26:45,12,12,24,1,1489498005
+1,Sergiy Shyrkov,9ac5ed6,sshyrkov@jahia.com,105,105,210,getParent,14 Mar 2017 10:26:45,12,12,24,1,1489498005
+8,Sergiy Shyrkov,9ac5ed6,sshyrkov@jahia.com,105,105,210,next,14 Mar 2017 10:26:45,12,12,24,8,1489498005
+1,Sergiy Shyrkov,9ac5ed6,sshyrkov@jahia.com,105,105,210,toString,14 Mar 2017 10:26:45,12,12,24,1,1489498005
+2,Sergiy Shyrkov,9ac5ed6,sshyrkov@jahia.com,105,105,210,remove,14 Mar 2017 10:26:45,12,12,24,2,1489498005
+1,Sergiy Shyrkov,1a6c498,sshyrkov@jahia.com,4,3,7,getName,19 Jul 2017 16:51:26,4,3,7,1,1500493886
+1,Sergiy Shyrkov,1a6c498,sshyrkov@jahia.com,4,3,7,getPath,19 Jul 2017 16:51:26,4,3,7,1,1500493886
+1,Sergiy Shyrkov,1a6c498,sshyrkov@jahia.com,4,3,7,size,19 Jul 2017 16:51:26,4,3,7,0,1500493886
+1,Sergiy Shyrkov,1a6c498,sshyrkov@jahia.com,4,3,7,or,19 Jul 2017 16:51:26,4,3,7,1,1500493886
+1,Sergiy Shyrkov,e7769a8,sshyrkov@jahia.com,2,0,2,getName,15 May 2017 09:13:13,2,0,2,0,1494850393
+1,Sergiy Shyrkov,e7769a8,sshyrkov@jahia.com,2,0,2,valueOf,15 May 2017 09:13:13,2,0,2,0,1494850393
+1,David Griffon,989b0fa,dgriffon@jahia.com,2,0,2,getPath,26 Apr 2017 13:34:46,2,0,2,0,1493224486
+1,David Griffon,989b0fa,dgriffon@jahia.com,2,0,2,remove,26 Apr 2017 13:34:46,2,0,2,0,1493224486
+1,jkevan,f483b15,kevan@jahia.com,3,0,3,equals,01 Aug 2017 10:42:00,3,0,3,0,1501594920
+1,jkevan,f483b15,kevan@jahia.com,3,0,3,next,01 Aug 2017 10:42:00,3,0,3,0,1501594920
+1,jkevan,f483b15,kevan@jahia.com,3,0,3,hasNext,01 Aug 2017 10:42:00,3,0,3,0,1501594920

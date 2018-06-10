@@ -41,6 +41,7 @@ def find_patters_commits(entire_commit, methods, value, remove_lines_equals=True
        
         m = Method(method, '', amount_inserted, amount_removed, 0, 0)
         
-        quantified_methods.append(m)
+        if amount_inserted + amount_removed > 0:
+            quantified_methods.append(m)
 
     return quantified_methods

@@ -26,6 +26,7 @@ def oraculo_david_ma(before_extracted, authors_extracted):
     
     i = 0
     sorted_commits = sorted(all_commits.items(), key= lambda x: x[0])
+    # print(len(sorted_commits))
     for commit in sorted_commits:
         i+=1
         if commit[1]['author'] not in before_extracted:

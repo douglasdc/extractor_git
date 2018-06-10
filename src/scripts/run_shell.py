@@ -10,4 +10,4 @@ def run_shell_scripts(script, folder):
     output, err = p.communicate()
     rc = p.returncode
     # print(output)
-    return output.decode('utf-8')
+    return output.decode('utf-8', errors="ignore")

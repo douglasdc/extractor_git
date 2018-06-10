@@ -1,19 +1,19 @@
 {
-    "projetos":[
+    "projetos": [
         "/mnt/c/Users/Douglas/Documents/camille_projects/commons/dxm"
     ],
-    "import_file":"input/imports.txt",
-    "api_file":"input/metodos_commons.txt",
-    "code_java":true,
-    "code_php":true,
-    "code_javascript":true,
-    "code_python":true,
-    "considerar_removidos":true,
-    "por_projeto":true,
+    "import_file": "input/imports.txt",
+    "api_file": "input/metodos_commons.txt",
+    "code_java": true,
+    "code_php": true,
+    "code_javascript": true,
+    "code_python": true,
+    "considerar_removidos": true,
+    "por_projeto": true,
     "linhas_identicas": true,
-    "data_inicio":"2017-01-30",
-    "data_fim":"2017-11-28",
+    "data_inicio": "2017-01-01",
+    "data_fim": "2017-12-31",
     "oraculo_david_ma": true,
-    "oraculo_david_ma_dias":300,
-    "multiprocessing":false
+    "oraculo_david_ma_dias": 90,
+    "multiprocessing": false
 }
